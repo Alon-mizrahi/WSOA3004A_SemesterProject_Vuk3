@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ToggleSongBook",
+                    "type": "Button",
+                    "id": "c41e2c72-8b15-49b9-9f3c-8c42d422888c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -411,6 +419,28 @@
                     "action": "Green(Left)",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3a7b3cf-bb95-474e-a77b-a9ac17b2b85f",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ToggleSongBook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1019cd7-6d5a-49a6-ae5e-562be7eec5c8",
+                    "path": "<Keyboard>/#(i)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "ToggleSongBook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -495,6 +525,14 @@
                     "type": "PassThrough",
                     "id": "b6af02bf-d3d4-4b0d-99e0-d71ef0042fcd",
                     "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ToggleSongBook",
+                    "type": "Button",
+                    "id": "9ad74777-6469-4c62-a11c-4f807e21f8b9",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -915,6 +953,28 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a8b530c-3cd4-4dab-b7f8-12abb5aee31c",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ToggleSongBook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "55f056d1-79f2-4ca0-8c3f-33796fe96bde",
+                    "path": "<Keyboard>/#(i)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleSongBook",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

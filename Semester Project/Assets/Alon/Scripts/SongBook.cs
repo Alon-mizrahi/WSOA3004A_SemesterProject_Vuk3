@@ -155,21 +155,25 @@ public class SongBook : MonoBehaviour
 
     }
 
-    //reset book to page 1 and close
-    void CloseBook() 
-    {
-        SongbookUI.SetActive(false);
-    }
 
-    void OpenBook() 
+
+    public void ToggleBook() 
     {
-        SongbookUI.SetActive(true);
-        Page1.SetActive(true);
-        Page2.SetActive(true);
-        Page3.SetActive(false);
-        Page4.SetActive(false);
-        Page5.SetActive(false);
-        Page6.SetActive(false);
+        Debug.Log("Toggling Song Book");
+
+        if (SongbookUI.activeSelf == false) //book is closed
+        {
+            SongbookUI.SetActive(true);
+            Page1.SetActive(true);
+            Page2.SetActive(true);
+            Page3.SetActive(false);
+            Page4.SetActive(false);
+            Page5.SetActive(false);
+            Page6.SetActive(false);
+        }else{//book is open
+            SongbookUI.SetActive(false);
+        }
+        
     }
 
 
