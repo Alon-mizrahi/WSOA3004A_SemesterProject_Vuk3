@@ -40,20 +40,36 @@ public class Player : MonoBehaviour
     public void RedUpNote(InputAction.CallbackContext RedContext)
     {
         Debug.Log("Red!");
+        if (gameObject.GetComponent<SongDetection>() != null)
+        {
+            gameObject.GetComponent<SongDetection>().GetNote("Up");
+        }
     }
 
     public void OrangeDownNote(InputAction.CallbackContext OrangeContext)
     {
         Debug.Log("Orange!");
+        if (gameObject.GetComponent<SongDetection>() != null)
+        {
+            gameObject.GetComponent<SongDetection>().GetNote("Down");
+        }
     }
 
     public void BlueRightNote(InputAction.CallbackContext BlueContext)
     {
         Debug.Log("Blue!");
+        if (gameObject.GetComponent<SongDetection>() != null)
+        {
+            gameObject.GetComponent<SongDetection>().GetNote("Right");
+        }
     }
 
     public void GreenLeftNote(InputAction.CallbackContext GreenContext)
     {
         Debug.Log("Green!");
+        if (gameObject.GetComponent<SongDetection>() != null) 
+        {
+            gameObject.GetComponent<SongDetection>().GetNote("Left");
+        }
     }
 }

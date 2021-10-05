@@ -24,6 +24,11 @@ public class Song : MonoBehaviour
             //transform.SetParent(SongBook.transform);
             SongBook.GetComponent<SongBook>().AddSong(gameObject.GetComponent<Song>());
 
+            gameObject.SetActive(false);
+            //gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            
+            
+
         }
     }
 }

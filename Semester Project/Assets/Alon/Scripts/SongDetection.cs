@@ -25,7 +25,7 @@ public class SongDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetNote();
+        //GetNote();
         IdleSong();
     }
 
@@ -50,27 +50,27 @@ public class SongDetection : MonoBehaviour
         Debug.Log("song cleared");
     }
 
-    void GetNote() 
+    public void GetNote(string Key) 
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) 
+        if (Key == "Up") 
         {
             CurrentSong += "1";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Key == "Down")
         {
             CurrentSong += "2";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Key == "Left")
         {
             CurrentSong += "3";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Key == "Right")
         {
             CurrentSong += "4";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected

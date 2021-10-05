@@ -5,6 +5,8 @@ using UnityEngine;
 public class SongBook : MonoBehaviour
 {
 
+    int index = 0;
+
     public Song[] Songlist;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,9 @@ public class SongBook : MonoBehaviour
 
     public void AddSong(Song song) //get children of gameobject component songs
     {
-        Songlist[Songlist.Length] = song;
+
+        Songlist[index] = song;
+        index++;
         
     }
 
