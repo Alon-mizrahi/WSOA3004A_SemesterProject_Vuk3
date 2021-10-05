@@ -86,22 +86,6 @@ public class SongBook : MonoBehaviour
             else if (Songlist[index - 1].Notes[i].ToString() == "4") { Note.color = Color.yellow; }
 
         }
-
-        //put page in book, order pages
-        //thePage.transform.SetParent(SongbookUI.transform);
-
-        //how to book???
-
-        //if ((index - 1) % 2 == 0)//even
-        //{
-        //    thePage.transform.localPosition = new Vector2(440, 0);
-        //}
-       // else //odd
-       // {
-       //     thePage.transform.localPosition = new Vector2(-440, 0);
-       // }
-        
-
     }
 
 
@@ -111,6 +95,7 @@ public class SongBook : MonoBehaviour
 
     public void NextPage() 
     {
+        Debug.Log("SongBook Next Page");
         if (ActivePage < 3) { ActivePage++; }
         ChangePage();
     }
@@ -118,16 +103,17 @@ public class SongBook : MonoBehaviour
 
     public void PreviousPage()
     {
-        if(ActivePage > 1) { ActivePage--; }
+        Debug.Log("SongBook Previous Page");
+        if (ActivePage > 1) { ActivePage--; }
         ChangePage();
     }
 
     void ChangePage() 
     {
         //determine active page
-        if (Page1.activeSelf == true && Page2.activeSelf == true) { ActivePage = 1; }
-        else if (Page3.activeSelf == true && Page4.activeSelf == true) { ActivePage = 2; }
-        else if (Page5.activeSelf == true && Page6.activeSelf == true) { ActivePage = 3; }
+        //if (Page1.activeSelf == true && Page2.activeSelf == true) { ActivePage = 1; }
+        //else if (Page3.activeSelf == true && Page4.activeSelf == true) { ActivePage = 2; }
+        //else if (Page5.activeSelf == true && Page6.activeSelf == true) { ActivePage = 3; }
 
         if (ActivePage == 1)
         {

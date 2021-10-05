@@ -54,6 +54,7 @@ public class UIController : MonoBehaviour
     {
         if (NextPageContext.started== true) 
         {
+            Debug.Log("UIController Next Page");
             SongBook.GetComponent<SongBook>().NextPage();
         }
         
@@ -63,6 +64,7 @@ public class UIController : MonoBehaviour
     {
         if (PreviousPageContext.started == true) 
         {
+            Debug.Log("UIController Previous Page");
             SongBook.GetComponent<SongBook>().PreviousPage();
         }
         
