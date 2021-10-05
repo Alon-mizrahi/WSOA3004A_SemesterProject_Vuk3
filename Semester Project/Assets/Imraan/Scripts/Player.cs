@@ -39,37 +39,49 @@ public class Player : MonoBehaviour
     }
     public void RedUpNote(InputAction.CallbackContext RedContext)
     {
-        Debug.Log("Red!");
-        if (gameObject.GetComponent<SongDetection>() != null)
+        if (RedContext.started == true)
         {
-            gameObject.GetComponent<SongDetection>().GetNote("Up");
+            Debug.Log("Red!");
+            if (gameObject.GetComponent<SongDetection>() != null)
+            {
+                gameObject.GetComponent<SongDetection>().GetNote("Up");
+            }
         }
     }
 
     public void OrangeDownNote(InputAction.CallbackContext OrangeContext)
     {
-        Debug.Log("Orange!");
-        if (gameObject.GetComponent<SongDetection>() != null)
+        if (OrangeContext.started == true)
         {
-            gameObject.GetComponent<SongDetection>().GetNote("Down");
+            Debug.Log("Orange!");
+            if (gameObject.GetComponent<SongDetection>() != null)
+            {
+                gameObject.GetComponent<SongDetection>().GetNote("Down");
+            }
         }
     }
 
     public void BlueRightNote(InputAction.CallbackContext BlueContext)
     {
-        Debug.Log("Blue!");
-        if (gameObject.GetComponent<SongDetection>() != null)
+        if (BlueContext.started == true) 
         {
-            gameObject.GetComponent<SongDetection>().GetNote("Right");
+            Debug.Log("Blue!");
+            if (gameObject.GetComponent<SongDetection>() != null)
+            {
+                gameObject.GetComponent<SongDetection>().GetNote("Right");
+            }
         }
     }
 
     public void GreenLeftNote(InputAction.CallbackContext GreenContext)
     {
-        Debug.Log("Green!");
-        if (gameObject.GetComponent<SongDetection>() != null) 
+        if (GreenContext.started == true)
         {
-            gameObject.GetComponent<SongDetection>().GetNote("Left");
+            Debug.Log("Green!");
+            if (gameObject.GetComponent<SongDetection>() != null)
+            {
+                gameObject.GetComponent<SongDetection>().GetNote("Left");
+            }
         }
     }
 }

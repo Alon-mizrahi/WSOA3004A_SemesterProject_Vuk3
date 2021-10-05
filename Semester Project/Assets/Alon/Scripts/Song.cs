@@ -9,6 +9,7 @@ public class Song : MonoBehaviour
     public string Notes;
     GameObject SongBook;
 
+
     void Start() 
     {
         gameObject.name = SongTitle;
@@ -26,9 +27,6 @@ public class Song : MonoBehaviour
 
             gameObject.SetActive(false);
             //gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            
-            
-
         }
     }
 }
