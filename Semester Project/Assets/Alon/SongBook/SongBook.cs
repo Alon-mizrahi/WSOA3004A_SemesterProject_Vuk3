@@ -18,6 +18,7 @@ public class SongBook : MonoBehaviour
     public GameObject Page5;
     public GameObject Page6;
 
+    int ActivePage = 1;
 
 
     public Song[] Songlist;
@@ -84,10 +85,6 @@ public class SongBook : MonoBehaviour
             else if (Songlist[index - 1].Notes[i].ToString() == "3") { Note.color = Color.green; }
             else if (Songlist[index - 1].Notes[i].ToString() == "4") { Note.color = Color.yellow; }
 
-
-
-
-
         }
 
         //put page in book, order pages
@@ -112,12 +109,22 @@ public class SongBook : MonoBehaviour
 
 
 
-    void NextPage() 
+    public void NextPage() 
     {
-        //change pivots from centre to pivot and move pivot so can rotate animation
+        if (ActivePage < 3) { ActivePage++; }
+        ChangePage();
+    }
 
+
+    public void PreviousPage()
+    {
+        if(ActivePage > 1) { ActivePage--; }
+        ChangePage();
+    }
+
+    void ChangePage() 
+    {
         //determine active page
-        int ActivePage=1;
         if (Page1.activeSelf == true && Page2.activeSelf == true) { ActivePage = 1; }
         else if (Page3.activeSelf == true && Page4.activeSelf == true) { ActivePage = 2; }
         else if (Page5.activeSelf == true && Page6.activeSelf == true) { ActivePage = 3; }
@@ -131,7 +138,7 @@ public class SongBook : MonoBehaviour
             Page5.SetActive(false);
             Page6.SetActive(false);
         }
-        else if (ActivePage == 2) 
+        else if (ActivePage == 2)
         {
             Page1.SetActive(false);
             Page2.SetActive(false);
@@ -150,11 +157,7 @@ public class SongBook : MonoBehaviour
             Page6.SetActive(true);
         }
 
-
-
-
     }
-
 
 
     public void ToggleBook() 

@@ -16,10 +16,9 @@ public class Song : MonoBehaviour
         SongBook = GameObject.Find("SongBook");
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player") 
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
         {
             //add to songbook
             //transform.SetParent(SongBook.transform);

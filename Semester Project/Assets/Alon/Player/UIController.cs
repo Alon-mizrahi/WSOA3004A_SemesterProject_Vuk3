@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
     //Controls UIControls;
 
     GameObject SongBook;
+    public GameObject SongBookUI;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +30,15 @@ public class UIController : MonoBehaviour
         {
             if (SongBook != null)
             {
-                if (gameObject.GetComponent<PlayerInput>().currentActionMap == new InputActionMap(gameObject.GetComponent<PlayerInput>().defaultActionMap))
+                if (SongBookUI.activeSelf == false)//song book close
                 {
-                    Debug.Log("FIF");
+                    //Debug.Log("FIF");
                     gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
                     Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
                 }
                 else 
                 {
-                    //gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
+                    gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
                     Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
                 }
 
@@ -46,6 +47,25 @@ public class UIController : MonoBehaviour
                 //Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
             }
         }
+    }
+
+
+    public void NextPage(InputAction.CallbackContext NextPageContext) 
+    {
+        if (NextPageContext.started== true) 
+        {
+            SongBook.GetComponent<SongBook>().NextPage();
+        }
+        
+    }
+
+    public void PreviousPage(InputAction.CallbackContext PreviousPageContext)
+    {
+        if (PreviousPageContext.started == true) 
+        {
+            SongBook.GetComponent<SongBook>().PreviousPage();
+        }
+        
     }
 
 }
