@@ -11,7 +11,7 @@ public class SongDetection : MonoBehaviour
     public float MaxIdleTime = 5f;
     public float IdleTimer;
 
-
+    GetInteractables GetInteractablesScript;
 
     SongBook SongBook;
 
@@ -20,6 +20,7 @@ public class SongDetection : MonoBehaviour
     {
         SongBook = GameObject.Find("SongBook").GetComponent<SongBook>();
         IdleTimer = MaxIdleTime;
+        GetInteractablesScript = gameObject.GetComponent<GetInteractables>();
     }
 
     // Update is called once per frame
@@ -96,6 +97,7 @@ public class SongDetection : MonoBehaviour
                 if (CurrentSong == SongBook.Songlist[i].Notes) 
                 {
                     Debug.Log("Played " + SongBook.Songlist[i].SongTitle);
+                    GetInteractablesScript.SongPlayed(SongBook.Songlist[i].SongTitle);
                     break;
                 }
             }

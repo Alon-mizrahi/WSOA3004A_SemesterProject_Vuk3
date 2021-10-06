@@ -49,6 +49,16 @@ public class GetInteractables : MonoBehaviour
         }
     }
 
+    public void SongPlayed(string SongName) 
+    {
+        for (int i = 0; i < Interactables.Length; i++) 
+        {
+            if (Interactables[i] != null && Interactables[i].GetComponent<InteractableSongDetection>() !=null) 
+            {
+                Interactables[i].GetComponent<InteractableSongDetection>().SongCheck(SongName);
+            }
+        }
+    }
 
 
 
