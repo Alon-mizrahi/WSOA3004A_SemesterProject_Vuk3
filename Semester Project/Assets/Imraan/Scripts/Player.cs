@@ -5,6 +5,14 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    //flute audio
+    public AudioClip flute1;
+    public AudioClip flute2;
+    public AudioClip flute3;
+    public AudioClip flute4;
+    public AudioSource AS;
+
+
     Controls PlayerContSys;
 
     [SerializeField]Rigidbody2D PLYRB;
@@ -46,6 +54,17 @@ public class Player : MonoBehaviour
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Up");
             }
+            AS.clip = flute1;
+            AS.Play();
+        }
+        if (RedContext.performed == true) 
+        {
+            AS.loop = true;
+        }
+        if (RedContext.canceled == true) 
+        {
+            AS.loop = false;
+            //AS.Stop();
         }
     }
 
@@ -58,6 +77,17 @@ public class Player : MonoBehaviour
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Down");
             }
+            AS.clip = flute3;
+            AS.Play();
+        }
+        if (OrangeContext.performed == true)
+        {
+            AS.loop = true;
+        }
+        if (OrangeContext.canceled == true)
+        {
+            AS.loop = false;
+            //AS.Stop();
         }
     }
 
@@ -70,6 +100,17 @@ public class Player : MonoBehaviour
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Right");
             }
+            AS.clip = flute2;
+            AS.Play();
+        }
+        if (BlueContext.performed == true)
+        {
+            AS.loop = true;
+        }
+        if (BlueContext.canceled == true)
+        {
+            AS.loop = false;
+            //AS.Stop();
         }
     }
 
@@ -82,6 +123,17 @@ public class Player : MonoBehaviour
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Left");
             }
+            AS.clip = flute4;
+            AS.Play();
+        }
+        if (GreenContext.performed == true)
+        {
+            AS.loop = true;
+        }
+        if (GreenContext.canceled == true)
+        {
+            AS.loop = false;
+            //AS.Stop();
         }
     }
 
