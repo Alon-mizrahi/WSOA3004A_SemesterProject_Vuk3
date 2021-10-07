@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7700052115228871914}
   - component: {fileID: 7700052115228871913}
   - component: {fileID: 7700052115228871912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interactable_MovablePlatform
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
   isActive: 0
   LeftBound: {fileID: 7700052116204708861}
   RightBound: {fileID: 7700052115677780821}
-  speed: 0.7
+  speed: 1.5
 --- !u!1 &7700052115677780820
 GameObject:
   m_ObjectHideFlags: 0
