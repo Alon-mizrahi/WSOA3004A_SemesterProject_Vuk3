@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cfba2b9b7de4f4e8311fff2138b394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongTitle: Song of Light
-  Notes: 123412
+  SongTitle: Song of
+  Notes: 
 --- !u!61 &7367477744303431938
 BoxCollider2D:
   m_ObjectHideFlags: 0
