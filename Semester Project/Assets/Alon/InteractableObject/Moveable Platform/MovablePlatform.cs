@@ -45,4 +45,25 @@ public class MovablePlatform : MonoBehaviour
 
     }
 
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player") 
+        {
+            other.gameObject.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.parent = null;
+        }
+    }
+
+
+
+
 }
