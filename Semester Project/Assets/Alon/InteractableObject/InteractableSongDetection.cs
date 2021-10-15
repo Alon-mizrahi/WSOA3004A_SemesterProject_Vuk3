@@ -16,13 +16,13 @@ public class InteractableSongDetection : MonoBehaviour
 
             //call object specific ability script
             //add scripots here if make new interactable object
-            if (gameObject.name == "Interactable_Door")
+            if (gameObject.name.Contains("Interactable_Door") == true)
             {
                 gameObject.GetComponent<DoorScript>().isOpen = true;
             }
-            else if (gameObject.name == "Interactable_MovablePlatform") 
+            else if (gameObject.name.Contains("Interactable_MovablePlatform") == true) 
             {
-                gameObject.GetComponent<MovablePlatform>().isActive = true;
+                //gameObject.GetComponent<MovablePlatform>().isActive = true;
             }
 
 

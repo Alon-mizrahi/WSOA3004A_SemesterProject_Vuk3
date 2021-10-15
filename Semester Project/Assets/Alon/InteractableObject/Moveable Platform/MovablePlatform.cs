@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class MovablePlatform : MonoBehaviour
 {
-    public bool isActive = false;
+    //public bool isActive = false;
+    public bool MoveHori = false;
+    public bool MoveVert = false;
+
     public Transform LeftBound;
     public Transform RightBound;
+    public Transform TopBound;
+    public Transform BottomBound;
+
     //public bool MoveLeftFirst = false;
     public float speed = 0.7f;
 
     Transform Target;
+    string Direc = "";
 
     // Start is called before the first frame update
     void Start()
@@ -21,27 +28,53 @@ public class MovablePlatform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (isActive == true) 
+        if (MoveHori == true) 
         {
-            Movement();
+            MoveVert = false;
+            Movement("Horizontal");
+        }
+        else if (MoveVert == true) 
+        {
+            MoveHori = false;
+            Movement("Vertical");
         }
     }
 
-    void Movement() 
+    void Movement(string Axis) 
     {
-        //transform.position = Vector2.MoveTowards(transform.position, RightBound.position, Time.deltaTime * speed);
-
-        if (transform.localPosition == RightBound.localPosition) 
+        if (Axis == "Horizontal")//horizontal movement
         {
-            //transform.localPosition = Vector2.MoveTowards(transform.localPosition, LeftBound.localPosition, Time.deltaTime * speed);
-            Target = LeftBound;
-        }
-        if (transform.localPosition == LeftBound.localPosition)
-        {
-            Target = RightBound;
+            if (gameObject.transform.position.x <= LeftBound.transform.position.x)//if at left bound move right
+            {
+                Direc = "Right";
+            }
+            else if (gameObject.transform.position.x >= RightBound.transform.position.x)//if at right bound move left
+            {
+                Direc = "Left";
+            }
+
+            if (Direc == "Left") 
+            { transform.Translate(Vector2.left*speed*Time.deltaTime); }
+            else if (Direc == "Right") { transform.Translate(Vector2.right * speed * Time.deltaTime); }
         }
 
-        transform.localPosition = Vector2.MoveTowards(transform.localPosition, Target.localPosition, Time.deltaTime * speed);
+
+        else if (Axis == "Vertical") 
+        {
+            if (gameObject.transform.position.y <= BottomBound.transform.position.y)//if at left bound move right
+            {
+                Direc = "Up";
+            }
+            else if (gameObject.transform.position.y >= TopBound.transform.position.y)//if at right bound move left
+            {
+                Direc = "Down";
+            }
+
+            if (Direc == "Up")
+            { transform.Translate(Vector2.up * speed * Time.deltaTime); }
+            else if (Direc == "Down") { transform.Translate(Vector2.down * speed * Time.deltaTime); }
+
+        }
 
     }
 
@@ -52,6 +85,13 @@ public class MovablePlatform : MonoBehaviour
         if (other.gameObject.tag == "Player") 
         {
             other.gameObject.transform.SetParent(transform);
+        }
+        if (other.gameObject.name.Contains("Door") == true) 
+        {
+            if (Direc == "Left") { Direc = "Right"; }
+            else if (Direc == "Right") { Direc = "Left"; }
+            else if (Direc == "Up") { Direc = "Down"; }
+            else if (Direc == "Down") { Direc = "Up"; }
         }
     }
 
