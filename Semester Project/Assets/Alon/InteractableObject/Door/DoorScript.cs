@@ -6,6 +6,8 @@ public class DoorScript : MonoBehaviour
 {
     public bool isOpen = false;
     public bool isClose = false;
+    public bool Opened = false;
+
     public float OpenSpeed = 1f;
     Vector2 StartPos;
     // Start is called before the first frame update
