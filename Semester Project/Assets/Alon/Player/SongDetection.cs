@@ -52,7 +52,7 @@ public class SongDetection : MonoBehaviour
         
     }
 
-    void ClearSong()
+    public void ClearSong()
     {
         IdleTimer = MaxIdleTime;
         CurrentSong = "";
@@ -108,7 +108,7 @@ public class SongDetection : MonoBehaviour
         }
         else if (Key == "Down")
         {
-            CurrentSong += "2";//whatever note this will be
+            CurrentSong += "3";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
             Note.color = Color.blue;
@@ -116,7 +116,7 @@ public class SongDetection : MonoBehaviour
         }
         else if (Key == "Left")
         {
-            CurrentSong += "3";//whatever note this will be
+            CurrentSong += "4";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
             Note.color = Color.green;
@@ -124,7 +124,7 @@ public class SongDetection : MonoBehaviour
         }
         else if (Key == "Right")
         {
-            CurrentSong += "4";//whatever note this will be
+            CurrentSong += "2";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
             Note.color = Color.yellow;
