@@ -7,7 +7,7 @@ public class SongBook : MonoBehaviour
 {
 
     int index = 0;
-    public GameObject PageUI;
+    //public GameObject PageUI;
     public GameObject SongbookUI;
 
 
@@ -80,10 +80,10 @@ public class SongBook : MonoBehaviour
             else if (i == 5) { Note = Note6; }
 
             //set colors
-            if (Songlist[index - 1].Notes[i].ToString() == "1") { Note.color = Color.red; }
-            else if(Songlist[index - 1].Notes[i].ToString() == "2") { Note.color = Color.blue; }
-            else if (Songlist[index - 1].Notes[i].ToString() == "3") { Note.color = Color.green; }
-            else if (Songlist[index - 1].Notes[i].ToString() == "4") { Note.color = Color.yellow; }
+            if (Songlist[index - 1].Notes[i].ToString() == "1") { Note.color = Color.red; Note.transform.Rotate(Vector3.forward, 0f); }
+            else if(Songlist[index - 1].Notes[i].ToString() == "2") { Note.color = Color.blue; Note.transform.Rotate(Vector3.forward, 180f); }
+            else if (Songlist[index - 1].Notes[i].ToString() == "3") { Note.color = Color.green; Note.transform.Rotate(Vector3.forward, 90f); }
+            else if (Songlist[index - 1].Notes[i].ToString() == "4") { Note.color = Color.yellow; Note.transform.Rotate(Vector3.forward, -90f); }
 
         }
     }

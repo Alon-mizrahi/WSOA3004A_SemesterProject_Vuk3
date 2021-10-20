@@ -17,6 +17,9 @@ public class SongDetection : MonoBehaviour
 
     SongBook SongBook;
 
+    public SpriteRenderer RangeUI;
+    bool isRangeUIOn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,21 +52,33 @@ public class SongDetection : MonoBehaviour
         
     }
 
-    void ClearSong()
+    public void ClearSong()
     {
         IdleTimer = MaxIdleTime;
         CurrentSong = "";
         Debug.Log("song cleared");
 
-        for (int i = 1; i <= 6; i++) 
-        {
-            NotesUI.transform.Find("Note"+i).GetComponent<Image>().color = Color.white;
-        }
+        StartCoroutine("PauseBeforeClear");
 
+        
+
+    }
+
+    IEnumerator PauseBeforeClear() 
+    {
+        yield return new WaitForSeconds(0.8f);
+        for (int i = 1; i <= 6; i++)
+        {
+            yield return new WaitForSeconds(0.3f);
+            NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
+            NotesUI.transform.Find("Note" + i).transform.rotation = Quaternion.identity;
+        }
     }
 
     public void GetNote(string Key) 
     {
+        StopCoroutine("PauseBeforeClear");
+
         Image Note = NotesUI.transform.Find("Note1").GetComponent<Image>();
         if (CurrentSong.Length == 1-1) { Note = NotesUI.transform.Find("Note1").GetComponent<Image>(); }
         else if (CurrentSong.Length == 2-1) { Note = NotesUI.transform.Find("Note2").GetComponent<Image>(); }
@@ -72,7 +87,14 @@ public class SongDetection : MonoBehaviour
         else if (CurrentSong.Length == 5-1) { Note = NotesUI.transform.Find("Note5").GetComponent<Image>(); }
         else if (CurrentSong.Length == 6-1) { Note = NotesUI.transform.Find("Note6").GetComponent<Image>(); }
 
-
+        if (CurrentSong.Length == 0)
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
+                NotesUI.transform.Find("Note" + i).transform.rotation = Quaternion.identity;
+            }
+        }
 
 
         NotesUI.SetActive(true);
@@ -82,29 +104,35 @@ public class SongDetection : MonoBehaviour
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
             Note.color = Color.red;
+            Note.transform.Rotate(Vector3.forward, 0f);
         }
         else if (Key == "Down")
-        {
-            CurrentSong += "2";//whatever note this will be
-            IdleTimer = MaxIdleTime; //only if input detected
-            Debug.Log("Song: " + CurrentSong);
-            Note.color = Color.blue;
-        }
-        else if (Key == "Left")
         {
             CurrentSong += "3";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
-            Note.color = Color.green;
+            Note.color = Color.blue;
+            Note.transform.Rotate(Vector3.forward, 180f);
         }
-        else if (Key == "Right")
+        else if (Key == "Left")
         {
             CurrentSong += "4";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
             Debug.Log("Song: " + CurrentSong);
+            Note.color = Color.green;
+            Note.transform.Rotate(Vector3.forward, 90f);
+        }
+        else if (Key == "Right")
+        {
+            CurrentSong += "2";//whatever note this will be
+            IdleTimer = MaxIdleTime; //only if input detected
+            Debug.Log("Song: " + CurrentSong);
             Note.color = Color.yellow;
+            Note.transform.Rotate(Vector3.forward, -90f);
         }
 
+        if (isRangeUIOn == true) { StopCoroutine("RangeIndicator"); isRangeUIOn = false; }
+        StartCoroutine("RangeIndicator");
 
         if (CurrentSong.Length == 6) 
         {
@@ -113,7 +141,6 @@ public class SongDetection : MonoBehaviour
         }
         
     }
-
 
     void CheckSong() 
     {
@@ -132,6 +159,16 @@ public class SongDetection : MonoBehaviour
         }
     }
 
+
+    IEnumerator RangeIndicator() //Called when playing a note
+    {
+        //turn indicator on
+        RangeUI.enabled = true;
+        isRangeUIOn = true;
+        yield return new WaitForSeconds(4f);
+        //turn indicator off
+        RangeUI.enabled = false;
+    }
 
 
 }

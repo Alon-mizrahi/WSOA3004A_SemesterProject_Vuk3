@@ -5,6 +5,9 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public bool isOpen = false;
+    public bool isClose = false;
+    public bool Opened = false;
+
     public float OpenSpeed = 1f;
     Vector2 StartPos;
     // Start is called before the first frame update
@@ -20,5 +23,41 @@ public class DoorScript : MonoBehaviour
         {
             transform.position += Vector3.down * Time.deltaTime * OpenSpeed;
         }
+
+        if (isOpen || isClose) { OpenandClose();  }
+
+    }
+
+    void OpenandClose() 
+    {
+        if (isOpen == true)
+        {
+            if (transform.position.y >= StartPos.y - 6.5f)
+            {
+                gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                transform.position += Vector3.down * Time.deltaTime * OpenSpeed;
+            }
+            else
+            {
+                isOpen = false;
+                isClose = false;
+            }
+        }
+        else if (isClose == true) 
+        {
+            if (transform.position.y <= StartPos.y)
+            {
+                gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                transform.position += Vector3.up * Time.deltaTime * OpenSpeed;
+            }
+            else
+            {
+                gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                isOpen = false;
+                isClose = false;
+            }
+        }
+        
+        
     }
 }
