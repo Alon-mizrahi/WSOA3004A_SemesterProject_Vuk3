@@ -22,17 +22,6 @@ public class SongBook : MonoBehaviour
 
 
     public Song[] Songlist;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void AddSong(Song song) //get children of gameobject component songs
     {
@@ -81,9 +70,9 @@ public class SongBook : MonoBehaviour
 
             //set colors
             if (Songlist[index - 1].Notes[i].ToString() == "1") { Note.color = Color.red; Note.transform.Rotate(Vector3.forward, 0f); }
-            else if(Songlist[index - 1].Notes[i].ToString() == "2") { Note.color = Color.blue; Note.transform.Rotate(Vector3.forward, 180f); }
-            else if (Songlist[index - 1].Notes[i].ToString() == "3") { Note.color = Color.green; Note.transform.Rotate(Vector3.forward, 90f); }
-            else if (Songlist[index - 1].Notes[i].ToString() == "4") { Note.color = Color.yellow; Note.transform.Rotate(Vector3.forward, -90f); }
+            else if(Songlist[index - 1].Notes[i].ToString() == "2") { Note.color = Color.yellow; Note.transform.Rotate(Vector3.forward, -90f); }
+            else if (Songlist[index - 1].Notes[i].ToString() == "3") {   Note.color = Color.blue; Note.transform.Rotate(Vector3.forward, 180f); }
+            else if (Songlist[index - 1].Notes[i].ToString() == "4") { Note.color = Color.green; Note.transform.Rotate(Vector3.forward, 90f); }
 
         }
     }

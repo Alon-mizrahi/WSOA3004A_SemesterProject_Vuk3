@@ -6,6 +6,7 @@ public class RangeIncreaseBlock : MonoBehaviour
 {
     float NormalRange;
     public float IncreasedRadius;
+    public SpriteRenderer RangeUI;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -13,9 +14,7 @@ public class RangeIncreaseBlock : MonoBehaviour
         {
             NormalRange = other.gameObject.GetComponent<CircleCollider2D>().radius;
             other.gameObject.GetComponent<CircleCollider2D>().radius = IncreasedRadius;
-            
-            //increase range sprite as well
-
+            RangeUI.transform.localScale = new Vector3(2.8f, 2.8f, 1f);
         }
     }
 
@@ -24,6 +23,7 @@ public class RangeIncreaseBlock : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<CircleCollider2D>().radius = NormalRange;
+            RangeUI.transform.localScale = new Vector3(1.4f, 1.4f, 1f);
         }
     }
 }
