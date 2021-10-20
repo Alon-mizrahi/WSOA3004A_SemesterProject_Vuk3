@@ -247,7 +247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7367477744303431949, guid: 7f0701faf12bd8946a0b5960de041136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.247
+      value: 3.88
       objectReference: {fileID: 0}
     - target: {fileID: 7367477744303431949, guid: 7f0701faf12bd8946a0b5960de041136, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1252,11 +1252,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7367477744303431949, guid: 7f0701faf12bd8946a0b5960de041136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.38
+      value: 6.74
       objectReference: {fileID: 0}
     - target: {fileID: 7367477744303431949, guid: 7f0701faf12bd8946a0b5960de041136, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 7367477744303431949, guid: 7f0701faf12bd8946a0b5960de041136, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2479,6 +2479,7 @@ MonoBehaviour:
     m_Bits: 64
   GroundCheck: {fileID: 1251169587}
   Ground: 0
+  MusicBlock: 0
 --- !u!212 &1529260754
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3871,7 +3872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7367477744303431949, guid: 7f0701faf12bd8946a0b5960de041136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.247
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 7367477744303431949, guid: 7f0701faf12bd8946a0b5960de041136, type: 3}
       propertyPath: m_LocalPosition.y
