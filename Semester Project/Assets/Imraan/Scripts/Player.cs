@@ -21,13 +21,14 @@ public class Player : MonoBehaviour
     public LayerMask GroundLayer;
     public Transform GroundCheck;
     float JumpCheckDist = 0.45f;
-    public bool Ground;
+    public bool Ground, MusicBlock;
 
 
     private void Update()
     {
         PLYRB.velocity = new Vector2(XInput * MoveSpeed, PLYRB.velocity.y);
         Ground = Physics2D.OverlapCircle(GroundCheck.position, JumpCheckDist, GroundLayer);
+
     }
 
     public void Move(InputAction.CallbackContext XContext)
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
     }
     public void RedUpNote(InputAction.CallbackContext RedContext)
     {
-        if (RedContext.started == true)
+        if (RedContext.started == true && MusicBlock == false)
         {
             Debug.Log("Red!");
             if (gameObject.GetComponent<SongDetection>() != null)
@@ -57,7 +58,7 @@ public class Player : MonoBehaviour
             AS.clip = flute1;
             AS.Play();
         }
-        if (RedContext.performed == true) 
+        if (RedContext.performed == true && MusicBlock == false) 
         {
             AS.loop = true;
         }
@@ -70,7 +71,7 @@ public class Player : MonoBehaviour
 
     public void OrangeDownNote(InputAction.CallbackContext OrangeContext)
     {
-        if (OrangeContext.started == true)
+        if (OrangeContext.started == true && MusicBlock == false)
         {
             Debug.Log("Orange!");
             if (gameObject.GetComponent<SongDetection>() != null)
@@ -80,7 +81,7 @@ public class Player : MonoBehaviour
             AS.clip = flute3;
             AS.Play();
         }
-        if (OrangeContext.performed == true)
+        if (OrangeContext.performed == true && MusicBlock == false)
         {
             AS.loop = true;
         }
@@ -93,7 +94,7 @@ public class Player : MonoBehaviour
 
     public void BlueRightNote(InputAction.CallbackContext BlueContext)
     {
-        if (BlueContext.started == true) 
+        if (BlueContext.started == true && MusicBlock == false) 
         {
             Debug.Log("Blue!");
             if (gameObject.GetComponent<SongDetection>() != null)
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour
             AS.clip = flute2;
             AS.Play();
         }
-        if (BlueContext.performed == true)
+        if (BlueContext.performed == true && MusicBlock == false)
         {
             AS.loop = true;
         }
@@ -116,7 +117,7 @@ public class Player : MonoBehaviour
 
     public void GreenLeftNote(InputAction.CallbackContext GreenContext)
     {
-        if (GreenContext.started == true)
+        if (GreenContext.started == true && MusicBlock == false)
         {
             Debug.Log("Green!");
             if (gameObject.GetComponent<SongDetection>() != null)
@@ -126,7 +127,7 @@ public class Player : MonoBehaviour
             AS.clip = flute4;
             AS.Play();
         }
-        if (GreenContext.performed == true)
+        if (GreenContext.performed == true && MusicBlock == false)
         {
             AS.loop = true;
         }
@@ -137,5 +138,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D MusicBlocker)
+    {
+        if(MusicBlocker.gameObject.CompareTag("Music Block"))
+        {
+            MusicBlock = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D MusicEnabler)
+    {
+        if (MusicEnabler.gameObject.CompareTag("Music Block"))
+        {
+            MusicBlock = false;
+        }
+    }
 
 }
