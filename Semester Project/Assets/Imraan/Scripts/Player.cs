@@ -39,10 +39,15 @@ public class Player : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext JumpContext)
     {
-        if (JumpContext.performed && Ground)
+        if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
             PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
             Debug.Log("Jumped");
+        }
+        if (JumpContext.performed && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
+        {
+            gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Tutorial");
+            Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
         }
         
     }
