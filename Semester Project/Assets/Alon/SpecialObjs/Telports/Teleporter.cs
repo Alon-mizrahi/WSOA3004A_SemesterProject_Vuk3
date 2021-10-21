@@ -10,33 +10,37 @@ public class Teleporter : MonoBehaviour
     public bool inT1 = false;
     public bool inT2 = false;
 
-    GameObject Player;
+    public bool IsActive = false;
+    //GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
         Teleport1 = transform.GetChild(0);
         Teleport2 = transform.GetChild(1);
-        Player = GameObject.FindGameObjectWithTag("Player");
+        //Player = GameObject.FindGameObjectWithTag("Player");
     }
-    public IEnumerator Teleport()
+    public IEnumerator Teleport(GameObject Object)
     {
-        inT1 = Teleport1.GetComponent<TelportGetPos>().inT1;
-        inT2 = Teleport2.GetComponent<TelportGetPos>().inT2;
+        if (IsActive) 
+        {
+            inT1 = Teleport1.GetComponent<TelportGetPos>().inT1;
+            inT2 = Teleport2.GetComponent<TelportGetPos>().inT2;
 
-        if (inT1)
-        {
-            Teleport2.GetComponent<CapsuleCollider2D>().enabled = false;
-            Player.transform.position = Teleport2.position;
-            yield return new WaitForSeconds(0.2f);
-            Teleport2.GetComponent<CapsuleCollider2D>().enabled = true;
-        }
-        else if (inT2) 
-        {
-            Teleport1.GetComponent<CapsuleCollider2D>().enabled = false;
-            Player.transform.position = Teleport1.position;
-            yield return new WaitForSeconds(0.2f);
-            Teleport1.GetComponent<CapsuleCollider2D>().enabled = true;
+            if (inT1)
+            {
+                Teleport2.GetComponent<CapsuleCollider2D>().enabled = false;
+                Object.transform.position = Teleport2.transform.GetChild(0).position;
+                yield return new WaitForSeconds(1f);
+                Teleport2.GetComponent<CapsuleCollider2D>().enabled = true;
+            }
+            else if (inT2)
+            {
+                Teleport1.GetComponent<CapsuleCollider2D>().enabled = false;
+                Object.transform.position = Teleport1.transform.GetChild(0).position;
+                yield return new WaitForSeconds(1f);
+                Teleport1.GetComponent<CapsuleCollider2D>().enabled = true;
+            }
         }
     }
 

@@ -9,17 +9,17 @@ public class TelportGetPos : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
+        if (other.tag == "Player" && other.GetType() == typeof(BoxCollider2D) || other.tag !="Player") 
         {
             if (gameObject.name == "Teleport1")
             {
                 inT1 = true;
-                StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport());
+                StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject));
             }
             else if (gameObject.name == "Teleport2")
             {
                 inT2 = true;
-                StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport());
+                StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject));
             }
         }
     }

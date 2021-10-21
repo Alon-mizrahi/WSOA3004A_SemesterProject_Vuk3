@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractableSongDetection : MonoBehaviour
 {
 
-    public string[] TargetSongName = new string[10];//{ "", "", "", "", "", "", "", "", "", "" };
+    public string[] TargetSongName = new string[10];
 
     private void Start()
     {
@@ -28,6 +28,11 @@ public class InteractableSongDetection : MonoBehaviour
             TargetSongName[index] = "Song of Large";
             index++;
             TargetSongName[index] = "Song of Small";
+            index++;
+        }
+        if (gameObject.GetComponent<TelportGetPos>() != null) 
+        {
+            TargetSongName[index] = "Song of Teleportation";
             index++;
         }
         //add more as needed
@@ -62,6 +67,11 @@ public class InteractableSongDetection : MonoBehaviour
                 else if (SongPlayed == "Song of Small")
                 {
                     gameObject.GetComponent<ScaleChange>().DecreaseSize();
+                }
+                else if (SongPlayed == "Song of Teleportation")
+                {
+                    if (gameObject.transform.GetComponentInParent<Teleporter>().IsActive == false) { gameObject.transform.GetComponentInParent<Teleporter>().IsActive = true; }
+                    else{ gameObject.transform.GetComponentInParent<Teleporter>().IsActive = false; }
                 }
 
             }
