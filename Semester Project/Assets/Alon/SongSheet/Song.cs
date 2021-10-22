@@ -18,5 +18,6 @@ public class Song : MonoBehaviour
     {
         Debug.Log("HERE");
         Songbook.GetComponent<SongBook>().AddSong(gameObject.GetComponent<Song>());
+        gameObject.SetActive(false);
     }
 }

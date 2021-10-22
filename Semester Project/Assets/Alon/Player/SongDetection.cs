@@ -15,7 +15,7 @@ public class SongDetection : MonoBehaviour
 
     GetInteractables GetInteractablesScript;
 
-    SongBook SongBook;
+    public SongBook SongBook;
 
     public SpriteRenderer RangeUI;
     bool isRangeUIOn = false;
@@ -25,7 +25,6 @@ public class SongDetection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SongBook = GameObject.Find("SongBookBackground").GetComponent<SongBook>();
         SongBook.gameObject.SetActive(false);
         IdleTimer = MaxIdleTime;
         GetInteractablesScript = gameObject.GetComponent<GetInteractables>();
