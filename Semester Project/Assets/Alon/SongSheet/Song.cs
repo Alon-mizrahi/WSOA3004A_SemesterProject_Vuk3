@@ -7,25 +7,16 @@ public class Song : MonoBehaviour
 
     public string SongTitle;
     public string Notes;
-    GameObject SongBook;
-
+    public GameObject Songbook;
 
     void Start() 
     {
-        gameObject.name = SongTitle;
-        SongBook = GameObject.Find("SongBook");
+        gameObject.name = "Learning Area "+SongTitle;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void AddtoSongBook()
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
-        {
-            //add to songbook
-            //transform.SetParent(SongBook.transform);
-            SongBook.GetComponent<SongBook>().AddSong(gameObject.GetComponent<Song>());
-
-            gameObject.SetActive(false);
-            //gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
+        Debug.Log("HERE");
+        Songbook.GetComponent<SongBook>().AddSong(gameObject.GetComponent<Song>());
     }
 }

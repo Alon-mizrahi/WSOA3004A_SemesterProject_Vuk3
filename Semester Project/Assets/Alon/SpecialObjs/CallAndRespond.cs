@@ -86,7 +86,7 @@ public class CallAndRespond : MonoBehaviour
         { 
             StopCoroutine("StartCall");
             completed = true;
-            SongBook.GetComponent<SongBook>().AddSong(gameObject.GetComponent<Song>());
+            //SongBook.GetComponent<SongBook>().AddSong(gameObject.GetComponent<Song>());
         }
         else { StartCoroutine("StartCall"); }
         

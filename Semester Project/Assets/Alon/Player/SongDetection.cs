@@ -20,6 +20,8 @@ public class SongDetection : MonoBehaviour
     public SpriteRenderer RangeUI;
     bool isRangeUIOn = false;
 
+    public GameObject CurrentLerningArea;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,9 +62,6 @@ public class SongDetection : MonoBehaviour
         Debug.Log("song cleared");
 
         StartCoroutine("PauseBeforeClear");
-
-        
-
     }
 
     IEnumerator PauseBeforeClear() 
@@ -138,6 +137,7 @@ public class SongDetection : MonoBehaviour
         if (CurrentSong.Length == 6) 
         {
             CheckSong();
+            CheckForLearning();
             ClearSong();
         }
         
@@ -160,6 +160,32 @@ public class SongDetection : MonoBehaviour
         }
     }
 
+    void CheckForLearning() 
+    {
+        if (CurrentLerningArea != null)
+        {
+            if (CurrentSong == CurrentLerningArea.GetComponent<Song>().Notes)
+            {
+                CurrentLerningArea.GetComponent<Song>().AddtoSongBook(); 
+            }
+        }
+    }
+
+    //private void OnTriggerStay2D(Collider2D other)
+    //{
+     //   if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
+      //  else { CurrentLerningArea = null; }
+//    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "LearningArea") { CurrentLerningArea = null; }
+    }
 
     IEnumerator RangeIndicator() //Called when playing a note
     {

@@ -24,12 +24,23 @@ public class SongBook : MonoBehaviour
     public Song[] Songlist;
 
     public void AddSong(Song song) //get children of gameobject component songs
-    {
-
-        Songlist[index] = song;
-        index++;
-        SetUI();
+     {
+    Songlist[index] = song;
+    index++;
+      SetUI();
     }
+
+    //public void AddSong(string Title, string Notes) //get children of gameobject component songs
+    //{
+     //   Song Temp = new Song();
+      //  Temp.Notes = Notes;
+       // Temp.SongTitle = Title;
+
+
+    //    Songlist[index] = Temp;
+      //  index++;
+  //      SetUI();
+//    }
 
     void SetUI() 
     {
