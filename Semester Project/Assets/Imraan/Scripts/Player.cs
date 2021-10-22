@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     float JumpCheckDist = 0.45f;
     public bool Ground, MusicBlock;
 
-
     private void Update()
     {
         PLYRB.velocity = new Vector2(XInput * MoveSpeed, PLYRB.velocity.y);
@@ -44,10 +43,11 @@ public class Player : MonoBehaviour
             PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
             Debug.Log("Jumped");
         }
-        if (JumpContext.performed && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
+        if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
         {
             gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Tutorial");
             Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
+            gameObject.GetComponent<PlayerTutorial>().ActivateTutorial();
         }
         
     }

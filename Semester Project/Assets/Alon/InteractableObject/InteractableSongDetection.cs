@@ -54,11 +54,14 @@ public class InteractableSongDetection : MonoBehaviour
                 }
                 else if (SongPlayed == "Song of Horizontal") 
                 {
-                    gameObject.GetComponent<MovablePlatform>().MoveHori = true;
+                    if (gameObject.GetComponent<MovablePlatform>().MoveHori == false) { gameObject.GetComponent<MovablePlatform>().MoveHori = true; }
+                    else { gameObject.GetComponent<MovablePlatform>().MoveHori = false; }
                 }
                 else if (SongPlayed == "Song of Vertical")
                 {
-                    gameObject.GetComponent<MovablePlatform>().MoveVert = true;
+                    if(gameObject.GetComponent<MovablePlatform>().MoveVert == false){ gameObject.GetComponent<MovablePlatform>().MoveVert = true; }
+                    else { gameObject.GetComponent<MovablePlatform>().MoveVert = false; }
+                    
                 }
                 else if (SongPlayed == "Song of Large")
                 {

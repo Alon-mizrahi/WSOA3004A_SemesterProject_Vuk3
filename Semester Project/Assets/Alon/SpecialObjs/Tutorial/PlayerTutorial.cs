@@ -19,10 +19,13 @@ public class PlayerTutorial : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Tutorial") 
+        if (other.tag == "Tutorial" && other.GetComponent<TutorialScript>().Collided == false) 
         {
-            CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = false;
-            CurrentTut = null; 
+            if (CurrentTut != null) 
+            {
+                CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = false;
+                CurrentTut = null; 
+            }
         }
     }
 
@@ -32,15 +35,21 @@ public class PlayerTutorial : MonoBehaviour
         if (CurrentTut != null) 
         {
             CurrentTut.GetComponent<TutorialScript>().ShowTutorial();
-            //gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Tutorial");
         }
     }
 
-    private void Update()
+    public void CallNextTut(InputAction.CallbackContext TutContext) 
     {
-        if (CurrentTut != null && CurrentTut.GetComponent<TutorialScript>().TutFinished == true) 
+        if (CurrentTut != null && TutContext.started)
         {
-            gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
+            CurrentTut.GetComponent<TutorialScript>().NextText();
         }
     }
+
+
+    public void EndTut() 
+    {
+        gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
+    }
+
 }
