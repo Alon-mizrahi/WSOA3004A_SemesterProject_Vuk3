@@ -23,7 +23,8 @@ public class SongDetection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SongBook = GameObject.Find("SongBook").GetComponent<SongBook>();
+        SongBook = GameObject.Find("SongBookBackground").GetComponent<SongBook>();
+        SongBook.gameObject.SetActive(false);
         IdleTimer = MaxIdleTime;
         GetInteractablesScript = gameObject.GetComponent<GetInteractables>();
         NotesUI.SetActive(false);
