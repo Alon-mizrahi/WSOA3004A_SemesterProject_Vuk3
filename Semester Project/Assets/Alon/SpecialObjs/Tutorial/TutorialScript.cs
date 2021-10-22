@@ -11,7 +11,7 @@ public class TutorialScript : MonoBehaviour
     GameObject Player;
     //public bool TutFinished = false;
 
-    public const string Defualttxt = "Press 'X' to Interact";
+    public const string Defualttxt = "Press Jump to Interact";
 
     public bool Collided;
 
@@ -52,11 +52,11 @@ public class TutorialScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { Collided = true; }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { Collided = true; other.gameObject.GetComponent<PlayerTutorial>().AtTutorial(gameObject); }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { Collided = false; }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { Collided = false; other.gameObject.GetComponent<PlayerTutorial>().LeftTutorial(); }
     }
 }

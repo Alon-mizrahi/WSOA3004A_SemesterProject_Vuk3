@@ -11,9 +11,23 @@ public class PlayerTutorial : MonoBehaviour
     {
         if (other.tag == "Tutorial" && other.GetComponent<TutorialScript>().Collided == true) 
         {
-            CurrentTut = other.gameObject;
-            CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press A to Interact";
+            
+        }
+    }
+
+    public void AtTutorial(GameObject Tut) 
+    {
+        CurrentTut = Tut;
+            CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press Jump to Interact";
             CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = true;
+    }
+
+    public void LeftTutorial() 
+    {
+        if (CurrentTut != null) 
+        {
+            CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = false;
+            CurrentTut = null; 
         }
     }
 
@@ -21,11 +35,7 @@ public class PlayerTutorial : MonoBehaviour
     {
         if (other.tag == "Tutorial" && other.GetComponent<TutorialScript>().Collided == false) 
         {
-            if (CurrentTut != null) 
-            {
-                CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = false;
-                CurrentTut = null; 
-            }
+            
         }
     }
 
