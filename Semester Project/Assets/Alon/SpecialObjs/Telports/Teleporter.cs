@@ -29,17 +29,17 @@ public class Teleporter : MonoBehaviour
 
             if (inT1)
             {
-                Teleport2.GetComponent<CapsuleCollider2D>().enabled = false;
+                Teleport2.GetComponent<BoxCollider2D>().enabled = false;
                 Object.transform.position = Teleport2.transform.GetChild(0).position;
                 yield return new WaitForSeconds(1f);
-                Teleport2.GetComponent<CapsuleCollider2D>().enabled = true;
+                Teleport2.GetComponent<BoxCollider2D>().enabled = true;
             }
             else if (inT2)
             {
-                Teleport1.GetComponent<CapsuleCollider2D>().enabled = false;
+                Teleport1.GetComponent<BoxCollider2D>().enabled = false;
                 Object.transform.position = Teleport1.transform.GetChild(0).position;
                 yield return new WaitForSeconds(1f);
-                Teleport1.GetComponent<CapsuleCollider2D>().enabled = true;
+                Teleport1.GetComponent<BoxCollider2D>().enabled = true;
             }
         }
     }
