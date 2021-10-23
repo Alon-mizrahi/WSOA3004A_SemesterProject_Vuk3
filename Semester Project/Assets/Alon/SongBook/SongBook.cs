@@ -18,7 +18,7 @@ public class SongBook : MonoBehaviour
     public GameObject Page5;
     public GameObject Page6;
 
-    int ActivePage = 1;
+    public int ActivePage = 1;
 
 
     public Song[] Songlist;
@@ -108,7 +108,7 @@ public class SongBook : MonoBehaviour
         ChangePage();
     }
 
-    void ChangePage() 
+    public void ChangePage() 
     {
         //determine active page
         //if (Page1.activeSelf == true && Page2.activeSelf == true) { ActivePage = 1; }
