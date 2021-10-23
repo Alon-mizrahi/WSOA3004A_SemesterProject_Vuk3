@@ -338,7 +338,7 @@
                     "path": "<HID::ZEROPLUS P4 Wired Gamepad>/hat/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Red(Up)",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -356,11 +356,22 @@
                 },
                 {
                     "name": "",
+                    "id": "94a7c6aa-2d96-42bc-bac2-01ce21b5dee4",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Red(Up)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "53453cc1-e939-4265-8d19-bacb44d2072b",
                     "path": "<HID::ZEROPLUS P4 Wired Gamepad>/hat/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Blue(Right)",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -372,6 +383,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Blue(Right)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5353738c-5377-44f2-b7d2-c554aa07104c",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Blue(Right)",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -400,6 +422,17 @@
                 },
                 {
                     "name": "",
+                    "id": "828e348b-fc77-4b98-b438-2f964cb9c1e0",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Orange(Down)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ee7dd3c3-663d-4064-8fd9-138610fbf247",
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
@@ -416,6 +449,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Green(Left)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc264314-cd23-4b63-b906-c435d096ddbb",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Green(Left)",
                     "isComposite": false,
                     "isPartOfComposite": false

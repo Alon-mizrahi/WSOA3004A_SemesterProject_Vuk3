@@ -971,6 +971,7 @@ GameObject:
   - component: {fileID: 247441143}
   - component: {fileID: 247441145}
   - component: {fileID: 247441144}
+  - component: {fileID: 247441146}
   m_Layer: 0
   m_Name: JumpBlockLayer
   m_TagString: Untagged
@@ -1078,6 +1079,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &247441146
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247441142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!4 &249933625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 772078312219204301, guid: c68fcbc6393bfff488f3d65dad00a76c, type: 3}
@@ -11693,6 +11710,7 @@ GameObject:
   - component: {fileID: 491374993}
   - component: {fileID: 491374995}
   - component: {fileID: 491374994}
+  - component: {fileID: 491374996}
   m_Layer: 6
   m_Name: MusicBlockLayer
   m_TagString: Music Block
@@ -11864,6 +11882,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &491374996
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491374992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!4 &545463574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4550971485237342762, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
