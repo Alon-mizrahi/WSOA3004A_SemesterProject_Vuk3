@@ -19,10 +19,10 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isOpen == true && transform.position.y > StartPos.y-6.5f) 
-        {
-            transform.position += Vector3.down * Time.deltaTime * OpenSpeed;
-        }
+        //if (isOpen == true && transform.position.y > StartPos.y-6.5f) 
+        //{
+         //   transform.position += Vector3.down * Time.deltaTime * OpenSpeed;
+        //}
 
         if (isOpen || isClose) { OpenandClose();  }
 
@@ -41,6 +41,7 @@ public class DoorScript : MonoBehaviour
             {
                 isOpen = false;
                 isClose = false;
+                Opened = true;
             }
         }
         else if (isClose == true) 
@@ -55,6 +56,7 @@ public class DoorScript : MonoBehaviour
                 gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
                 isOpen = false;
                 isClose = false;
+                Opened = false;
             }
         }
         
