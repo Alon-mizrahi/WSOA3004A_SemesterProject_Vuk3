@@ -21,6 +21,8 @@ public class Teleporter : MonoBehaviour
         //Player = GameObject.FindGameObjectWithTag("Player");
     }
     
+
+    /*
     public IEnumerator Teleport(GameObject Object)
     {
         if (IsActive) 
@@ -45,6 +47,6 @@ public class Teleporter : MonoBehaviour
         }
     }
 
-
+    */
 
 }
