@@ -13198,15 +13198,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[1]
-      value: Use the Left analog stick to move around
+      value: Use the Left analog stick to move around. If you are playing on a keyboard,
+        then you can move with the A and D keys
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[2]
-      value: Press A to jump
+      value: Press A to jump. If you are playing on a keyobard, press spacebar
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[3]
-      value: Use the Arrowkeys to play your instrument
+      value: Use the Directional Buttons(D-Pad) to play your instrument. If you are
+        playing on keyboard and mouse, then use the number keys from 1 to 4
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503781, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: m_RootOrder
