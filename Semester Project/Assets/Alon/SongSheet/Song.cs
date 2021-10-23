@@ -25,27 +25,24 @@ public class Song : MonoBehaviour
         Songbook.GetComponent<SongBook>().ToggleBook();
         Player.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
 
-        if (Songbook.GetComponent<SongBook>().Songlist.Length == 1) 
+        int count = 0;
+        for (int i = 0; i < Songbook.GetComponent<SongBook>().Songlist.Length; i++) 
+        {
+            if (Songbook.GetComponent<SongBook>().Songlist[i] != null) 
+            {
+                count++;
+            }
+        }
+
+        if (count ==1 || count == 2) 
         {
             Songbook.GetComponent<SongBook>().ActivePage = 1;
         }
-        else if (Songbook.GetComponent<SongBook>().Songlist.Length == 2)
-        {
-            Songbook.GetComponent<SongBook>().ActivePage = 1;
-        }
-        else if (Songbook.GetComponent<SongBook>().Songlist.Length == 3)
+        else if (count == 3 || count == 4)
         {
             Songbook.GetComponent<SongBook>().ActivePage = 2;
         }
-        else if (Songbook.GetComponent<SongBook>().Songlist.Length == 4)
-        {
-            Songbook.GetComponent<SongBook>().ActivePage = 2;
-        }
-        else if (Songbook.GetComponent<SongBook>().Songlist.Length == 5)
-        {
-            Songbook.GetComponent<SongBook>().ActivePage = 3;
-        }
-        else if (Songbook.GetComponent<SongBook>().Songlist.Length == 6)
+        else if (count == 5 || count == 6)
         {
             Songbook.GetComponent<SongBook>().ActivePage = 3;
         }
