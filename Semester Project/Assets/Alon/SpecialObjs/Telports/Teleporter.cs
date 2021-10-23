@@ -20,6 +20,7 @@ public class Teleporter : MonoBehaviour
         Teleport2 = transform.GetChild(1);
         //Player = GameObject.FindGameObjectWithTag("Player");
     }
+    
     public IEnumerator Teleport(GameObject Object)
     {
         if (IsActive) 

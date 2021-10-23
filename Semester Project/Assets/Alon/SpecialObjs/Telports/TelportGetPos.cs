@@ -15,11 +15,13 @@ public class TelportGetPos : MonoBehaviour
             {
                 inT1 = true;
                 StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject));
+                //transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject);
             }
             else if (gameObject.name == "Teleport2")
             {
                 inT2 = true;
                 StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject));
+                //transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject);
             }
         }
     }
