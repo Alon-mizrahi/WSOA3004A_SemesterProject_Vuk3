@@ -12295,15 +12295,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[0]
-      value: Try out the new song on this door
+      value: Try out the new song on this door!
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[1]
-      value: Remember you have to be in range of the door
+      value: Remember you have to be in range of the door. When you play a note,
+        your range will be displayed!
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[2]
-      value: You can always check your songbook if you forget the sequence
+      value: You can always check your songbook if you forget the sequence and try
+        it again if you mess it up!
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[3]
@@ -13162,7 +13164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[1]
-      value: Use the Left anologue stick to move
+      value: Use the Left analog stick to move around
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[2]
@@ -13439,6 +13441,18 @@ PrefabInstance:
       propertyPath: TutorialUItxt
       value: 
       objectReference: {fileID: 1767792393}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TutorialText.Array.data[0]
+      value: Try your new song on this platform and see what happens!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TutorialText.Array.data[1]
+      value: Who knows maybe somethin cool will happen!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TutorialText.Array.data[2]
+      value: Something you can play around with, maybe?
+      objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503781, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -13817,11 +13831,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[0]
-      value: These blocks will teach you a song
+      value: These blocks will teach you a song you can play
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[1]
-      value: Notice the note arrows in the top left corner
+      value: Notice the note arrows in the top left corner. Those arrows tell you
+        which note the arrow key will play
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[2]
@@ -13830,7 +13845,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[3]
-      value: Press 'Y' to open your song book
+      value: Press 'Y' to open your song book and check it out when you think you
+        got the song order down!
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503781, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: m_RootOrder
