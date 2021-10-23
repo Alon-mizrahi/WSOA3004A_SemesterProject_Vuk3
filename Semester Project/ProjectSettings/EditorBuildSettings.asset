@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Alon/Alon_Scene.unity
     guid: d70db4a350a51ff4797ee842906c5d20
-  - enabled: 1
+  - enabled: 0
     path: Assets/Imraan/Imraan_Scene.unity
     guid: dae68ca434ee7cd4eb765a5aac55256c
+  - enabled: 1
+    path: Assets/Scenes/Playtest Scene.unity
+    guid: 2141ed3cd185ee34db8650bf58f66da7
   m_configObjects: {}
