@@ -73,8 +73,11 @@ public class InteractableSongDetection : MonoBehaviour
                 }
                 else if (SongPlayed == "Song of Teleportation")
                 {
-                    if (gameObject.transform.GetComponentInParent<Teleporter>().IsActive == false) { gameObject.transform.GetComponentInParent<Teleporter>().IsActive = true; }
+                    if (gameObject.transform.GetComponentInParent<Teleporter>().IsActive == false) { gameObject.transform.GetComponentInParent<Teleporter>().IsActive = true; gameObject.GetComponentInParent<Teleporter>().VisFeedback1.SetActive(true);
+                        gameObject.GetComponentInParent<Teleporter>().VisFeedback2.SetActive(true);
+                    }
                     else{ gameObject.transform.GetComponentInParent<Teleporter>().IsActive = false; }
+
                 }
 
             }

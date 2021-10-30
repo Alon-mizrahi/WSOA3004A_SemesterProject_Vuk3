@@ -181,6 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inT1: 0
   inT2: 0
+  Target1: {fileID: 0}
+  Target2: {fileID: 0}
 --- !u!114 &2122822638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +333,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inT1: 0
   inT2: 0
+  Target1: {fileID: 0}
+  Target2: {fileID: 0}
 --- !u!114 &2088931054
 MonoBehaviour:
   m_ObjectHideFlags: 0

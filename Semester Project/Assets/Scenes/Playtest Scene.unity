@@ -211,11 +211,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25627192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.3099995, z: 0}
-  m_LocalScale: {x: 0.24999996, y: 0.25, z: 1}
+  m_LocalPosition: {x: -0, y: -2.3099995, z: 0}
+  m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698483}
-  m_RootOrder: 2
+  m_Father: {fileID: 1311042685}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &25627194
 ParticleSystemRenderer:
@@ -257,7 +257,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -472,8 +472,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.03769602, g: 0.3773585, b: 0.012103926, a: 1}
+      maxColor: {r: 0.68452114, g: 0.9433962, b: 0.21715912, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -535,8 +535,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 0.8
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -918,7 +918,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 9, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -5075,6 +5075,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dccecb3d9a2a2b4ab618e264ad9eee3, type: 3}
+--- !u!1 &41193061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41193062}
+  m_Layer: 0
+  m_Name: Visual Feedback 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &41193062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41193061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1689981293}
+  - {fileID: 1913528440}
+  - {fileID: 1279541512}
+  - {fileID: 1373308215}
+  m_Father: {fileID: 1591258430}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &53087077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5513,11 +5547,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159505232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.099983215, y: -2.1, z: 0}
+  m_LocalPosition: {x: -0.09998917, y: -2.1000001, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342260}
-  m_RootOrder: 2
+  m_Father: {fileID: 185492232}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &159505234
 ParticleSystemRenderer:
@@ -5559,7 +5593,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -5774,8 +5808,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.9150943, g: 0.56366616, b: 0.02071909, a: 1}
+      maxColor: {r: 0.6698113, g: 0.4851273, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5837,8 +5871,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 0.8
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6220,7 +6254,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 9, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -10372,6 +10406,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09bb6a439898de3488f8b20cb7aff69f, type: 3}
+--- !u!1 &185492231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185492232}
+  m_Layer: 0
+  m_Name: Visual Feedback 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185492232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185492231}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 159505233}
+  - {fileID: 1763983393}
+  - {fileID: 967574780}
+  - {fileID: 2023814357}
+  m_Father: {fileID: 273342260}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &189431410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10868,6 +10936,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4550971485237342763, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback1
+      value: 
+      objectReference: {fileID: 185492231}
+    - target: {fileID: 4550971485237342763, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback2
+      value: 
+      objectReference: {fileID: 1930405170}
     - target: {fileID: 4550971485237342765, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
       propertyPath: m_Name
       value: Teleporters (1)
@@ -11051,11 +11127,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296659034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.3099995, z: 0}
-  m_LocalScale: {x: 0.24999996, y: 0.25, z: 1}
+  m_LocalPosition: {x: -0, y: -2.3099995, z: 0}
+  m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698483}
-  m_RootOrder: 3
+  m_Father: {fileID: 1311042685}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &296659036
 ParticleSystemRenderer:
@@ -11097,7 +11173,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -11312,8 +11388,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.03769602, g: 0.3773585, b: 0.012103926, a: 1}
+      maxColor: {r: 0.68452114, g: 0.9433962, b: 0.21715912, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -11758,7 +11834,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 6, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -25497,6 +25573,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09bb6a439898de3488f8b20cb7aff69f, type: 3}
+--- !u!1 &361656030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 361656031}
+  m_Layer: 0
+  m_Name: Visual Feedback 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &361656031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361656030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1642338282}
+  - {fileID: 1070262887}
+  - {fileID: 1210634275}
+  - {fileID: 928290734}
+  m_Father: {fileID: 1591258431}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &387268535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25604,11 +25714,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393341023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19997656, y: -2.500001, z: 0}
+  m_LocalPosition: {x: -0.19996642, y: -2.5000012, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342259}
-  m_RootOrder: 4
+  m_Father: {fileID: 1930405171}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &393341025
 ParticleSystemRenderer:
@@ -25650,7 +25760,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -25865,8 +25975,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 1, g: 0.66474617, b: 0.0039215684, a: 1}
+      maxColor: {r: 0.5754717, g: 0.37849155, b: 0.00760054, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -25928,7 +26038,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
+      scalar: 1
       minScalar: 0.5
       maxCurve:
         serializedVersion: 2
@@ -26311,7 +26421,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 3, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -31254,12 +31364,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574870884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: -2.53, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.22000629, y: -2.5300002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342259}
-  m_RootOrder: 5
+  m_Father: {fileID: 1930405171}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &574870886
 MonoBehaviour:
@@ -31585,11 +31695,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687751612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -2.4, z: 0}
+  m_LocalPosition: {x: 0, y: -2.4, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698482}
-  m_RootOrder: 2
+  m_Father: {fileID: 969567403}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &687751614
 ParticleSystemRenderer:
@@ -31631,7 +31741,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -31846,8 +31956,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.10635272, g: 0.6415094, b: 0.026628664, a: 1}
+      maxColor: {r: 0.7278772, g: 1, b: 0.12641507, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -31909,8 +32019,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 0.8
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -32292,7 +32402,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 9, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -36933,6 +37043,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4550971485237342763, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback1
+      value: 
+      objectReference: {fileID: 1311042684}
+    - target: {fileID: 4550971485237342763, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback2
+      value: 
+      objectReference: {fileID: 969567402}
     - target: {fileID: 4550971485237342765, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
       propertyPath: m_Name
       value: Teleporters
@@ -36945,6 +37063,14 @@ PrefabInstance:
       propertyPath: Target2
       value: 
       objectReference: {fileID: 266002952}
+    - target: {fileID: 4550971485298459795, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback1
+      value: 
+      objectReference: {fileID: 1311042684}
+    - target: {fileID: 4550971485298459795, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback2
+      value: 
+      objectReference: {fileID: 969567402}
     - target: {fileID: 4550971485298459796, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.42
@@ -36961,6 +37087,14 @@ PrefabInstance:
       propertyPath: Target2
       value: 
       objectReference: {fileID: 266002952}
+    - target: {fileID: 4550971485331700117, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback1
+      value: 
+      objectReference: {fileID: 1311042684}
+    - target: {fileID: 4550971485331700117, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback2
+      value: 
+      objectReference: {fileID: 969567402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
 --- !u!4 &869698482 stripped
@@ -37474,11 +37608,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928290733}
   m_LocalRotation: {x: -0, y: -0, z: -0.0032186203, w: 0.9999948}
-  m_LocalPosition: {x: 0, y: -2.25, z: 0}
+  m_LocalPosition: {x: -0, y: -2.2500002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258431}
-  m_RootOrder: 5
+  m_Father: {fileID: 361656031}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &928290735
 MonoBehaviour:
@@ -37743,11 +37877,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967574779}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -2.1, z: 0}
+  m_LocalPosition: {x: -0.09998917, y: -2.1000001, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342260}
-  m_RootOrder: 4
+  m_Father: {fileID: 185492232}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &967574781
 ParticleSystemRenderer:
@@ -37789,7 +37923,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -38004,8 +38138,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.9150943, g: 0.56366616, b: 0.02071909, a: 1}
+      maxColor: {r: 0.6698113, g: 0.4851273, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -38067,8 +38201,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 1
+      minScalar: 0.8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -38450,7 +38584,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 3, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -42521,6 +42655,40 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &969567402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969567403}
+  m_Layer: 0
+  m_Name: Visual Feedback 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969567403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969567402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 687751613}
+  - {fileID: 1328895651}
+  - {fileID: 2000625755}
+  - {fileID: 1011857224}
+  m_Father: {fileID: 869698482}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1003129497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2407255353518261996, guid: 05740fe3e3249fb43b93692a0076b607, type: 3}
@@ -42624,11 +42792,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011857223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -2.27, z: 0}
+  m_LocalPosition: {x: -0.060014717, y: -2.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698482}
-  m_RootOrder: 5
+  m_Father: {fileID: 969567403}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1011857225
 MonoBehaviour:
@@ -43097,11 +43265,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070262886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19992042, y: -2.5999985, z: 0}
+  m_LocalPosition: {x: -0.19989608, y: -2.5999987, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258431}
-  m_RootOrder: 3
+  m_Father: {fileID: 361656031}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1070262888
 ParticleSystemRenderer:
@@ -43143,7 +43311,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -43358,8 +43526,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.6792453, g: 0.034603007, b: 0.4014993, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.7741165, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -43804,7 +43972,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 6, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -48100,11 +48268,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210634274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -2.6, z: 0}
+  m_LocalPosition: {x: -0.1999978, y: -2.5999987, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258431}
-  m_RootOrder: 4
+  m_Father: {fileID: 361656031}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1210634276
 ParticleSystemRenderer:
@@ -48146,7 +48314,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -48361,8 +48529,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.6792453, g: 0.034603007, b: 0.4014993, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.7741165, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -48424,8 +48592,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 1.8
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -48807,7 +48975,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 3, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -53049,12 +53217,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248892642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.27, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -2.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698483}
-  m_RootOrder: 5
+  m_Father: {fileID: 1311042685}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1248892644
 MonoBehaviour:
@@ -53405,11 +53573,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279541511}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: -2.4, z: 0}
+  m_LocalPosition: {x: -0.600001, y: -2.3999977, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258430}
-  m_RootOrder: 4
+  m_Father: {fileID: 41193062}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1279541513
 ParticleSystemRenderer:
@@ -53451,7 +53619,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -53666,8 +53834,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.6698113, g: 0.06571732, b: 0.4029545, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.73283195, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -53729,8 +53897,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 1.8
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -54112,7 +54280,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 3, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -58274,6 +58442,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4995188457728503781, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
   m_PrefabInstance: {fileID: 758764955}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1311042684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311042685}
+  m_Layer: 0
+  m_Name: Visual Feedback 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311042685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311042684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 25627193}
+  - {fileID: 296659035}
+  - {fileID: 1519957529}
+  - {fileID: 1248892643}
+  m_Father: {fileID: 869698483}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1328895650
 GameObject:
   m_ObjectHideFlags: 0
@@ -58300,11 +58502,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328895650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000038146973, y: -2.3099995, z: 0}
+  m_LocalPosition: {x: 0, y: -2.3099995, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698482}
-  m_RootOrder: 3
+  m_Father: {fileID: 969567403}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1328895652
 ParticleSystemRenderer:
@@ -58346,7 +58548,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -58561,8 +58763,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.10635272, g: 0.6415094, b: 0.026628664, a: 1}
+      maxColor: {r: 0.7278772, g: 1, b: 0.12641507, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -59007,7 +59209,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 6, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -63174,11 +63376,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373308214}
   m_LocalRotation: {x: -0, y: -0, z: -0.0032186203, w: 0.9999948}
-  m_LocalPosition: {x: 0.1, y: -1.7, z: 0}
+  m_LocalPosition: {x: 0.09999592, y: -1.7000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258430}
-  m_RootOrder: 5
+  m_Father: {fileID: 41193062}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1373308216
 MonoBehaviour:
@@ -64633,11 +64835,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519957528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.3099995, z: 0}
-  m_LocalScale: {x: 0.24999996, y: 0.25, z: 1}
+  m_LocalPosition: {x: -0, y: -2.3099995, z: 0}
+  m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698483}
-  m_RootOrder: 4
+  m_Father: {fileID: 1311042685}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1519957530
 ParticleSystemRenderer:
@@ -64679,7 +64881,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -64894,8 +65096,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.03769602, g: 0.3773585, b: 0.012103926, a: 1}
+      maxColor: {r: 0.68452114, g: 0.9433962, b: 0.21715912, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -64957,8 +65159,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 1
+      minScalar: 0.6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -65340,7 +65542,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 3, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -69467,6 +69669,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4550971485237342763, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback1
+      value: 
+      objectReference: {fileID: 361656030}
+    - target: {fileID: 4550971485237342763, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
+      propertyPath: VisFeedback2
+      value: 
+      objectReference: {fileID: 41193061}
     - target: {fileID: 4550971485237342765, guid: c5d3d257142866d4e93720b6002ba76e, type: 3}
       propertyPath: m_Name
       value: Teleporters (2)
@@ -70080,11 +70290,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642338281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19992042, y: -2.5999985, z: 0}
+  m_LocalPosition: {x: -0.19989608, y: -2.5999987, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258431}
-  m_RootOrder: 2
+  m_Father: {fileID: 361656031}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1642338283
 ParticleSystemRenderer:
@@ -70126,7 +70336,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -70341,8 +70551,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.6792453, g: 0.034603007, b: 0.4014993, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.7741165, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -70404,8 +70614,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 0.2
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -70787,7 +70997,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 9, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -74957,11 +75167,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689981292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6000061, y: -2.3999977, z: 0}
+  m_LocalPosition: {x: -0.600001, y: -2.3999977, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258430}
-  m_RootOrder: 2
+  m_Father: {fileID: 41193062}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1689981294
 ParticleSystemRenderer:
@@ -75013,7 +75223,7 @@ ParticleSystemRenderer:
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
-  m_ShadowBias: 0
+  m_ShadowBias: 3
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
@@ -75218,8 +75428,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.6698113, g: 0.06571732, b: 0.4029545, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.73283195, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -75281,8 +75491,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 0.8
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -75664,7 +75874,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 9, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -79761,11 +79971,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691218298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19997656, y: -2.500001, z: 0}
+  m_LocalPosition: {x: -0.19996642, y: -2.5000012, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342259}
-  m_RootOrder: 2
+  m_Father: {fileID: 1930405171}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1691218300
 ParticleSystemRenderer:
@@ -79807,7 +80017,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -80022,8 +80232,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 1, g: 0.66474617, b: 0.0039215684, a: 1}
+      maxColor: {r: 0.5754717, g: 0.37849155, b: 0.00760054, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -80085,8 +80295,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 0.8
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -80468,7 +80678,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 9, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -84659,11 +84869,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763983392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.099983215, y: -2.1, z: 0}
+  m_LocalPosition: {x: -0.09998917, y: -2.1000001, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342260}
-  m_RootOrder: 3
+  m_Father: {fileID: 185492232}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1763983394
 ParticleSystemRenderer:
@@ -84705,7 +84915,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -84920,8 +85130,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.9150943, g: 0.56366616, b: 0.02071909, a: 1}
+      maxColor: {r: 0.6698113, g: 0.4851273, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -85366,7 +85576,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 6, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -89966,11 +90176,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913528439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6000061, y: -2.3999977, z: 0}
+  m_LocalPosition: {x: -0.600001, y: -2.3999977, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 1591258430}
-  m_RootOrder: 3
+  m_Father: {fileID: 41193062}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1913528441
 ParticleSystemRenderer:
@@ -90012,7 +90222,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -90227,8 +90437,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.6698113, g: 0.06571732, b: 0.4029545, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.73283195, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -90673,7 +90883,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 6, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -94786,6 +94996,40 @@ MonoBehaviour:
   - 
   - 
   - 
+--- !u!1 &1930405170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930405171}
+  m_Layer: 0
+  m_Name: Visual Feedback 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1930405171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930405170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1691218299}
+  - {fileID: 1974849518}
+  - {fileID: 393341024}
+  - {fileID: 574870885}
+  m_Father: {fileID: 273342259}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1933198698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7826467176788236573, guid: b61b6d83519fa314dad7f50a31fb1cda, type: 3}
@@ -95142,15 +95386,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 878465792, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.7075472
+      value: 0.5566038
       objectReference: {fileID: 0}
     - target: {fileID: 878465792, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.4909513
+      value: 0.3738763
       objectReference: {fileID: 0}
     - target: {fileID: 878465792, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.08276964
+      value: 0.028355243
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475461, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_Name
@@ -95277,11 +95521,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974849517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -2.5, z: 0}
+  m_LocalPosition: {x: -0.19999184, y: -2.4999998, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342259}
-  m_RootOrder: 3
+  m_Father: {fileID: 1930405171}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1974849519
 ParticleSystemRenderer:
@@ -95323,7 +95567,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -95538,8 +95782,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 1, g: 0.66474617, b: 0.0039215684, a: 1}
+      maxColor: {r: 0.5754717, g: 0.37849155, b: 0.00760054, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -95984,7 +96228,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 6, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -100154,11 +100398,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000625754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000038146973, y: -2.3099995, z: 0}
+  m_LocalPosition: {x: 0, y: -2.3099995, z: 0}
   m_LocalScale: {x: 0.24999994, y: 0.25, z: 1}
   m_Children: []
-  m_Father: {fileID: 869698482}
-  m_RootOrder: 4
+  m_Father: {fileID: 969567403}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &2000625756
 ParticleSystemRenderer:
@@ -100200,7 +100444,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -100415,8 +100659,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8679245, g: 0.15065858, b: 0.15065858, a: 1}
-      maxColor: {r: 0.107333556, g: 0.8490566, b: 0.14742666, a: 1}
+      minColor: {r: 0.10635272, g: 0.6415094, b: 0.026628664, a: 1}
+      maxColor: {r: 0.7278772, g: 1, b: 0.12641507, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -100478,7 +100722,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
+      scalar: 1
       minScalar: 0.5
       maxCurve:
         serializedVersion: 2
@@ -100861,7 +101105,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 1, z: 1}
+    m_Scale: {x: 3, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -105181,11 +105425,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023814356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -2.48, z: 0}
+  m_LocalPosition: {x: 0.1999986, y: -2.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 273342260}
-  m_RootOrder: 5
+  m_Father: {fileID: 185492232}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2023814358
 MonoBehaviour:

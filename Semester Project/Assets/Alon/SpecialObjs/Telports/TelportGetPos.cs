@@ -9,6 +9,7 @@ public class TelportGetPos : MonoBehaviour
 
     public Transform Target1, Target2;
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player" && other.GetType() == typeof(BoxCollider2D) || other.tag !="Player") 

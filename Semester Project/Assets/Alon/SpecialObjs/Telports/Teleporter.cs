@@ -6,6 +6,8 @@ public class Teleporter : MonoBehaviour
 {
     public Transform Teleport1;
     public Transform Teleport2;
+    public GameObject VisFeedback1;
+    public GameObject VisFeedback2;
 
     public bool inT1 = false;
     public bool inT2 = false;
@@ -19,6 +21,9 @@ public class Teleporter : MonoBehaviour
         Teleport1 = transform.GetChild(0);
         Teleport2 = transform.GetChild(1);
         //Player = GameObject.FindGameObjectWithTag("Player");
+        VisFeedback1.SetActive(false);
+        VisFeedback2.SetActive(false);
+
     }
     
 
@@ -29,6 +34,8 @@ public class Teleporter : MonoBehaviour
         {
             inT1 = Teleport1.GetComponent<TelportGetPos>().inT1;
             inT2 = Teleport2.GetComponent<TelportGetPos>().inT2;
+            VisFeedback1.SetActive(true);
+            VisFeedback2.SetActive(true);
 
             if (inT1)
             {
