@@ -31291,11 +31291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3504587017024823560, guid: 85bd3d0c2a43e884dbc7460f4bcb4322, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.984863
+      value: 51.17
       objectReference: {fileID: 0}
     - target: {fileID: 3504587017024823560, guid: 85bd3d0c2a43e884dbc7460f4bcb4322, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.84
+      value: 3.82
       objectReference: {fileID: 0}
     - target: {fileID: 3504587017024823560, guid: 85bd3d0c2a43e884dbc7460f4bcb4322, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53473,6 +53473,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5134173789586326396, guid: 09bb6a439898de3488f8b20cb7aff69f, type: 3}
   m_PrefabInstance: {fileID: 1260499500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1263651658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3504587017024823574, guid: 85bd3d0c2a43e884dbc7460f4bcb4322, type: 3}
+  m_PrefabInstance: {fileID: 567071220}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1273939300
 PrefabInstance:
@@ -106198,6 +106203,10 @@ PrefabInstance:
       propertyPath: SongTitle
       value: Song of Opening
       objectReference: {fileID: 0}
+    - target: {fileID: 772078312219204303, guid: c68fcbc6393bfff488f3d65dad00a76c, type: 3}
+      propertyPath: TargetObjs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1263651658}
     - target: {fileID: 772078312219204306, guid: c68fcbc6393bfff488f3d65dad00a76c, type: 3}
       propertyPath: m_Size.x
       value: 30

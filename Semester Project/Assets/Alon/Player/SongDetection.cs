@@ -22,6 +22,8 @@ public class SongDetection : MonoBehaviour
 
     public GameObject CurrentLerningArea;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -169,12 +171,6 @@ public class SongDetection : MonoBehaviour
             }
         }
     }
-
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-     //   if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
-      //  else { CurrentLerningArea = null; }
-//    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
