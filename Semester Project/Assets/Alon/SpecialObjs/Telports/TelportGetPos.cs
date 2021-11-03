@@ -18,7 +18,7 @@ public class TelportGetPos : MonoBehaviour
             {
                 if (transform.parent.GetComponent<Teleporter>().IsActive == true) 
                 {
-                    inT1 = true;
+                    //inT1 = true;
                     //StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject));
                     //transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject);
                     //other.gameObject.transform.position = Target2.position;
@@ -29,7 +29,7 @@ public class TelportGetPos : MonoBehaviour
             {
                 if (transform.parent.GetComponent<Teleporter>().IsActive == true)
                 {
-                    inT2 = true;
+                    //inT2 = true;
                     //StartCoroutine(transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject));
                     //transform.parent.GetComponent<Teleporter>().Teleport(other.gameObject);
                     //other.gameObject.transform.position = Target1.position;
@@ -60,6 +60,7 @@ public class TelportGetPos : MonoBehaviour
 
     }
 
+    /*
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player" && other.GetType() == typeof(BoxCollider2D))
@@ -75,5 +76,5 @@ public class TelportGetPos : MonoBehaviour
         }
     }
 
-
+    */
 }
