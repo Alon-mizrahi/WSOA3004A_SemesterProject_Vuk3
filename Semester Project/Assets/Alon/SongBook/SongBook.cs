@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class SongBook : MonoBehaviour
 {
+    bool firstOpen = false;
+    public GameObject NewSongNotif;
+    public bool NewSong = false;
 
     int index = 0;
     //public GameObject PageUI;
@@ -89,10 +92,6 @@ public class SongBook : MonoBehaviour
     }
 
 
-
-
-
-
     public void NextPage() 
     {
         Debug.Log("SongBook Next Page");
@@ -153,16 +152,49 @@ public class SongBook : MonoBehaviour
         if (SongbookUI.activeSelf == false) //book is closed
         {
             SongbookUI.SetActive(true);
-            Page1.SetActive(true);
-            Page2.SetActive(true);
-            Page3.SetActive(false);
-            Page4.SetActive(false);
-            Page5.SetActive(false);
-            Page6.SetActive(false);
+            if (firstOpen == false) 
+            {
+                firstOpen = true;
+                Page1.SetActive(true);
+                Page2.SetActive(true);
+                Page3.SetActive(false);
+                Page4.SetActive(false);
+                Page5.SetActive(false);
+                Page6.SetActive(false);
+            }
+            if (NewSong == true) { GoToLastPage(); }
+
         }else{//book is open
             SongbookUI.SetActive(false);
         }
         
+    }
+
+
+    void GoToLastPage() 
+    {
+        NewSongNotif.SetActive(false);
+        NewSong = false;
+
+        int temp=0;
+        for (int i = 0; i < Songlist.Length; i++) 
+        {
+            if (Songlist[i] != null) { temp++; }
+        }
+
+        if (temp == 0 || temp == 1) 
+        {
+            ActivePage = 1;
+        }
+        else if (temp == 3 || temp == 4)
+        {
+            ActivePage = 2;
+        }
+        if (temp == 5 || temp == 6)
+        {
+            ActivePage = 3;
+        }
+        ChangePage();
     }
 
 

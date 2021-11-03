@@ -12,6 +12,10 @@ public class UIInputManager : MonoBehaviour
     public GameObject ArrowUI;
     public GameObject NumUI;
 
+    //SongBook Notification control
+    public GameObject SBnotifGpad;
+    public GameObject SBnotifMK;
+
     //other ui changes
 
 
@@ -20,7 +24,7 @@ public class UIInputManager : MonoBehaviour
     void Update()
     {
         ChangeCanvaseArrows(); //Top right corner arrows
-        Debug.Log("Current Input: " + InputMap.currentControlScheme);
+        ChangeSongBookNotif();
     }
 
     void ChangeCanvaseArrows() 
@@ -30,7 +34,7 @@ public class UIInputManager : MonoBehaviour
             if (ArrowUI.activeSelf == false) { ArrowUI.SetActive(true); }
             if (NumUI.activeSelf == true) { NumUI.SetActive(false); }
         }
-        else if (InputMap.currentControlScheme == "dog") //player using PS
+        else if (InputMap.currentControlScheme == "") //player using PS
         {
             if (ArrowUI.activeSelf == false) { ArrowUI.SetActive(true); }
             if (NumUI.activeSelf == true) { NumUI.SetActive(false); }
@@ -39,6 +43,26 @@ public class UIInputManager : MonoBehaviour
         {
             if (ArrowUI.activeSelf == true) { ArrowUI.SetActive(false); }
             if (NumUI.activeSelf == false) { NumUI.SetActive(true); }
+        }
+    }
+
+
+    void ChangeSongBookNotif() 
+    {
+        if (InputMap.currentControlScheme == "Gamepad") //player using xbox
+        {
+            if (SBnotifGpad.activeSelf == false) { SBnotifGpad.SetActive(true); }
+            if (SBnotifMK.activeSelf == true) { SBnotifMK.SetActive(false); }
+        }
+        else if (InputMap.currentControlScheme == "") //player using PS
+        {
+            if (SBnotifGpad.activeSelf == false) { SBnotifGpad.SetActive(true); }
+            if (SBnotifMK.activeSelf == true) { SBnotifMK.SetActive(false); }
+        }
+        else if (InputMap.currentControlScheme == "Keyboard&Mouse") //player using M and K
+        {
+            if (SBnotifGpad.activeSelf == true) { SBnotifGpad.SetActive(false); }
+            if (SBnotifMK.activeSelf == false) { SBnotifMK.SetActive(true); }
         }
     }
 }
