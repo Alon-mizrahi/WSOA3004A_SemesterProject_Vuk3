@@ -8,6 +8,10 @@ public class UIInputManager : MonoBehaviour
 {
     public PlayerInput InputMap;
 
+    public string PrevScheme;
+
+    public GameObject SongBook;
+
     //Top right corner UI arrows
     public GameObject ArrowUI;
     public GameObject NumUI;
@@ -16,15 +20,40 @@ public class UIInputManager : MonoBehaviour
     public GameObject SBnotifGpad;
     public GameObject SBnotifMK;
 
+    //Tutorial objects
+    public GameObject TutorialHolder;
+
     //other ui changes
+
+    private void Start()
+    {
+        PrevScheme = InputMap.currentControlScheme;
+
+        ChangeCanvaseArrows();
+        ChangeSongBookNotif();
+        ChangeTutorialTxt();
+        UpdateSongBookNotes();
+    }
 
 
 
     // Update is called once per frame
     void Update()
     {
-        ChangeCanvaseArrows(); //Top right corner arrows
-        ChangeSongBookNotif();
+        if (PrevScheme != InputMap.currentControlScheme) 
+        {
+            ChangeCanvaseArrows(); //Top right corner arrows
+            ChangeSongBookNotif(); //song book notif
+            ChangeTutorialTxt(); // tutorial messages
+            UpdateSongBookNotes(); // change song book notes
+
+            PrevScheme = InputMap.currentControlScheme;
+        }
+    }
+
+    void UpdateSongBookNotes() 
+    {
+        SongBook.GetComponent<SongBook>().ChangeUIScheme();
     }
 
     void ChangeCanvaseArrows() 
@@ -63,6 +92,21 @@ public class UIInputManager : MonoBehaviour
         {
             if (SBnotifGpad.activeSelf == true) { SBnotifGpad.SetActive(false); }
             if (SBnotifMK.activeSelf == false) { SBnotifMK.SetActive(true); }
+        }
+    }
+
+    void ChangeTutorialTxt() 
+    {
+        for (int i = 0; i < TutorialHolder.transform.childCount; i++) 
+        {
+            if (InputMap.currentControlScheme == "Gamepad") //player using xbox
+            {
+                TutorialHolder.transform.GetChild(i).GetComponent<TutorialScript>().ChangeSchemeGpad();
+            }
+            else if (InputMap.currentControlScheme == "Keyboard&Mouse") //player using M&K
+            {
+                TutorialHolder.transform.GetChild(i).GetComponent<TutorialScript>().ChangeSchemeMandK();
+            }      
         }
     }
 }

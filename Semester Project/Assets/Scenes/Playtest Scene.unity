@@ -31886,10 +31886,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputMap: {fileID: 1557847583}
+  PrevScheme: 
+  SongBook: {fileID: 831246077}
   ArrowUI: {fileID: 1411046773}
   NumUI: {fileID: 270165899}
   SBnotifGpad: {fileID: 1599549386}
   SBnotifMK: {fileID: 507147568}
+  TutorialHolder: {fileID: 2005236515}
 --- !u!4 &662044389
 Transform:
   m_ObjectHideFlags: 0
@@ -37949,6 +37952,38 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1767792393}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[0]
+      value: k1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[1]
+      value: k2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[2]
+      value: k3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[0]
+      value: g1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[1]
+      value: g2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[2]
+      value: g3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -38187,12 +38222,52 @@ PrefabInstance:
     m_TransformParent: {fileID: 1850717123}
     m_Modifications:
     - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num1
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cbb9af5990750e4696a7734ccf301e2, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num2
+      value: 
+      objectReference: {fileID: 21300000, guid: 8227d9f79b51d284b82c50a1f97af42e, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num3
+      value: 
+      objectReference: {fileID: 21300000, guid: ba1f5309bff906e44a2ada3ba987d0c4, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num4
+      value: 
+      objectReference: {fileID: 21300000, guid: 2028294a9378fac40abad2ecbd10b522, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Scheme
+      value: 
+      objectReference: {fileID: 1557847583}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: NewSongNotif
       value: 
       objectReference: {fileID: 1055327709}
     - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: Songlist.Array.size
-      value: 10
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 267098373175364672, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404699992035939138, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514234279103460360, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965955033970571684, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421737935009540559, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8276979028633385889, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: m_Name
@@ -38200,7 +38275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8276979028633385889, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8276979028633385890, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: m_Pivot.x
@@ -43151,6 +43226,30 @@ PrefabInstance:
       propertyPath: TutorialUItxt
       value: 
       objectReference: {fileID: 1767792393}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[0]
+      value: MandK 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[1]
+      value: MandK 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[0]
+      value: Gamepad 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[1]
+      value: Gamepad 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.data[0]
       value: Try your new song on this platform and see what happens!

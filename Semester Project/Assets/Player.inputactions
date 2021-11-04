@@ -1084,6 +1084,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0c9e81a3-ef0f-4dc7-b024-8dab28922bb7",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "NextPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9d5de9b6-7620-442d-9849-8404f15ef38c",
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
@@ -1108,6 +1119,17 @@
                     "name": "",
                     "id": "13b640fc-7a29-4d07-8366-c43607b3cb14",
                     "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "PreviousPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "65aae203-346b-4611-9a0b-a635e030d5e6",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
