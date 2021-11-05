@@ -23,6 +23,7 @@ public class SongDetection : MonoBehaviour
 
     public GameObject CurrentLerningArea;
 
+
     PlayerInput PI;
     public Sprite Num1, Num2, Num3, Num4;
 
@@ -238,6 +239,11 @@ public class SongDetection : MonoBehaviour
     {
         if (CurrentLerningArea != null)
         {
+            if (CurrentLerningArea.GetComponent<CallAndRespond>() != null) 
+            {
+                CurrentLerningArea.GetComponent<CallAndRespond>().PlayerResponse();
+            }
+
             if (CurrentSong == CurrentLerningArea.GetComponent<Song>().Notes)
             {
                 CurrentLerningArea.GetComponent<Song>().AddtoSongBook(); 
