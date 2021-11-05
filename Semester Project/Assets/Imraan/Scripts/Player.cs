@@ -33,7 +33,16 @@ public class Player : MonoBehaviour
     public void Move(InputAction.CallbackContext XContext)
     {
         XInput = XContext.ReadValue<Vector2>().x;
-        
+
+        if (XInput < 0) 
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(XInput > 0)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+
     }
 
     public void Jump(InputAction.CallbackContext JumpContext)

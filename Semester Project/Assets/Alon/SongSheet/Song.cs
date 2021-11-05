@@ -34,6 +34,13 @@ public class Song : MonoBehaviour
         //Player.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
 
         NewSongNotif.SetActive(true);
+        //StartCoroutine(NewSongNotif.GetComponent<NotifFlash>().Flash());
+        //foreach (Transform Child in NewSongNotif.transform) 
+        //{
+        //    StartCoroutine(Child.gameObject.GetComponent<NotifFlash>().Flash());
+        //}
+
+
         Songbook.GetComponent<SongBook>().NewSong = true;
 
         //open songbook
