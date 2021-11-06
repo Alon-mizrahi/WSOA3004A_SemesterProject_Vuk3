@@ -19,6 +19,7 @@ public class CallAndRespond : MonoBehaviour
     public GameObject Player;
 
     //public bool PlayerResponse = false;
+    //bool isTiming = false;
 
     public int LayerNumber=1;
     // Start is called before the first frame update
@@ -44,7 +45,6 @@ public class CallAndRespond : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { StopCoroutine("StartCall"); }
     }
 
-
     IEnumerator StartCall()
     {
         Debug.Log("Started Call");
@@ -59,10 +59,12 @@ public class CallAndRespond : MonoBehaviour
 
         //call another func to time, if time exceded restart coroutine
 
+        StartCoroutine("Timer");
         yield return new WaitUntil(PlayerResponse); //calls function every frame and waits until it returns true
         //PlayerResponse = false;
-        Debug.Log("RESPONDED");
+        StopCoroutine("Timer");
 
+        Debug.Log("RESPONDED");
 
         LayerNumber++;
 
@@ -79,6 +81,7 @@ public class CallAndRespond : MonoBehaviour
         else { StartCoroutine("StartCall"); }
         
     }
+    
     public bool PlayerResponse() 
     {
             int count = 0;
@@ -95,6 +98,13 @@ public class CallAndRespond : MonoBehaviour
                 else if (LayerNumber == 3 && count == 6) { return true; }
             }
             return false;
+    }
+
+    IEnumerator Timer() 
+    {
+        yield return new WaitForSeconds(6f);
+        StopCoroutine("StartCall");
+        StartCoroutine("FailedSong");
     }
 
     IEnumerator FailedSong() 

@@ -22,10 +22,10 @@ public class SongDetection : MonoBehaviour
     bool isRangeUIOn = false;
 
     public GameObject CurrentLerningArea;
-
+    public GameObject CurrentCrystal;
 
     PlayerInput PI;
-    public Sprite Num1, Num2, Num3, Num4;
+    public Sprite Num1, Num2, Num3, Num4, NumAsterix;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +89,7 @@ public class SongDetection : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.3f);
                 NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
-                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = Num1;
+                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = NumAsterix;
             }
         }
 
@@ -117,10 +117,13 @@ public class SongDetection : MonoBehaviour
         if (isRangeUIOn == true) { StopCoroutine("RangeIndicator"); isRangeUIOn = false; }
         StartCoroutine("RangeIndicator");
 
+        if (CurrentSong.Length == 3) { CheckForCrystal(); }
+
         if (CurrentSong.Length == 6)
         {
             CheckSong();
             CheckForLearning();
+            CheckForCrystal();
             ClearSong();
         }
     }
@@ -178,7 +181,7 @@ public class SongDetection : MonoBehaviour
             for (int i = 1; i <= 6; i++)
             {
                 NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
-                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = Num1;
+                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = NumAsterix;
             }
         }
 
@@ -251,14 +254,24 @@ public class SongDetection : MonoBehaviour
         }
     }
 
+    void CheckForCrystal() 
+    {
+        if (CurrentCrystal != null) 
+        {
+            CurrentCrystal.GetComponent<WorldCrystal>().PlayerResponse();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
+        if (other.tag == "Crystal") { CurrentCrystal = other.gameObject; }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "LearningArea") { CurrentLerningArea = null; }
+        if (other.tag == "Crystal") { CurrentCrystal = null; }
     }
 
     IEnumerator RangeIndicator() //Called when playing a note
