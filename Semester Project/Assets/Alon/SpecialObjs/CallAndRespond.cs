@@ -17,7 +17,7 @@ public class CallAndRespond : MonoBehaviour
     int SongIndex = 0;
 
     public GameObject Player;
-
+    public bool CorrectResponse = false;
     //public bool PlayerResponse = false;
     //bool isTiming = false;
 
@@ -42,7 +42,7 @@ public class CallAndRespond : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { StopCoroutine("StartCall"); }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { StopCoroutine("StartCall"); CorrectResponse = false; }
     }
 
     IEnumerator StartCall()
@@ -56,14 +56,14 @@ public class CallAndRespond : MonoBehaviour
             yield return new WaitForSeconds(0.8f);
             //AS.Stop();
         }
-
+        CorrectResponse = false;
         //call another func to time, if time exceded restart coroutine
 
         StartCoroutine("Timer");
-        yield return new WaitUntil(PlayerResponse); //calls function every frame and waits until it returns true
+        yield return new WaitUntil(()=>CorrectResponse); //calls function every frame and waits until it returns true
         //PlayerResponse = false;
         StopCoroutine("Timer");
-
+        CorrectResponse = false;
         Debug.Log("RESPONDED");
 
         LayerNumber++;
@@ -82,7 +82,7 @@ public class CallAndRespond : MonoBehaviour
         
     }
     
-    public bool PlayerResponse() 
+    public void PlayerResponse() 
     {
             int count = 0;
             for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++) 
@@ -92,12 +92,12 @@ public class CallAndRespond : MonoBehaviour
                     //return true;
                     count++;
                 }
-                else { StartCoroutine("FailedSong"); return false; }
-                if (LayerNumber == 1 && count == 2 ) { return true; }
-                else if(LayerNumber == 2 && count == 4) { return true; }
-                else if (LayerNumber == 3 && count == 6) { return true; }
+                else { StartCoroutine("FailedSong");  }
+                if (LayerNumber == 1 && count == 2 ) { CorrectResponse = true; }
+                else if(LayerNumber == 2 && count == 4) { CorrectResponse = true; }
+                else if (LayerNumber == 3 && count == 6) { CorrectResponse = true; }
             }
-            return false;
+            //return false;
     }
 
     IEnumerator Timer() 
@@ -111,6 +111,8 @@ public class CallAndRespond : MonoBehaviour
     {
         //play some fail audio here
         Player.GetComponent<Player>().MusicBlock = true;
+
+        CorrectResponse = false;
         Debug.Log("FAILED"); 
         StopCoroutine("StartCall");
         LayerNumber = 1;

@@ -119,10 +119,14 @@ public class SongDetection : MonoBehaviour
 
         if (CurrentSong.Length == 3) { CheckForCrystal(); }
 
+        else if (CurrentSong.Length == 2) { CheckForLearning(); }
+        else if (CurrentSong.Length == 4) { CheckForLearning(); }
+
         if (CurrentSong.Length == 6)
         {
-            CheckSong();
             CheckForLearning();
+            CheckSong();
+            
             CheckForCrystal();
             ClearSong();
         }
@@ -242,7 +246,7 @@ public class SongDetection : MonoBehaviour
     {
         if (CurrentLerningArea != null)
         {
-            if (CurrentLerningArea.GetComponent<CallAndRespond>() != null) 
+            if (CurrentLerningArea.GetComponent<CallAndRespond>() != null)
             {
                 CurrentLerningArea.GetComponent<CallAndRespond>().PlayerResponse();
             }
