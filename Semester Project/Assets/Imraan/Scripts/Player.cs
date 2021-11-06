@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
             gameObject.transform.localScale = new Vector3(1, 1, 1);
             PlayerAnimator.SetBool("Move", true);
         }
-        if(XInput == 0)
+        if(XContext.canceled)
         {
             PlayerAnimator.SetBool("Move", false);
         }
@@ -59,17 +59,19 @@ public class Player : MonoBehaviour
 
             PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
             //Debug.Log("Jumped");
+
+            if (Ground)
+            {
+                PlayerAnimator.SetBool("Jump", false);
+            }
+            else
+            {
+                PlayerAnimator.SetBool("Jump", true);
+            }
             
         }
-        if (Ground)
-        {
-            PlayerAnimator.SetBool("Jump", false);
-        }
-        else
-        {
-            PlayerAnimator.SetBool("Jump", true);
-        }
-        if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
+        
+        else if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
         {
             gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Tutorial");
             Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
