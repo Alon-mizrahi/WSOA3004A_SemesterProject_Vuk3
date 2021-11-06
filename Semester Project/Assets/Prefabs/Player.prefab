@@ -648,6 +648,12 @@ MonoBehaviour:
   SongBook: {fileID: 0}
   RangeUI: {fileID: 711742898}
   CurrentLerningArea: {fileID: 0}
+  CurrentCrystal: {fileID: 0}
+  Num1: {fileID: 21300000, guid: 8cbb9af5990750e4696a7734ccf301e2, type: 3}
+  Num2: {fileID: 21300000, guid: 8227d9f79b51d284b82c50a1f97af42e, type: 3}
+  Num3: {fileID: 21300000, guid: ba1f5309bff906e44a2ada3ba987d0c4, type: 3}
+  Num4: {fileID: 21300000, guid: 2028294a9378fac40abad2ecbd10b522, type: 3}
+  NumAsterix: {fileID: 21300000, guid: 61f5a2e9139a5ac42b161c934db3dc67, type: 3}
 --- !u!114 &7353043857725475462
 MonoBehaviour:
   m_ObjectHideFlags: 0

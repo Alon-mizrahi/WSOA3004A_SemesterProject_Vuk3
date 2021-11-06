@@ -25,7 +25,7 @@ public class SongDetection : MonoBehaviour
     public GameObject CurrentCrystal;
 
     PlayerInput PI;
-    public Sprite Num1, Num2, Num3, Num4;
+    public Sprite Num1, Num2, Num3, Num4, NumAsterix;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +89,7 @@ public class SongDetection : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.3f);
                 NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
-                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = Num1;
+                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = NumAsterix;
             }
         }
 
@@ -179,7 +179,7 @@ public class SongDetection : MonoBehaviour
             for (int i = 1; i <= 6; i++)
             {
                 NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
-                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = Num1;
+                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = NumAsterix;
             }
         }
 
@@ -256,6 +256,7 @@ public class SongDetection : MonoBehaviour
     {
         if (CurrentCrystal != null) 
         {
+            Debug.Log("CHECKING FOR CRYSTAL");
             CurrentCrystal.GetComponent<WorldCrystal>().PlayerResponse();
         }
     }

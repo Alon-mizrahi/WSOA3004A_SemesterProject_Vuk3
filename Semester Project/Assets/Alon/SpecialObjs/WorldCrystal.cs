@@ -45,7 +45,7 @@ public class WorldCrystal : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { StopCoroutine("StartCall"); }
+        if (other.gameObject.tag == "Player") { StopCoroutine("StartCall"); }
     }
 
     IEnumerator StartCall()
@@ -78,7 +78,9 @@ public class WorldCrystal : MonoBehaviour
 
         if (LayerNumber >= 5)// add to song book
         {
+            Debug.Log("FINISHED CRYSTAL");
             StopCoroutine("StartCall");
+
             //gameObject.GetComponent<Song>().AddtoSongBook();
         }
         else { StartCoroutine("StartCall"); }
@@ -89,39 +91,55 @@ public class WorldCrystal : MonoBehaviour
     {
         // public int count = 0;
         //int 
-            count = 0;
+        count = 0;
 
-        for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
-        {
-            if (NoteBarCount == 1) 
+        //for (int j = 0; j < 2; j++) 
+        //{
+            if (NoteBarCount == 1)
             {
-                if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x])
+                for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
                 {
-                    count++;
+                    if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x])
+                    {
+                        count++;
+                    }
+                    else { Debug.Log("F1"); StartCoroutine("FailedSong"); return false; }
                 }
-                else { Debug.Log("F1");StartCoroutine("FailedSong");  return false; }
+
+            }
+            else if (NoteBarCount == 2)
+            {
+                for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
+                {
+                    if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x + 6]) // x 0,1,2,3,4,5 //Notes 6,7,8,9,10,11
+                    {
+                        count++;
+                    }
+                    else { Debug.Log("F2"); StartCoroutine("FailedSong"); return false; }
+                }
             }
 
-            if (NoteBarCount == 2) 
+            //if (LayerNumber == 2 && count == 6) { NoteBarCount++; }
+
+            if (LayerNumber == 1 && count == 3) { NoteBarCount = 1; return true; }
+            else if (LayerNumber == 2 && count == 6) 
             {
-                if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x + 6]) // x 0,1,2,3,4,5 //Notes 6,7,8,9,10,11
-                {
-                    count++;
-                }
-                else { Debug.Log("F2");StartCoroutine("FailedSong");  return false; }
+                if (NoteBarCount == 1) { return true; }
+                NoteBarCount++;
             }
-            
-            if (LayerNumber == 1 && count == 3) { return true; }
-            else if (LayerNumber == 2 && count == 6) { NoteBarCount++; return true; } 
             else if (LayerNumber == 3 && count == 9) { return true; }
             else if (LayerNumber == 4 && count == 12) { return true; }
-        }
+
+
+        //}
+
+        NoteBarCount = 1;
         return false;
     }
 
     IEnumerator Timer()
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(30f);
         StopCoroutine("StartCall");
         StartCoroutine("FailedSong");
     }
