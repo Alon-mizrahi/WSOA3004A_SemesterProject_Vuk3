@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public Transform GroundCheck;
     float JumpCheckDist = 0.45f;
     public bool Ground, MusicBlock;
+    public Animator PlayerAnimator;
 
     private void Update()
     {
@@ -37,10 +38,16 @@ public class Player : MonoBehaviour
         if (XInput < 0) 
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            PlayerAnimator.SetBool("Move", true);
         }
         else if(XInput > 0)
         {
             gameObject.transform.localScale = new Vector3(1, 1, 1);
+            PlayerAnimator.SetBool("Move", true);
+        }
+        if(XInput == 0)
+        {
+            PlayerAnimator.SetBool("Move", false);
         }
 
     }
@@ -49,8 +56,18 @@ public class Player : MonoBehaviour
     {
         if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
+
             PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
             //Debug.Log("Jumped");
+            
+        }
+        if (Ground)
+        {
+            PlayerAnimator.SetBool("Jump", false);
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Jump", true);
         }
         if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
         {
