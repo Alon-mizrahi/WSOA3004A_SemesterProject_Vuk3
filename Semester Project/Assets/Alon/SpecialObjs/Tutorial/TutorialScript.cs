@@ -8,12 +8,12 @@ public class TutorialScript : MonoBehaviour
 {
     public Text TutorialUItxt;
     string[] TutorialText;
-    public string[] TextGpad;
-    public string[] TextMK;
+    public string[] TextGpad = { "" };
+    public string[] TextMK = { "" };
     GameObject Player;
     //public bool TutFinished = false;
 
-    public const string Defualttxt = "Press Jump to Interact";
+    public string Defualttxt = "Press 'A' to Interact";
 
     public bool Collided;
 
@@ -59,14 +59,16 @@ public class TutorialScript : MonoBehaviour
         {
             TutorialText[i] = TextGpad[i];
         }
+        Defualttxt = "Press 'A' to Interact";
     }
 
     public void ChangeSchemeMandK()
     {
-        for (int i = 0; i < TextGpad.Length; i++)
+        for (int i = 0; i < TextMK.Length; i++)
         {
             TutorialText[i] = TextMK[i];
         }
+        Defualttxt = "Press 'Space' to Interact";
     }
 
 

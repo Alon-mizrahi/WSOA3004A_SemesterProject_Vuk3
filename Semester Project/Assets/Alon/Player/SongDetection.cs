@@ -246,8 +246,7 @@ public class SongDetection : MonoBehaviour
             {
                 CurrentLerningArea.GetComponent<CallAndRespond>().PlayerResponse();
             }
-
-            if (CurrentSong == CurrentLerningArea.GetComponent<Song>().Notes)
+            else if (CurrentSong == CurrentLerningArea.GetComponent<Song>().Notes)
             {
                 CurrentLerningArea.GetComponent<Song>().AddtoSongBook(); 
             }

@@ -53,7 +53,6 @@ public class SongBook : MonoBehaviour
 
         Text Title = thePage.transform.Find("Song Title").gameObject.GetComponent<Text>();
         Title.text = Songlist[index - 1].SongTitle;
-
         if (Scheme.currentControlScheme == "Gamepad") { SetUIGpad(thePage); }
         else if(Scheme.currentControlScheme == "Keyboard&Mouse") { SetUIMandK(thePage); }
     }

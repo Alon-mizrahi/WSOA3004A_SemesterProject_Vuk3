@@ -12434,6 +12434,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1767792393}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -14014,6 +14030,22 @@ PrefabInstance:
       propertyPath: TutorialUItxt
       value: 
       objectReference: {fileID: 1767792393}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialText.Array.size
       value: 4
@@ -17103,6 +17135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: World Crystal
       objectReference: {fileID: 0}
+    - target: {fileID: 8619973336888537466, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
 --- !u!1 &1810499604 stripped
@@ -17769,6 +17805,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3842048628010776521, guid: 0dccecb3d9a2a2b4ab618e264ad9eee3, type: 3}
   m_PrefabInstance: {fileID: 1933675234}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1934838744 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7353043858606784756, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
+  m_PrefabInstance: {fileID: 1963710871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1938727968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 772078312219204301, guid: c68fcbc6393bfff488f3d65dad00a76c, type: 3}
@@ -18033,7 +18074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.7
+      value: 42.3
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18071,6 +18112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7353043857725475481, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
+      propertyPath: PlayerAnimator
+      value: 
+      objectReference: {fileID: 1934838744}
     - target: {fileID: 7353043857725475484, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: NotesUI
       value: 
@@ -19877,6 +19922,10 @@ PrefabInstance:
     - target: {fileID: 7629770568403002155, guid: 1381efbe2128c9747ba217ab90151c40, type: 3}
       propertyPath: m_Name
       value: UIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629770568403002155, guid: 1381efbe2128c9747ba217ab90151c40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7629770568403002156, guid: 1381efbe2128c9747ba217ab90151c40, type: 3}
       propertyPath: NumUI
