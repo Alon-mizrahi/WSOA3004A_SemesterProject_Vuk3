@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class SongDetection : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class SongDetection : MonoBehaviour
 
     public GameObject CurrentLerningArea;
 
+
+    PlayerInput PI;
+    public Sprite Num1, Num2, Num3, Num4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +34,8 @@ public class SongDetection : MonoBehaviour
         IdleTimer = MaxIdleTime;
         GetInteractablesScript = gameObject.GetComponent<GetInteractables>();
         NotesUI.SetActive(false);
+
+        PI = gameObject.GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -48,7 +55,7 @@ public class SongDetection : MonoBehaviour
         else if(IdleTimer <= 0)
         {
             ClearSong();
-            NotesUI.SetActive(false);
+            //NotesUI.SetActive(false);
         }
 
         
@@ -66,12 +73,28 @@ public class SongDetection : MonoBehaviour
     IEnumerator PauseBeforeClear() 
     {
         yield return new WaitForSeconds(0.8f);
-        for (int i = 1; i <= 6; i++)
-        {
-            yield return new WaitForSeconds(0.3f);
-            NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
-            NotesUI.transform.Find("Note" + i).transform.rotation = Quaternion.identity;
+
+        if(PI.currentControlScheme == "Gamepad")
+        {  
+            for (int i = 1; i <= 6; i++)
+            {
+                yield return new WaitForSeconds(0.3f);
+                NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
+                NotesUI.transform.Find("Note" + i).transform.rotation = Quaternion.identity;
+            }
         }
+        else if (PI.currentControlScheme == "Keyboard&Mouse") 
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                yield return new WaitForSeconds(0.3f);
+                NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
+                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = Num1;
+            }
+        }
+
+        
+        NotesUI.SetActive(false);
     }
 
     public void GetNote(string Key) 
@@ -86,6 +109,24 @@ public class SongDetection : MonoBehaviour
         else if (CurrentSong.Length == 5-1) { Note = NotesUI.transform.Find("Note5").GetComponent<Image>(); }
         else if (CurrentSong.Length == 6-1) { Note = NotesUI.transform.Find("Note6").GetComponent<Image>(); }
 
+
+
+        if (PI.currentControlScheme == "Gamepad") { GetNoteGpad(Note, Key); }
+        else if (PI.currentControlScheme == "Keyboard&Mouse") { GetNoteMandK(Note, Key); }
+
+        if (isRangeUIOn == true) { StopCoroutine("RangeIndicator"); isRangeUIOn = false; }
+        StartCoroutine("RangeIndicator");
+
+        if (CurrentSong.Length == 6)
+        {
+            CheckSong();
+            CheckForLearning();
+            ClearSong();
+        }
+    }
+
+    void GetNoteGpad(Image Note, string Key) 
+    {
         if (CurrentSong.Length == 0)
         {
             for (int i = 1; i <= 6; i++)
@@ -95,9 +136,8 @@ public class SongDetection : MonoBehaviour
             }
         }
 
-
         NotesUI.SetActive(true);
-        if (Key == "Up") 
+        if (Key == "Up")
         {
             CurrentSong += "1";//whatever note this will be
             IdleTimer = MaxIdleTime; //only if input detected
@@ -129,18 +169,54 @@ public class SongDetection : MonoBehaviour
             Note.color = Color.yellow;
             Note.transform.Rotate(Vector3.forward, -90f);
         }
-
-        if (isRangeUIOn == true) { StopCoroutine("RangeIndicator"); isRangeUIOn = false; }
-        StartCoroutine("RangeIndicator");
-
-        if (CurrentSong.Length == 6) 
-        {
-            CheckSong();
-            CheckForLearning();
-            ClearSong();
-        }
-        
     }
+
+    void GetNoteMandK(Image Note, string Key) 
+    {
+        if (CurrentSong.Length == 0)
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                NotesUI.transform.Find("Note" + i).GetComponent<Image>().color = Color.white;
+                NotesUI.transform.Find("Note" + i).gameObject.GetComponent<Image>().sprite = Num1;
+            }
+        }
+
+        NotesUI.SetActive(true);
+        if (Key == "Up")
+        {
+            CurrentSong += "1";//whatever note this will be
+            IdleTimer = MaxIdleTime; //only if input detected
+            Debug.Log("Song: " + CurrentSong);
+            Note.color = Color.red;
+            Note.sprite = Num1;
+        }
+        else if (Key == "Down")
+        {
+            CurrentSong += "3";//whatever note this will be
+            IdleTimer = MaxIdleTime; //only if input detected
+            Debug.Log("Song: " + CurrentSong);
+            Note.color = Color.blue;
+            Note.sprite = Num3;
+        }
+        else if (Key == "Left")
+        {
+            CurrentSong += "4";//whatever note this will be
+            IdleTimer = MaxIdleTime; //only if input detected
+            Debug.Log("Song: " + CurrentSong);
+            Note.color = Color.green;
+            Note.sprite = Num4;
+        }
+        else if (Key == "Right")
+        {
+            CurrentSong += "2";//whatever note this will be
+            IdleTimer = MaxIdleTime; //only if input detected
+            Debug.Log("Song: " + CurrentSong);
+            Note.color = Color.yellow;
+            Note.sprite = Num2;
+        }
+    }
+
 
     void CheckSong() 
     {
@@ -163,18 +239,17 @@ public class SongDetection : MonoBehaviour
     {
         if (CurrentLerningArea != null)
         {
+            if (CurrentLerningArea.GetComponent<CallAndRespond>() != null) 
+            {
+                CurrentLerningArea.GetComponent<CallAndRespond>().PlayerResponse();
+            }
+
             if (CurrentSong == CurrentLerningArea.GetComponent<Song>().Notes)
             {
                 CurrentLerningArea.GetComponent<Song>().AddtoSongBook(); 
             }
         }
     }
-
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-     //   if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
-      //  else { CurrentLerningArea = null; }
-//    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

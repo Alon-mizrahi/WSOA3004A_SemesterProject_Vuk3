@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class TutorialScript : MonoBehaviour
 {
     public Text TutorialUItxt;
-    public string[] TutorialText;
+    string[] TutorialText;
+    public string[] TextGpad;
+    public string[] TextMK;
     GameObject Player;
     //public bool TutFinished = false;
 
@@ -21,6 +23,8 @@ public class TutorialScript : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        TutorialText = new string[TextGpad.Length];
+        ChangeSchemeGpad();
     }
 
     public void ShowTutorial() 
@@ -48,6 +52,23 @@ public class TutorialScript : MonoBehaviour
             }
         }
     }
+
+    public void ChangeSchemeGpad() 
+    {
+        for (int i = 0; i < TextGpad.Length; i++) 
+        {
+            TutorialText[i] = TextGpad[i];
+        }
+    }
+
+    public void ChangeSchemeMandK()
+    {
+        for (int i = 0; i < TextGpad.Length; i++)
+        {
+            TutorialText[i] = TextMK[i];
+        }
+    }
+
 
 
     private void OnTriggerEnter2D(Collider2D other)

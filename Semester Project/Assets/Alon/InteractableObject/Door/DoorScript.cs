@@ -8,12 +8,21 @@ public class DoorScript : MonoBehaviour
     public bool isClose = false;
     public bool Opened = false;
 
+    public bool StartOpen = false;
+
     public float OpenSpeed = 1f;
     Vector2 StartPos;
     // Start is called before the first frame update
     void Start()
     {
         StartPos = gameObject.transform.position;
+        if (StartOpen == true) 
+        {
+            StartPos = gameObject.transform.position;
+            StartPos.y += 6.5f;
+            Opened = true;
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
     }
 
     // Update is called once per frame
