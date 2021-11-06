@@ -18177,33 +18177,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-      propertyPath: AS
-      value: 
-      objectReference: {fileID: 1856582842}
-    - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-      propertyPath: Notes
-      value: 111222333444
-      objectReference: {fileID: 0}
-    - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1326564444}
-    - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-      propertyPath: flute1
-      value: 
-      objectReference: {fileID: 8300000, guid: 5104da17442b5a246b2cbf907ec0412b, type: 3}
-    - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-      propertyPath: flute2
-      value: 
-      objectReference: {fileID: 8300000, guid: 58722b31e48520b4ca4cf884f7bd662c, type: 3}
-    - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-      propertyPath: flute3
-      value: 
-      objectReference: {fileID: 8300000, guid: f5dfd3fc4733ae541ac12b3617d0bf22, type: 3}
-    - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-      propertyPath: flute4
-      value: 
-      objectReference: {fileID: 8300000, guid: 47111e4f3261c9f4f97d51d1ebc04fd1, type: 3}
     - target: {fileID: 8619973336888537464, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -18251,10 +18227,6 @@ PrefabInstance:
     - target: {fileID: 8619973336888537466, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
       propertyPath: m_Name
       value: World Crystal
-      objectReference: {fileID: 0}
-    - target: {fileID: 8619973336888537466, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-      propertyPath: m_TagString
-      value: Crystal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
@@ -18538,11 +18510,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!82 &1856582842 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1856582842, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
-  m_PrefabInstance: {fileID: 1793192638}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1880245425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3842048628010776521, guid: 0dccecb3d9a2a2b4ab618e264ad9eee3, type: 3}

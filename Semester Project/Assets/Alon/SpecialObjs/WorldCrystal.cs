@@ -26,6 +26,8 @@ public class WorldCrystal : MonoBehaviour
 
     public int count = 0;
 
+    public bool Correct = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,12 +65,15 @@ public class WorldCrystal : MonoBehaviour
         //call another func to time, if time exceded restart coroutine
 
         StartCoroutine("Timer");
-        yield return new WaitUntil(PlayerResponse); //calls function every frame and waits until it returns true
+        //yield return new WaitUntil(PlayerResponse); //calls function every frame and waits until it returns true
+
+
+        yield return new WaitUntil(()=>Correct);
         //PlayerResponse = false;
         StopCoroutine("Timer");
 
         Debug.Log("RESPONDED");
-
+        Correct = false;
         LayerNumber++;
 
 
@@ -87,6 +92,65 @@ public class WorldCrystal : MonoBehaviour
 
     }
 
+
+    public void PlayerResponse()
+    {
+        count = 0;
+
+        if (NoteBarCount == 1)
+        {
+            for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
+            {
+                if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x])
+                {
+                    count++;
+                }
+                else { Debug.Log("F1"); StartCoroutine("FailedSong"); }
+            }
+        }
+
+        if (LayerNumber == 1 && count == 3) { NoteBarCount = 1; Correct = true; }
+        else if (LayerNumber == 2 && count == 6)
+        {
+            if (NoteBarCount == 1) { Correct = true;}
+        }
+
+        if (LayerNumber >= 3) { NoteBarCount++; }
+
+        else if (NoteBarCount == 2 && LayerNumber >= 3)
+        {
+            for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
+            {
+                if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x + 6]) // x 0,1,2,3,4,5 //Notes 6,7,8,9,10,11
+                {
+                    count++;
+                }
+                else { Debug.Log("F2"); StartCoroutine("FailedSong"); }
+            }
+        }
+
+
+        else if (LayerNumber == 3 && count == 9) { Correct = true; }
+        else if (LayerNumber == 4 && count == 12) { Correct = true; }
+
+
+
+        NoteBarCount = 1;
+        //Correct = false;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     public bool PlayerResponse()
     {
         // public int count = 0;
@@ -107,7 +171,9 @@ public class WorldCrystal : MonoBehaviour
                 }
 
             }
-            else if (NoteBarCount == 2)
+            
+        
+        else if (NoteBarCount == 2)
             {
                 for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
                 {
@@ -118,7 +184,7 @@ public class WorldCrystal : MonoBehaviour
                     else { Debug.Log("F2"); StartCoroutine("FailedSong"); return false; }
                 }
             }
-
+        
             //if (LayerNumber == 2 && count == 6) { NoteBarCount++; }
 
             if (LayerNumber == 1 && count == 3) { NoteBarCount = 1; return true; }
@@ -136,6 +202,7 @@ public class WorldCrystal : MonoBehaviour
         NoteBarCount = 1;
         return false;
     }
+    */
 
     IEnumerator Timer()
     {
@@ -147,6 +214,9 @@ public class WorldCrystal : MonoBehaviour
     IEnumerator FailedSong()
     {
         //play some fail audio here
+
+        Correct = false;
+
         Player.GetComponent<Player>().MusicBlock = true;
         Debug.Log("FAILED");
         StopCoroutine("StartCall");

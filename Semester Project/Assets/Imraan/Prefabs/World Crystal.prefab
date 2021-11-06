@@ -19264,7 +19264,7 @@ GameObject:
   - component: {fileID: 1856582839}
   m_Layer: 0
   m_Name: World Crystal
-  m_TagString: Untagged
+  m_TagString: Crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19470,3 +19470,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe3702ecc413ea4e97dd67affb45660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flute1: {fileID: 8300000, guid: 5104da17442b5a246b2cbf907ec0412b, type: 3}
+  flute2: {fileID: 8300000, guid: 58722b31e48520b4ca4cf884f7bd662c, type: 3}
+  flute3: {fileID: 8300000, guid: f5dfd3fc4733ae541ac12b3617d0bf22, type: 3}
+  flute4: {fileID: 8300000, guid: 47111e4f3261c9f4f97d51d1ebc04fd1, type: 3}
+  AS: {fileID: 1856582842}
+  Notes: 111222333444
+  Player: {fileID: 0}
+  LayerNumber: 1
+  NoteBarCount: 1
+  count: 0

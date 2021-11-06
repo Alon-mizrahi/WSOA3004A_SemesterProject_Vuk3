@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
             PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
-            Debug.Log("Jumped");
+            //Debug.Log("Jumped");
         }
         if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
         {
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
     {
         if (RedContext.started == true && MusicBlock == false)
         {
-            Debug.Log("Red!");
+            //Debug.Log("Red!");
             if (gameObject.GetComponent<SongDetection>() != null)
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Up");
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
     {
         if (OrangeContext.started == true && MusicBlock == false)
         {
-            Debug.Log("Orange!");
+            //Debug.Log("Orange!");
             if (gameObject.GetComponent<SongDetection>() != null)
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Down");
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
     {
         if (BlueContext.started == true && MusicBlock == false) 
         {
-            Debug.Log("Blue!");
+            //Debug.Log("Blue!");
             if (gameObject.GetComponent<SongDetection>() != null)
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Right");
@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
     {
         if (GreenContext.started == true && MusicBlock == false)
         {
-            Debug.Log("Green!");
+            //Debug.Log("Green!");
             if (gameObject.GetComponent<SongDetection>() != null)
             {
                 gameObject.GetComponent<SongDetection>().GetNote("Left");

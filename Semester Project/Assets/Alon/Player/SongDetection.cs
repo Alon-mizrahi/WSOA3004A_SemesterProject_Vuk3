@@ -117,6 +117,8 @@ public class SongDetection : MonoBehaviour
         if (isRangeUIOn == true) { StopCoroutine("RangeIndicator"); isRangeUIOn = false; }
         StartCoroutine("RangeIndicator");
 
+        if (CurrentSong.Length == 3) { CheckForCrystal(); }
+
         if (CurrentSong.Length == 6)
         {
             CheckSong();
@@ -256,7 +258,6 @@ public class SongDetection : MonoBehaviour
     {
         if (CurrentCrystal != null) 
         {
-            Debug.Log("CHECKING FOR CRYSTAL");
             CurrentCrystal.GetComponent<WorldCrystal>().PlayerResponse();
         }
     }
