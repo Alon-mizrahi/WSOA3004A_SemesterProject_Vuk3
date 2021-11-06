@@ -64,9 +64,10 @@ public class WorldCrystal : MonoBehaviour
 
         //call another func to time, if time exceded restart coroutine
 
+        count = 0;
+        NoteBarCount = 1;
         StartCoroutine("Timer");
         //yield return new WaitUntil(PlayerResponse); //calls function every frame and waits until it returns true
-
 
         yield return new WaitUntil(()=>Correct);
         //PlayerResponse = false;
@@ -95,7 +96,7 @@ public class WorldCrystal : MonoBehaviour
 
     public void PlayerResponse()
     {
-        count = 0;
+        //count = 0;
 
         if (NoteBarCount == 1)
         {
@@ -107,20 +108,25 @@ public class WorldCrystal : MonoBehaviour
                 }
                 else { Debug.Log("F1"); StartCoroutine("FailedSong"); }
             }
-        }
+            
+            
+            if (LayerNumber == 1 && count == 3) { NoteBarCount = 1; Correct = true; return; }
+            else if (LayerNumber == 2 && count == 9)
+            {
+                if (NoteBarCount == 1) { Correct = true; return; }
+            }
 
-        if (LayerNumber == 1 && count == 3) { NoteBarCount = 1; Correct = true; }
-        else if (LayerNumber == 2 && count == 6)
-        {
-            if (NoteBarCount == 1) { Correct = true;}
-        }
+            if (LayerNumber >= 3 && Player.GetComponent<SongDetection>().CurrentSong.Length == 6) { NoteBarCount++; Debug.Log("INCREAE NOTE BAR "+NoteBarCount); }
 
-        if (LayerNumber >= 3) { NoteBarCount++; }
+
+        }
 
         else if (NoteBarCount == 2 && LayerNumber >= 3)
         {
             for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
             {
+                Debug.Log("NOTES: " + Player.GetComponent<SongDetection>().CurrentSong[x]+ " " + Notes[x + 6]);
+
                 if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x + 6]) // x 0,1,2,3,4,5 //Notes 6,7,8,9,10,11
                 {
                     count++;
@@ -130,12 +136,13 @@ public class WorldCrystal : MonoBehaviour
         }
 
 
-        else if (LayerNumber == 3 && count == 9) { Correct = true; }
-        else if (LayerNumber == 4 && count == 12) { Correct = true; }
+
+        if (LayerNumber == 3 && count == 12) { Correct = true; }
+        else if (LayerNumber == 4 && count == 18) { Correct = true; }
 
 
 
-        NoteBarCount = 1;
+        //NoteBarCount = 1;
         //Correct = false;
     }
 
