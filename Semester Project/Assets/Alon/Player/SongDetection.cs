@@ -22,7 +22,7 @@ public class SongDetection : MonoBehaviour
     bool isRangeUIOn = false;
 
     public GameObject CurrentLerningArea;
-
+    public GameObject CurrentCrystal;
 
     PlayerInput PI;
     public Sprite Num1, Num2, Num3, Num4;
@@ -121,6 +121,7 @@ public class SongDetection : MonoBehaviour
         {
             CheckSong();
             CheckForLearning();
+            CheckForCrystal();
             ClearSong();
         }
     }
@@ -251,14 +252,24 @@ public class SongDetection : MonoBehaviour
         }
     }
 
+    void CheckForCrystal() 
+    {
+        if (CurrentCrystal != null) 
+        {
+            CurrentCrystal.GetComponent<WorldCrystal>().PlayerResponse();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
+        if (other.tag == "Crystal") { CurrentCrystal = other.gameObject; }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "LearningArea") { CurrentLerningArea = null; }
+        if (other.tag == "Crystal") { CurrentCrystal = null; }
     }
 
     IEnumerator RangeIndicator() //Called when playing a note
