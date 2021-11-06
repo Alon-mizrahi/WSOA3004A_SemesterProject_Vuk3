@@ -12,13 +12,17 @@ public class WorldCrystal : MonoBehaviour
 
     public string Notes;
 
+
+    public GameObject Particals1, Particals2, Particals3;
+    SpriteRenderer Crystal;
+
     AudioClip[] SoundOrder = new AudioClip[12];
 
     //int SongIndex = 0;
 
     public GameObject Player;
 
-    //public GameObject Obstacle;
+    public GameObject Obstacle;
 
     public int LayerNumber = 1;
 
@@ -31,6 +35,7 @@ public class WorldCrystal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Crystal = gameObject.GetComponent<SpriteRenderer>();
         //StopCoroutine("StartCall");
         for (int i = 0; i < Notes.Length; i++)
         {
@@ -47,7 +52,14 @@ public class WorldCrystal : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player") { StopCoroutine("StartCall"); }
+        if (other.gameObject.tag == "Player") 
+        { 
+            StopCoroutine("StartCall");
+            Particals1.SetActive(false);
+            Particals2.SetActive(false);
+            Particals3.SetActive(false);
+            Crystal.color = Color.white;
+        }
     }
 
     IEnumerator StartCall()
@@ -58,6 +70,13 @@ public class WorldCrystal : MonoBehaviour
         {
             AS.clip = SoundOrder[x]; //012 //345 //678 //91011
             AS.Play();
+
+            if (Notes[x] == '1') { Crystal.color = Color.red; }//red
+            else if (Notes[x] == '2') { Crystal.color = Color.yellow; }//yellow
+            else if (Notes[x] == '3') { Crystal.color = Color.blue; }//blue
+            else if (Notes[x] == '4') { Crystal.color = Color.green; }//green
+
+
             yield return new WaitForSeconds(0.8f);
             //AS.Stop();
         }
@@ -82,12 +101,20 @@ public class WorldCrystal : MonoBehaviour
         Player.GetComponent<SongDetection>().ClearSong();
 
 
-        if (LayerNumber >= 5)// add to song book
+        if (LayerNumber - 1 == 1) { Particals1.SetActive(true); }
+        else if (LayerNumber - 1 == 2) { Particals2.SetActive(true); }
+        else if (LayerNumber - 1 == 3) { Particals3.SetActive(true); }
+
+
+
+        if (LayerNumber >= 5)// Finished
         {
             Debug.Log("FINISHED CRYSTAL");
+
             StopCoroutine("StartCall");
 
-            //gameObject.GetComponent<Song>().AddtoSongBook();
+            Obstacle.GetComponent<CrystalObstical>().CrystalComplete = true;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         else { StartCoroutine("StartCall"); }
 
@@ -148,69 +175,6 @@ public class WorldCrystal : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-
-    /*
-    public bool PlayerResponse()
-    {
-        // public int count = 0;
-        //int 
-        count = 0;
-
-        //for (int j = 0; j < 2; j++) 
-        //{
-            if (NoteBarCount == 1)
-            {
-                for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
-                {
-                    if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x])
-                    {
-                        count++;
-                    }
-                    else { Debug.Log("F1"); StartCoroutine("FailedSong"); return false; }
-                }
-
-            }
-            
-        
-        else if (NoteBarCount == 2)
-            {
-                for (int x = 0; x < Player.GetComponent<SongDetection>().CurrentSong.Length; x++)
-                {
-                    if (Player.GetComponent<SongDetection>().CurrentSong[x] == Notes[x + 6]) // x 0,1,2,3,4,5 //Notes 6,7,8,9,10,11
-                    {
-                        count++;
-                    }
-                    else { Debug.Log("F2"); StartCoroutine("FailedSong"); return false; }
-                }
-            }
-        
-            //if (LayerNumber == 2 && count == 6) { NoteBarCount++; }
-
-            if (LayerNumber == 1 && count == 3) { NoteBarCount = 1; return true; }
-            else if (LayerNumber == 2 && count == 6) 
-            {
-                if (NoteBarCount == 1) { return true; }
-                NoteBarCount++;
-            }
-            else if (LayerNumber == 3 && count == 9) { return true; }
-            else if (LayerNumber == 4 && count == 12) { return true; }
-
-
-        //}
-
-        NoteBarCount = 1;
-        return false;
-    }
-    */
-
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(30f);
@@ -218,11 +182,16 @@ public class WorldCrystal : MonoBehaviour
         StartCoroutine("FailedSong");
     }
 
+
     IEnumerator FailedSong()
     {
         //play some fail audio here
 
         Correct = false;
+        Particals1.SetActive(false);
+        Particals2.SetActive(false);
+        Particals3.SetActive(false);
+        Crystal.color = Color.white;
 
         Player.GetComponent<Player>().MusicBlock = true;
         Debug.Log("FAILED");
