@@ -22,6 +22,9 @@ public class MenuHandler : MonoBehaviour
 
     GameObject myEventSystem;
 
+
+    //Controls PlayerContSys;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +36,18 @@ public class MenuHandler : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) { Quite(); }
-
-        
     }
 
     void ControllerHandler() 
     {
+        Debug.Log(InputScheme.currentControlScheme);
+        Debug.Log("HANDLER");
         Length=0;
+
+
+        //clean buttons
+        for (int x = 0; x < Buttons.Length; x++) { Buttons[x] = null; }
+
 
         if (Screen1.activeSelf) 
         {
@@ -54,11 +62,38 @@ public class MenuHandler : MonoBehaviour
             {
                 if (Screen1.transform.GetChild(i).GetComponent<Button>() != null) { Length++; }
             }
-            index = 0;
-            SelectedBtn = Buttons[index];
         }
-        //else
+        else if (Screen2.activeSelf)
+        {
+            for (index = 0; index < Screen2.transform.childCount; index++)
+            {
+                if (Screen2.transform.GetChild(index).GetComponent<Button>() != null)
+                {
+                    Buttons[index] = Screen2.transform.GetChild(index).GetComponent<Button>();
+                }
+            }
+            for (int i = 0; i < Screen2.transform.childCount; i++)
+            {
+                if (Screen2.transform.GetChild(i).GetComponent<Button>() != null) { Length++; }
+            }
+        }
+        else if (Screen3.activeSelf)
+        {
+            for (index = 0; index < Screen3.transform.childCount; index++)
+            {
+                if (Screen3.transform.GetChild(index).GetComponent<Button>() != null)
+                {
+                    Buttons[index] = Screen3.transform.GetChild(index).GetComponent<Button>();
+                }
+            }
+            for (int i = 0; i < Screen3.transform.childCount; i++)
+            {
+                if (Screen3.transform.GetChild(i).GetComponent<Button>() != null) { Length++; }
+            }
+        }
 
+        index = 0;
+        SelectedBtn = Buttons[index];
 
         ControllerUIChanger();
 
@@ -69,7 +104,7 @@ public class MenuHandler : MonoBehaviour
         myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
         if (NxtContext.started) 
         {
-            if (index < Length-1) { SelectedBtn = Buttons[index + 1]; index++; SelectedBtn.Select(); }
+            if (index < Length-1) { SelectedBtn = Buttons[index + 1]; index++; ControllerUIChanger(); }
         }
     }
 
@@ -78,7 +113,7 @@ public class MenuHandler : MonoBehaviour
         myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
         if (PrevContext.started) 
         { 
-            if (index > 0) { SelectedBtn = Buttons[index - 1]; index--; SelectedBtn.Select(); }
+            if (index > 0) { SelectedBtn = Buttons[index - 1]; index--; ControllerUIChanger(); }
         }
     }
     public void ControllerSelectBtn(InputAction.CallbackContext SelectContext)
@@ -86,21 +121,17 @@ public class MenuHandler : MonoBehaviour
         if (SelectContext.started) 
         {
             SelectedBtn.Select();
-            //SelectedBtn.Select();
         }
+        if (SelectContext.performed) { SelectedBtn.Select(); }
     }
 
     void ControllerUIChanger() 
     {
         for (int i = 0; i < Buttons.Length; i++) 
         {
-            Buttons[i].GetComponent<Outline>().enabled = false;
+            if (Buttons[i] != null) { Buttons[i].gameObject.GetComponent<Outline>().enabled = false; }        
         }
-
-        //SelectedBtn.spriteState = SpriteState.highlightedSprite;
-
-        //SelectedBtn.spriteState = "Se"
-        SelectedBtn.GetComponent<Outline>().enabled = true;
+        SelectedBtn.gameObject.GetComponent<Outline>().enabled = true;
     }
 
 
