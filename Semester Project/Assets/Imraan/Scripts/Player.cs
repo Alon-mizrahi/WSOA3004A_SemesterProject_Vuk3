@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
     {
         PLYRB.velocity = new Vector2(XInput * MoveSpeed, PLYRB.velocity.y);
         Ground = Physics2D.OverlapCircle(GroundCheck.position, JumpCheckDist, GroundLayer);
-
     }
 
     public void Move(InputAction.CallbackContext XContext)
