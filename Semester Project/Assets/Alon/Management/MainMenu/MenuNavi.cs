@@ -79,6 +79,17 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""31452328-0622-4947-97d7-c9dc4c91ab25"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""99c8be21-d548-42b3-b10b-4a39f4cfac09"",
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
@@ -103,6 +114,17 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""9a9d39fc-4490-4cfc-ac33-32a399bd1a6a"",
                     ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a499af3-c1c1-47f3-a4d5-4da638e1c840"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
