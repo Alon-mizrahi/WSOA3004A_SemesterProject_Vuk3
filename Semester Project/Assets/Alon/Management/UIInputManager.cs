@@ -27,11 +27,11 @@ public class UIInputManager : MonoBehaviour
 
     private void Start()
     {
-        PrevScheme = InputMap.currentControlScheme;
+        //PrevScheme = InputMap.currentControlScheme;
 
         ChangeCanvaseArrows();
         ChangeSongBookNotif();
-        ChangeTutorialTxt();
+        //ChangeTutorialTxt();
         UpdateSongBookNotes();
     }
 

@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class TutorialScript : MonoBehaviour
 {
     public Text TutorialUItxt;
-    string[] TutorialText;
+    public string[] TutorialText;
     public string[] TextGpad = { "" };
     public string[] TextMK = { "" };
     GameObject Player;
     //public bool TutFinished = false;
 
-    public string Defualttxt = "Press 'A' to Interact";
+    string Defualttxt = "Press 'A' to Interact";
 
     public bool Collided;
 
@@ -23,7 +23,8 @@ public class TutorialScript : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        TutorialText = new string[TextGpad.Length];
+        if (TextGpad.Length >= TextMK.Length) { TutorialText = new string[TextGpad.Length]; }
+        else { TutorialText = new string[TextMK.Length]; }
         ChangeSchemeGpad();
     }
 
@@ -75,11 +76,20 @@ public class TutorialScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { Collided = true; other.gameObject.GetComponent<PlayerTutorial>().AtTutorial(gameObject); }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
+        { 
+            Collided = true; other.gameObject.GetComponent<PlayerTutorial>().AtTutorial(gameObject);
+            TutorialUItxt.text = Defualttxt;
+            TutorialUItxt.enabled = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { Collided = false; other.gameObject.GetComponent<PlayerTutorial>().LeftTutorial(); }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
+        { 
+            Collided = false; other.gameObject.GetComponent<PlayerTutorial>().LeftTutorial();
+            TutorialUItxt.enabled = false;
+        }
     }
 }

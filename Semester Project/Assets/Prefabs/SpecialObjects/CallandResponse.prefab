@@ -129,7 +129,7 @@ MonoBehaviour:
   flute2: {fileID: 8300000, guid: 58722b31e48520b4ca4cf884f7bd662c, type: 3}
   flute3: {fileID: 8300000, guid: f5dfd3fc4733ae541ac12b3617d0bf22, type: 3}
   flute4: {fileID: 8300000, guid: 47111e4f3261c9f4f97d51d1ebc04fd1, type: 3}
-  FailAudio: {fileID: 8300000, guid: 3687034921d567e43bd715d6d3b6f5a9, type: 3}
+  FailAudio: {fileID: 8300000, guid: 8bb64603abb89794c89321d8f5ad53b8, type: 3}
   AS: {fileID: 3824247858767806455}
   Player: {fileID: 0}
   CorrectResponse: 0

@@ -18,8 +18,8 @@ public class PlayerTutorial : MonoBehaviour
     public void AtTutorial(GameObject Tut) 
     {
         CurrentTut = Tut;
-        if (gameObject.GetComponent<PlayerInput>().currentControlScheme == "Gamepad") { CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press 'A' to Interact"; }
-        else if (gameObject.GetComponent<PlayerInput>().currentControlScheme == "Keyboard&Mouse") { CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press 'Space' to Interact"; }
+        //if (gameObject.GetComponent<PlayerInput>().currentControlScheme == "Gamepad") { CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press 'A' to Interact"; }
+        //else if (gameObject.GetComponent<PlayerInput>().currentControlScheme == "Keyboard&Mouse") { CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press 'Space' to Interact"; }
 
             CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = true;
     }

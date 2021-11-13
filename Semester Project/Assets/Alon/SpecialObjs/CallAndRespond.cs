@@ -125,6 +125,7 @@ public class CallAndRespond : MonoBehaviour
         AS.Play();
 
         yield return new WaitForSeconds(1f);
+        AS.Stop();
         StartCoroutine("StartCall");
         Player.GetComponent<Player>().MusicBlock = false;
     }
