@@ -41,22 +41,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""IncreaseSlider"",
-                    ""type"": ""Button"",
-                    ""id"": ""6ab050ae-a2d9-4484-8880-373d1fd5b491"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""DecreaseSlider"",
-                    ""type"": ""Button"",
-                    ""id"": ""80fe2564-4c01-4c23-809a-3454b12cd0ec"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -180,50 +164,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                     ""action"": ""Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7e90524d-718e-4510-a2c2-e6ba7d790e2f"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""IncreaseSlider"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""191f530c-576a-4556-98f9-0f3207bca83b"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""IncreaseSlider"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""67f70b14-4e6f-49ad-96c8-31ac469a4957"",
-                    ""path"": ""<Gamepad>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""DecreaseSlider"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""46086f84-385c-45e1-b4c2-5e798de7a7c8"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""DecreaseSlider"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -263,8 +203,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
         m_MenuNav_NextItem = m_MenuNav.FindAction("NextItem", throwIfNotFound: true);
         m_MenuNav_PrevItem = m_MenuNav.FindAction("PrevItem", throwIfNotFound: true);
         m_MenuNav_Select = m_MenuNav.FindAction("Select", throwIfNotFound: true);
-        m_MenuNav_IncreaseSlider = m_MenuNav.FindAction("IncreaseSlider", throwIfNotFound: true);
-        m_MenuNav_DecreaseSlider = m_MenuNav.FindAction("DecreaseSlider", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,8 +255,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
     private readonly InputAction m_MenuNav_NextItem;
     private readonly InputAction m_MenuNav_PrevItem;
     private readonly InputAction m_MenuNav_Select;
-    private readonly InputAction m_MenuNav_IncreaseSlider;
-    private readonly InputAction m_MenuNav_DecreaseSlider;
     public struct MenuNavActions
     {
         private @MenuNavi m_Wrapper;
@@ -326,8 +262,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
         public InputAction @NextItem => m_Wrapper.m_MenuNav_NextItem;
         public InputAction @PrevItem => m_Wrapper.m_MenuNav_PrevItem;
         public InputAction @Select => m_Wrapper.m_MenuNav_Select;
-        public InputAction @IncreaseSlider => m_Wrapper.m_MenuNav_IncreaseSlider;
-        public InputAction @DecreaseSlider => m_Wrapper.m_MenuNav_DecreaseSlider;
         public InputActionMap Get() { return m_Wrapper.m_MenuNav; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -346,12 +280,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                 @Select.started -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnSelect;
                 @Select.performed -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnSelect;
                 @Select.canceled -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnSelect;
-                @IncreaseSlider.started -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnIncreaseSlider;
-                @IncreaseSlider.performed -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnIncreaseSlider;
-                @IncreaseSlider.canceled -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnIncreaseSlider;
-                @DecreaseSlider.started -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnDecreaseSlider;
-                @DecreaseSlider.performed -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnDecreaseSlider;
-                @DecreaseSlider.canceled -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnDecreaseSlider;
             }
             m_Wrapper.m_MenuNavActionsCallbackInterface = instance;
             if (instance != null)
@@ -365,12 +293,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                 @Select.started += instance.OnSelect;
                 @Select.performed += instance.OnSelect;
                 @Select.canceled += instance.OnSelect;
-                @IncreaseSlider.started += instance.OnIncreaseSlider;
-                @IncreaseSlider.performed += instance.OnIncreaseSlider;
-                @IncreaseSlider.canceled += instance.OnIncreaseSlider;
-                @DecreaseSlider.started += instance.OnDecreaseSlider;
-                @DecreaseSlider.performed += instance.OnDecreaseSlider;
-                @DecreaseSlider.canceled += instance.OnDecreaseSlider;
             }
         }
     }
@@ -398,7 +320,5 @@ public class @MenuNavi : IInputActionCollection, IDisposable
         void OnNextItem(InputAction.CallbackContext context);
         void OnPrevItem(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
-        void OnIncreaseSlider(InputAction.CallbackContext context);
-        void OnDecreaseSlider(InputAction.CallbackContext context);
     }
 }

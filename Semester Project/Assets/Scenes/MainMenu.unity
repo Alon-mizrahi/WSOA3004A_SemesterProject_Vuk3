@@ -479,7 +479,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -763,15 +763,6 @@ MonoBehaviour:
   Screen3: {fileID: 1837111624}
   InputScheme: {fileID: 1722849169}
   SelectedBtn: {fileID: 0}
-  SelectedSlider: {fileID: 0}
-  Sliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicVol: 70
-  SfxVol: 80
 --- !u!1 &505764798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,14 +1155,14 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 781830669}
+  m_TargetGraphic: {fileID: 838217094}
   m_FillRect: {fileID: 781830668}
   m_HandleRect: {fileID: 838217093}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 80
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1323,7 +1314,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.8, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1546,8 +1537,8 @@ RectTransform:
   m_Father: {fileID: 500602261}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8, y: 0}
-  m_AnchorMax: {x: 0.8, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2033,14 +2024,14 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 206981264}
+  m_TargetGraphic: {fileID: 1718485172}
   m_FillRect: {fileID: 206981263}
   m_HandleRect: {fileID: 1718485171}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 70
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2355,8 +2346,8 @@ Canvas:
   m_GameObject: {fileID: 1511293541}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 1002514914}
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2740,8 +2731,8 @@ RectTransform:
   m_Father: {fileID: 781113209}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7, y: 0}
-  m_AnchorMax: {x: 0.7, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2873,14 +2864,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8908d053-ae2d-47bd-aa33-32d793698dd1
     m_ActionName: MenuNav/Select
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6ab050ae-a2d9-4484-8880-373d1fd5b491
-    m_ActionName: MenuNav/IncreaseSlider[/XInputControllerWindows/dpad/right,/XInputControllerWindows/leftStick/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 80fe2564-4c01-4c23-809a-3454b12cd0ec
-    m_ActionName: MenuNav/DecreaseSlider[/XInputControllerWindows/dpad/left,/XInputControllerWindows/leftStick/left]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MenuNav
