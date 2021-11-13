@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class Player : MonoBehaviour
 {
     //flute audio
@@ -24,10 +25,13 @@ public class Player : MonoBehaviour
     public bool Ground, MusicBlock;
     public Animator PlayerAnimator;
 
+  
+
     private void Update()
     {
         PLYRB.velocity = new Vector2(XInput * MoveSpeed, PLYRB.velocity.y);
         Ground = Physics2D.OverlapCircle(GroundCheck.position, JumpCheckDist, GroundLayer);
+        Land();
     }
 
     public void Move(InputAction.CallbackContext XContext)
@@ -55,19 +59,9 @@ public class Player : MonoBehaviour
     {
         if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
-
+            PlayerAnimator.SetBool("Midair", true);
             PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
             //Debug.Log("Jumped");
-
-            if (Ground)
-            {
-                PlayerAnimator.SetBool("Jump", false);
-            }
-            else
-            {
-                PlayerAnimator.SetBool("Jump", true);
-            }
-            
         }
         
         else if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
@@ -77,6 +71,17 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<PlayerTutorial>().ActivateTutorial();
         }
         
+    }
+    public void Land()
+    {
+        if (Ground)
+        {
+            PlayerAnimator.SetBool("Midair", false);
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Midair", true);
+        }
     }
     public void RedUpNote(InputAction.CallbackContext RedContext)
     {
