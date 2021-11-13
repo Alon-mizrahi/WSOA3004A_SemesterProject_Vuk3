@@ -8,6 +8,8 @@ public class CallAndRespond : MonoBehaviour
     public AudioClip flute2;
     public AudioClip flute3;
     public AudioClip flute4;
+
+    public AudioClip FailAudio;
     public AudioSource AS;
 
     string Notes;
@@ -115,8 +117,13 @@ public class CallAndRespond : MonoBehaviour
         CorrectResponse = false;
         Debug.Log("FAILED"); 
         StopCoroutine("StartCall");
+
         LayerNumber = 1;
         Player.GetComponent<SongDetection>().ClearSong();
+
+        AS.clip = FailAudio;
+        AS.Play();
+
         yield return new WaitForSeconds(1f);
         StartCoroutine("StartCall");
         Player.GetComponent<Player>().MusicBlock = false;
