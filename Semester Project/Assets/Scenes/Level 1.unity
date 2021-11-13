@@ -231,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TextGpad.Array.data[0]
-      value: Use the Right analog stick to move
+      value: Use the Left analog stick to move
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TextGpad.Array.data[1]
@@ -9030,6 +9030,54 @@ PrefabInstance:
       propertyPath: Songlist.Array.size
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 413985185614816259, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 947527402643902485, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 1027929338983427693, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 2014217306210757039, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 2426678459669008151, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 3442989671191083460, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 4964911730436270744, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 5371764144898169931, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 7305661569263942961, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 7351940659394495305, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 7971328879990437727, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
+    - target: {fileID: 8129828296207563507, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     - target: {fileID: 8276979028633385889, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: m_Name
       value: SongBookBackground
@@ -10114,6 +10162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialText
       objectReference: {fileID: 0}
+    - target: {fileID: 3806679482103779518, guid: 3e8f335945407e84aa5a9fbaaf0894d8, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8f335945407e84aa5a9fbaaf0894d8, type: 3}
 --- !u!224 &1979814996 stripped
