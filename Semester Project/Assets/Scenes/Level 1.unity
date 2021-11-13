@@ -201,13 +201,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialObject
       objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503776, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TutorialUItxt
       value: 
       objectReference: {fileID: 1912822653}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[0]
+      value: "Use \u2018A\u2019 and \u2018D\u2019 to move"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[1]
+      value: "Press \u2018Space\u2019 to jump"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextMK.Array.data[2]
+      value: Press 1, 2, 3, and 4 to play your flute
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TextGpad.Array.data[0]
-      value: Use the Left analog stick to move
+      value: Use the Right analog stick to move
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[1]
+      value: "Press \u2018A\u2019 to jump"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TextGpad.Array.data[2]
+      value: Press the Arrow buttons to play your flute
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503781, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: m_RootOrder
@@ -8657,6 +8689,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 726046906}
     m_Modifications:
     - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num1
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cbb9af5990750e4696a7734ccf301e2, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num2
+      value: 
+      objectReference: {fileID: 21300000, guid: 8227d9f79b51d284b82c50a1f97af42e, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num3
+      value: 
+      objectReference: {fileID: 21300000, guid: ba1f5309bff906e44a2ada3ba987d0c4, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Num4
+      value: 
+      objectReference: {fileID: 21300000, guid: 2028294a9378fac40abad2ecbd10b522, type: 3}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: Scheme
       value: 
       objectReference: {fileID: 1733971236}
@@ -8664,6 +8712,10 @@ PrefabInstance:
       propertyPath: NewSongNotif
       value: 
       objectReference: {fileID: 519302421}
+    - target: {fileID: 831246080, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
+      propertyPath: Songlist.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8276979028633385889, guid: 520ebd968e2f5eb4483d4e0915474127, type: 3}
       propertyPath: m_Name
       value: SongBookBackground
