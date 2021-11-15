@@ -2149,6 +2149,10 @@ PrefabInstance:
       value: TutorialObject
       objectReference: {fileID: 0}
     - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
+      propertyPath: TutorialUItxt
+      value: 
+      objectReference: {fileID: 2019377701}
+    - target: {fileID: 4995188457728503779, guid: 218b419aceb6d954bbbf21a0a71c7e4a, type: 3}
       propertyPath: TextMK.Array.size
       value: 5
       objectReference: {fileID: 0}
