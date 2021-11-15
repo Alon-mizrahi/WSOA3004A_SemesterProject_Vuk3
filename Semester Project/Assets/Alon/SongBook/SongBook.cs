@@ -33,7 +33,7 @@ public class SongBook : MonoBehaviour
     GameObject Acontainer;
     GameObject Ncontainer;
 
-    private void Start()
+    private void Awake()
     {
         for (int i = 0; i < Songlist.Length; i++) 
         {
@@ -55,6 +55,7 @@ public class SongBook : MonoBehaviour
 
     void SetUI() 
     {
+        Debug.Log("Eish");
         //Setting the page variables to the song variables
         GameObject thePage = Page1;
         if (index - 1 == 0) { thePage = Page1; }
@@ -65,8 +66,6 @@ public class SongBook : MonoBehaviour
         else if (index - 1 == 5) { thePage = Page6; }
 
         Text Title = thePage.transform.Find("Song Title").gameObject.GetComponent<Text>();
-        Debug.Log("Title " + Title);
-        Debug.Log("Song Title " + Songlist[index - 1].SongTitle);
         Title.text = Songlist[index - 1].SongTitle;
         if (Scheme.currentControlScheme == "Gamepad") { SetUIGpad(thePage); }
         else if(Scheme.currentControlScheme == "Keyboard&Mouse") { SetUIMandK(thePage); }
