@@ -692,6 +692,14 @@ PrefabInstance:
       propertyPath: NewSongNotif
       value: 
       objectReference: {fileID: 540800485}
+    - target: {fileID: 772078312219204306, guid: c68fcbc6393bfff488f3d65dad00a76c, type: 3}
+      propertyPath: m_Size.x
+      value: 28.760895
+      objectReference: {fileID: 0}
+    - target: {fileID: 772078312219204306, guid: c68fcbc6393bfff488f3d65dad00a76c, type: 3}
+      propertyPath: m_Offset.x
+      value: 2.8804474
+      objectReference: {fileID: 0}
     - target: {fileID: 772078312219204307, guid: c68fcbc6393bfff488f3d65dad00a76c, type: 3}
       propertyPath: m_Name
       value: LearningArea
