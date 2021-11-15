@@ -33,6 +33,19 @@ public class SongBook : MonoBehaviour
     GameObject Acontainer;
     GameObject Ncontainer;
 
+    private void Start()
+    {
+        for (int i = 0; i < Songlist.Length; i++) 
+        {
+            if (Songlist[i] != null) 
+            {
+                index++;
+                SetUI();
+            }
+        }
+    }
+
+
     public void AddSong(Song song) //get children of gameobject component songs
     {
         Songlist[index] = song;
