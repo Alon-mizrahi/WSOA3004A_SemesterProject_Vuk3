@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 7700052115228871913}
   - component: {fileID: 7700052115228871912}
   - component: {fileID: 136916147}
+  - component: {fileID: 7645573512462103593}
   m_Layer: 6
   m_Name: Interactable_MovablePlatform
   m_TagString: Interactable
@@ -229,6 +230,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Small: {x: 1, y: 0.5, z: 1}
   Large: {x: 4, y: 2, z: 1}
+--- !u!50 &7645573512462103593
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700052115228871909}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7700052115677780820
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MovablePlatform : MonoBehaviour
 {
@@ -77,11 +78,14 @@ public class MovablePlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
+        Debug.Log(other);
+
         if (other.gameObject.tag == "Player") 
         {
             other.gameObject.transform.SetParent(transform);
         }
-        if (other.gameObject.name.Contains("Door") == true) 
+        if (other.gameObject.name.Contains("Door") == true || other.gameObject.GetComponent<TilemapCollider2D>() == true || other.gameObject.name.Contains("Interactable_MovablePlatform") == true) 
         {
             if (Direc == "Left") { Direc = "Right"; }
             else if (Direc == "Right") { Direc = "Left"; }
