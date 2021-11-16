@@ -39,6 +39,7 @@ public class SongBook : MonoBehaviour
         {
             if (Songlist[i] != null) 
             {
+                Debug.Log("OY OY "+ index);
                 index++;
                 SetUI();
             }
@@ -55,7 +56,7 @@ public class SongBook : MonoBehaviour
 
     void SetUI() 
     {
-        Debug.Log("Eish");
+        Debug.Log("Eish "+ index);
         //Setting the page variables to the song variables
         GameObject thePage = Page1;
         if (index - 1 == 0) { thePage = Page1; }
@@ -128,7 +129,7 @@ public class SongBook : MonoBehaviour
 
         for (int i = 0; i < Songlist[index - 1].Notes.Length; i++)
         {
-
+            Debug.Log(Songlist[index - 1].Notes);
             //get note UI object
             if (i == 0) { Note = Note1; }
             else if (i == 1) { Note = Note2; }
@@ -268,8 +269,8 @@ public class SongBook : MonoBehaviour
 
             if (Songlist[j] != null)
             {
-                if (Scheme.currentControlScheme == "Gamepad") { SetUIGpad(thePage); }
-                else if (Scheme.currentControlScheme == "Keyboard&Mouse") { SetUIMandK(thePage); }
+                if (Scheme.currentControlScheme == "Gamepad") { ChangeToGpad(thePage, j); }
+                else if (Scheme.currentControlScheme == "Keyboard&Mouse") { ChangeToMandK(thePage, j); }
             }else {
                 if (Scheme.currentControlScheme == "Gamepad") 
                 {
@@ -291,5 +292,78 @@ public class SongBook : MonoBehaviour
         
     }
 
+
+    void ChangeToMandK(GameObject thePage, int j)
+    {
+        Acontainer = thePage.transform.Find("Note_Arrows").gameObject;
+        Ncontainer = thePage.transform.Find("Note_Nums").gameObject;
+
+        Acontainer.SetActive(false);
+        Ncontainer.SetActive(true);
+
+        Image Note1 = Ncontainer.transform.Find("N1").gameObject.GetComponent<Image>();
+        Image Note2 = Ncontainer.transform.Find("N2").gameObject.GetComponent<Image>();
+        Image Note3 = Ncontainer.transform.Find("N3").gameObject.GetComponent<Image>();
+        Image Note4 = Ncontainer.transform.Find("N4").gameObject.GetComponent<Image>();
+        Image Note5 = Ncontainer.transform.Find("N5").gameObject.GetComponent<Image>();
+        Image Note6 = Ncontainer.transform.Find("N6").gameObject.GetComponent<Image>();
+
+        Image Note = Note1;
+
+        for (int i = 0; i < 6; i++)
+        {
+            Debug.Log(Songlist[j].Notes);
+            //get note UI object
+            if (i == 0) { Note = Note1; }
+            else if (i == 1) { Note = Note2; }
+            else if (i == 2) { Note = Note3; }
+            else if (i == 3) { Note = Note4; }
+            else if (i == 4) { Note = Note5; }
+            else if (i == 5) { Note = Note6; }
+
+            //set colors and num
+            if (Songlist[j].Notes[i].ToString() == "1") { Note.color = Color.red; Note.sprite = Num1; }
+            else if (Songlist[j].Notes[i].ToString() == "2") { Note.color = Color.yellow; Note.sprite = Num2; }
+            else if (Songlist[j].Notes[i].ToString() == "3") { Note.color = Color.blue; Note.sprite = Num3; }
+            else if (Songlist[j].Notes[i].ToString() == "4") { Note.color = Color.green; Note.sprite = Num4; }
+        }
+    }
+
+    void ChangeToGpad(GameObject thePage, int j)
+    {
+        Acontainer = thePage.transform.Find("Note_Arrows").gameObject;
+        Ncontainer = thePage.transform.Find("Note_Nums").gameObject;
+
+        Acontainer.SetActive(true);
+        Ncontainer.SetActive(false);
+
+        Image Note1 = Acontainer.transform.Find("A1").gameObject.GetComponent<Image>();
+        Image Note2 = Acontainer.transform.Find("A2").gameObject.GetComponent<Image>();
+        Image Note3 = Acontainer.transform.Find("A3").gameObject.GetComponent<Image>();
+        Image Note4 = Acontainer.transform.Find("A4").gameObject.GetComponent<Image>();
+        Image Note5 = Acontainer.transform.Find("A5").gameObject.GetComponent<Image>();
+        Image Note6 = Acontainer.transform.Find("A6").gameObject.GetComponent<Image>();
+
+        Image Note = Note1;
+
+        for (int i = 0; i < 6; i++)
+        {
+
+            //get note UI object
+            if (i == 0) { Note = Note1; }
+            else if (i == 1) { Note = Note2; }
+            else if (i == 2) { Note = Note3; }
+            else if (i == 3) { Note = Note4; }
+            else if (i == 4) { Note = Note5; }
+            else if (i == 5) { Note = Note6; }
+
+            //set colors
+            if (Songlist[j].Notes[i].ToString() == "1") { Note.color = Color.red; Note.transform.Rotate(Vector3.forward, 0f); }
+            else if (Songlist[j].Notes[i].ToString() == "2") { Note.color = Color.yellow; Note.transform.Rotate(Vector3.forward, -90f); }
+            else if (Songlist[j].Notes[i].ToString() == "3") { Note.color = Color.blue; Note.transform.Rotate(Vector3.forward, 180f); }
+            else if (Songlist[j].Notes[i].ToString() == "4") { Note.color = Color.green; Note.transform.Rotate(Vector3.forward, 90f); }
+
+        }
+    }
 
 }

@@ -32,7 +32,7 @@ public class UIInputManager : MonoBehaviour
         ChangeCanvaseArrows();
         ChangeSongBookNotif();
         //ChangeTutorialTxt();
-        UpdateSongBookNotes();
+        //UpdateSongBookNotes();
     }
 
 
