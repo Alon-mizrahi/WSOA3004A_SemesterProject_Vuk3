@@ -15,18 +15,18 @@ EditorBuildSettings:
     path: Assets/Imraan/Imraan_Scene.unity
     guid: dae68ca434ee7cd4eb765a5aac55256c
   - enabled: 0
-    path: Assets/Scenes/Playtest Scene.unity
+    path: Assets/Prefabs/Scenes/Playtest Scene.unity
     guid: 2141ed3cd185ee34db8650bf58f66da7
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Prefabs/Scenes/MainMenu.unity
     guid: 01d2962e3f49ce64c9ae4d311efda2a5
   - enabled: 0
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/Prefabs/Scenes/Level 1.unity
     guid: 53a558b344e2a1e4fb0ad6cd3b5fff75
   - enabled: 0
-    path: Assets/Scenes/MusicTest.unity
+    path: Assets/Prefabs/Scenes/MusicTest.unity
     guid: edf04221ea2d61449b3a328a031b27de
   - enabled: 1
-    path: Assets/Scenes/PlatformTest.unity
+    path: Assets/Prefabs/Scenes/PlatformTest.unity
     guid: 8ded1deb2d2fef544897b1ba94e2a75c
   m_configObjects: {}
