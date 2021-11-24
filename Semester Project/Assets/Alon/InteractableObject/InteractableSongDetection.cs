@@ -7,6 +7,9 @@ public class InteractableSongDetection : MonoBehaviour
 
     public string[] TargetSongName = new string[10];
 
+
+    public Material Default_Mat, Outline_Mat;
+
     private void Start()
     {
         int index = 0;
@@ -92,5 +95,15 @@ public class InteractableSongDetection : MonoBehaviour
         
     }
 
+
+    public void Highlight() 
+    {
+        gameObject.GetComponent<SpriteRenderer>().material = Outline_Mat;
+    }
+
+    public void UnHighlight() 
+    {
+        gameObject.GetComponent<SpriteRenderer>().material = Default_Mat;
+    }
 
 }

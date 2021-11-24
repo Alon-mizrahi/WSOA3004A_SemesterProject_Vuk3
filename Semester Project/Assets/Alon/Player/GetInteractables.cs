@@ -6,22 +6,13 @@ public class GetInteractables : MonoBehaviour
 {
     public GameObject[] Interactables = new GameObject[10];
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Interactable") 
         {
+            other.gameObject.GetComponent<InteractableSongDetection>().Highlight();
+
             for (int i = 0; i < Interactables.Length; i++) 
             {
                 if (Interactables[i] == null) 
@@ -38,6 +29,7 @@ public class GetInteractables : MonoBehaviour
     {
         if (other.tag == "Interactable")
         {
+            other.gameObject.GetComponent<InteractableSongDetection>().UnHighlight();
             for (int i = 0; i < Interactables.Length; i++)
             {
                 if (Interactables[i] == other.gameObject)

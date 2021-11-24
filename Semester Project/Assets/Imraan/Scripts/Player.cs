@@ -177,7 +177,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D MusicBlocker)
     {
-        if(MusicBlocker.gameObject.CompareTag("Music Block"))
+
+        if (MusicBlocker.gameObject.CompareTag("Music Block"))
         {
             MusicBlock = true;
         }
@@ -185,6 +186,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D MusicEnabler)
     {
+
         if (MusicEnabler.gameObject.CompareTag("Music Block"))
         {
             MusicBlock = false;
