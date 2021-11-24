@@ -110,6 +110,8 @@ MonoBehaviour:
   - 
   - 
   - 
+  Default_Mat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  Outline_Mat: {fileID: 2100000, guid: 66130da13e7b9a04591e6b22dde64280, type: 2}
 --- !u!114 &3504587017024823565
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29245,6 +29245,8 @@ MonoBehaviour:
   - 
   - 
   - 
+  Default_Mat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  Outline_Mat: {fileID: 2100000, guid: 0f02d29fc6d0a1e4aae7a39cdb5208a7, type: 2}
 --- !u!61 &5926303030124340173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29398,6 +29400,8 @@ MonoBehaviour:
   - 
   - 
   - 
+  Default_Mat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  Outline_Mat: {fileID: 2100000, guid: 0f02d29fc6d0a1e4aae7a39cdb5208a7, type: 2}
 --- !u!61 &3447497291176994112
 BoxCollider2D:
   m_ObjectHideFlags: 0
