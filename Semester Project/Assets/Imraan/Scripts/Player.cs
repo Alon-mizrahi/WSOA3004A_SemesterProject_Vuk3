@@ -66,9 +66,13 @@ public class Player : MonoBehaviour
         
         else if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
         {
-            gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Tutorial");
-            Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
-            gameObject.GetComponent<PlayerTutorial>().ActivateTutorial();
+            if (gameObject.GetComponent<PlayerTutorial>().FirstRound) 
+            {
+                gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Tutorial");
+                Debug.Log(gameObject.GetComponent<PlayerInput>().currentActionMap);
+                gameObject.GetComponent<PlayerTutorial>().ActivateTutorial();
+            }
+            
         }
         
     }

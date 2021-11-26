@@ -7,21 +7,13 @@ public class PlayerTutorial : MonoBehaviour
 {
     public GameObject CurrentTut;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Tutorial" && other.GetComponent<TutorialScript>().Collided == true) 
-        {
-            
-        }
-    }
+    public bool FirstRound = true;
 
-    public void AtTutorial(GameObject Tut) 
+
+    public void AtTutorial(GameObject Tut) //called from collision with tut , this starts tut
     {
         CurrentTut = Tut;
-        //if (gameObject.GetComponent<PlayerInput>().currentControlScheme == "Gamepad") { CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press 'A' to Interact"; }
-        //else if (gameObject.GetComponent<PlayerInput>().currentControlScheme == "Keyboard&Mouse") { CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.text = "Press 'Space' to Interact"; }
-
-            CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = true;
+        CurrentTut.GetComponent<TutorialScript>().TutorialUItxt.enabled = true;
     }
 
     public void LeftTutorial() 
@@ -33,18 +25,10 @@ public class PlayerTutorial : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Tutorial" && other.GetComponent<TutorialScript>().Collided == false) 
-        {
-            
-        }
-    }
 
-
-    public void ActivateTutorial() 
+    public void ActivateTutorial() //called from pressing interact at tut
     {
-        if (CurrentTut != null) 
+        if (CurrentTut != null && FirstRound) 
         {
             CurrentTut.GetComponent<TutorialScript>().ShowTutorial();
         }

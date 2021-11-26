@@ -22,32 +22,36 @@ public class TutorialScript : MonoBehaviour
 
     private void Start()
     {
+        //Player.GetComponent<PlayerTutorial>().FirstRound;
+
         Player = GameObject.FindGameObjectWithTag("Player");
         if (TextGpad.Length >= TextMK.Length) { TutorialText = new string[TextGpad.Length]; }
         else { TutorialText = new string[TextMK.Length]; }
         ChangeSchemeGpad();
     }
 
-    public void ShowTutorial() 
+    public void ShowTutorial() //start of tut
     {
         TutorialUItxt.text = TutorialText[0];
         TutorialUItxt.enabled = true;
         inTutorial = true;
+        Player.GetComponent<PlayerTutorial>().FirstRound = false;
     }
 
     public void NextText() 
     {
         if (inTutorial == true) 
         {
-            if (index >= TutorialText.Length-1)
+            if (index >= TutorialText.Length-1) //end of tut
             {
                 inTutorial = false;
                 index = 0;
                 TutorialUItxt.text = Defualttxt;
+                TutorialUItxt.enabled = false;
 
                 Player.GetComponent<PlayerTutorial>().EndTut();
             }
-            else { 
+            else { //next tut
                 index++;
                 TutorialUItxt.text = TutorialText[index];
             }
@@ -81,6 +85,7 @@ public class TutorialScript : MonoBehaviour
             Collided = true; other.gameObject.GetComponent<PlayerTutorial>().AtTutorial(gameObject);
             TutorialUItxt.text = Defualttxt;
             TutorialUItxt.enabled = true;
+            Player.GetComponent<PlayerTutorial>().FirstRound = true;
         }
     }
 
