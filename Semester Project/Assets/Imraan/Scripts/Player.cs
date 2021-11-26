@@ -25,13 +25,20 @@ public class Player : MonoBehaviour
     public bool Ground, MusicBlock;
     public Animator PlayerAnimator;
 
-  
+    Vector2 JumpVect;
+
+    private void Start()
+    {
+        JumpVect = new Vector2(0, JumpForce);
+    }
 
     private void Update()
     {
         PLYRB.velocity = new Vector2(XInput * MoveSpeed, PLYRB.velocity.y);
         Ground = Physics2D.OverlapCircle(GroundCheck.position, JumpCheckDist, GroundLayer);
         Land();
+
+        //JumpVect = new Vector2(0, JumpForce); for testing
     }
 
     public void Move(InputAction.CallbackContext XContext)
@@ -60,7 +67,9 @@ public class Player : MonoBehaviour
         if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
             PlayerAnimator.SetBool("Midair", true);
-            PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
+            //PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
+
+            PLYRB.AddForce(JumpVect, ForceMode2D.Impulse);
             //Debug.Log("Jumped");
         }
         

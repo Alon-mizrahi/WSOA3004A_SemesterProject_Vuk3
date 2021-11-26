@@ -3060,6 +3060,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7353043857725475480, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353043857725475480, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
+      propertyPath: m_GravityScale
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353043857725475481, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
+      propertyPath: JumpForce
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475484, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: NotesUI
       value: 
