@@ -39,7 +39,7 @@ public class SongBook : MonoBehaviour
         {
             if (Songlist[i] != null) 
             {
-                Debug.Log("OY OY "+ index);
+                //Debug.Log("OY OY "+ index);
                 index++;
                 SetUI();
             }
@@ -56,7 +56,7 @@ public class SongBook : MonoBehaviour
 
     void SetUI() 
     {
-        Debug.Log("Eish "+ index);
+        //Debug.Log("Eish "+ index);
         //Setting the page variables to the song variables
         GameObject thePage = Page1;
         if (index - 1 == 0) { thePage = Page1; }
@@ -129,7 +129,7 @@ public class SongBook : MonoBehaviour
 
         for (int i = 0; i < Songlist[index - 1].Notes.Length; i++)
         {
-            Debug.Log(Songlist[index - 1].Notes);
+            //Debug.Log(Songlist[index - 1].Notes);
             //get note UI object
             if (i == 0) { Note = Note1; }
             else if (i == 1) { Note = Note2; }
@@ -312,7 +312,7 @@ public class SongBook : MonoBehaviour
 
         for (int i = 0; i < 6; i++)
         {
-            Debug.Log(Songlist[j].Notes);
+            //Debug.Log(Songlist[j].Notes);
             //get note UI object
             if (i == 0) { Note = Note1; }
             else if (i == 1) { Note = Note2; }

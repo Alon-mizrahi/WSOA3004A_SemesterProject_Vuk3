@@ -57,12 +57,19 @@ public class InteractableSongDetection : MonoBehaviour
                 }
                 else if (SongPlayed == "Song of Horizontal") 
                 {
-                    if (gameObject.GetComponent<MovablePlatform>().MoveHori == false) { gameObject.GetComponent<MovablePlatform>().MoveHori = true; }
+                    if (gameObject.GetComponent<MovablePlatform>().MoveHori == false) 
+                    { 
+                        gameObject.GetComponent<MovablePlatform>().MoveHori = true;
+                        gameObject.GetComponent<MovablePlatform>().MoveVert = false;
+                    }
                     else { gameObject.GetComponent<MovablePlatform>().MoveHori = false; }
                 }
                 else if (SongPlayed == "Song of Vertical")
                 {
-                    if(gameObject.GetComponent<MovablePlatform>().MoveVert == false){ gameObject.GetComponent<MovablePlatform>().MoveVert = true; }
+                    if(gameObject.GetComponent<MovablePlatform>().MoveVert == false){ 
+                        gameObject.GetComponent<MovablePlatform>().MoveVert = true; 
+                        gameObject.GetComponent<MovablePlatform>().MoveHori = false; 
+                    }
                     else { gameObject.GetComponent<MovablePlatform>().MoveVert = false; }
                     
                 }
