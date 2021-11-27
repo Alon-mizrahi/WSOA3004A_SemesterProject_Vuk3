@@ -16,7 +16,7 @@ public class Teleporter : MonoBehaviour
     //GameObject Player;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Teleport1 = transform.GetChild(0);
         Teleport2 = transform.GetChild(1);

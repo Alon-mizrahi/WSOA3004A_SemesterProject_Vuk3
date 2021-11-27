@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class TelportGetPos : MonoBehaviour
 {
-    public bool inT1 = false;
-    public bool inT2 = false;
+    //public bool inT1 = false;
+    //public bool inT2 = false;
 
     public Transform Target1, Target2;
 
+    bool PairedWithPlat = false;
+    Transform Plat;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -37,8 +39,22 @@ public class TelportGetPos : MonoBehaviour
                 }
             }
         }
+
+        if (other.name.Contains("Interactable_MovablePlatform")) 
+        {
+            PairedWithPlat = true;
+            Plat = other.transform;
+        }
     }
 
+
+    private void Update()
+    {
+        if (PairedWithPlat) 
+        {
+            gameObject.transform.position = new Vector2(Plat.position.x, Plat.position.y + 2.4f);
+        }
+    }
 
 
     IEnumerator Telport(GameObject other) 
