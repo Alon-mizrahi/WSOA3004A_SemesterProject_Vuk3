@@ -41,6 +41,14 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Quite"",
+                    ""type"": ""Button"",
+                    ""id"": ""a53c0377-f1f3-4162-b6a7-6523a8d45efd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -164,6 +172,17 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                     ""action"": ""Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70156e46-dd79-4cfe-b8ba-686fb52b8ecb"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Quite"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -203,6 +222,7 @@ public class @MenuNavi : IInputActionCollection, IDisposable
         m_MenuNav_NextItem = m_MenuNav.FindAction("NextItem", throwIfNotFound: true);
         m_MenuNav_PrevItem = m_MenuNav.FindAction("PrevItem", throwIfNotFound: true);
         m_MenuNav_Select = m_MenuNav.FindAction("Select", throwIfNotFound: true);
+        m_MenuNav_Quite = m_MenuNav.FindAction("Quite", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -255,6 +275,7 @@ public class @MenuNavi : IInputActionCollection, IDisposable
     private readonly InputAction m_MenuNav_NextItem;
     private readonly InputAction m_MenuNav_PrevItem;
     private readonly InputAction m_MenuNav_Select;
+    private readonly InputAction m_MenuNav_Quite;
     public struct MenuNavActions
     {
         private @MenuNavi m_Wrapper;
@@ -262,6 +283,7 @@ public class @MenuNavi : IInputActionCollection, IDisposable
         public InputAction @NextItem => m_Wrapper.m_MenuNav_NextItem;
         public InputAction @PrevItem => m_Wrapper.m_MenuNav_PrevItem;
         public InputAction @Select => m_Wrapper.m_MenuNav_Select;
+        public InputAction @Quite => m_Wrapper.m_MenuNav_Quite;
         public InputActionMap Get() { return m_Wrapper.m_MenuNav; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -280,6 +302,9 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                 @Select.started -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnSelect;
                 @Select.performed -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnSelect;
                 @Select.canceled -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnSelect;
+                @Quite.started -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnQuite;
+                @Quite.performed -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnQuite;
+                @Quite.canceled -= m_Wrapper.m_MenuNavActionsCallbackInterface.OnQuite;
             }
             m_Wrapper.m_MenuNavActionsCallbackInterface = instance;
             if (instance != null)
@@ -293,6 +318,9 @@ public class @MenuNavi : IInputActionCollection, IDisposable
                 @Select.started += instance.OnSelect;
                 @Select.performed += instance.OnSelect;
                 @Select.canceled += instance.OnSelect;
+                @Quite.started += instance.OnQuite;
+                @Quite.performed += instance.OnQuite;
+                @Quite.canceled += instance.OnQuite;
             }
         }
     }
@@ -320,5 +348,6 @@ public class @MenuNavi : IInputActionCollection, IDisposable
         void OnNextItem(InputAction.CallbackContext context);
         void OnPrevItem(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
+        void OnQuite(InputAction.CallbackContext context);
     }
 }

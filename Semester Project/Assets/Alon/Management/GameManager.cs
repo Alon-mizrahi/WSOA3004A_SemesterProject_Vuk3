@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) { QuitGame(); }
+        //if (Input.GetKeyDown(KeyCode.Escape)) { QuitGame(); }
     }
 
 
@@ -45,7 +45,11 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame() 
     {
-        Application.Quit();
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+        }
+        else { Application.Quit(); }
     }
 
 

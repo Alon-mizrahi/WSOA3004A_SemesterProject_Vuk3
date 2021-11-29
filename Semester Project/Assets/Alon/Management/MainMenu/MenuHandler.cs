@@ -142,7 +142,8 @@ public class MenuHandler : MonoBehaviour
     }
 
     public void Quite() 
-    { 
+    {
+        Debug.Log("Quite");
         Application.Quit(); 
     }
 

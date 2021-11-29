@@ -76,6 +76,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "c213b12b-df49-4d48-aad7-bdcd849ec447",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -494,6 +502,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "ToggleSongBook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4cdbc433-3e5e-4f81-aea2-51705d6ee391",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse;Gamepad",
+                    "action": "Quit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1045,6 +1064,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "ToggleSongBook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75627284-3882-49e9-b044-54567bcdb95b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "ToggleSongBook",
                     "isComposite": false,
                     "isPartOfComposite": false
