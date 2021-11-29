@@ -28,7 +28,7 @@ public class WorldCrystal : MonoBehaviour
 
     public bool Correct = false;
 
-    public GameManager GM;
+    BackgroundMusic MusicScript;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,8 @@ public class WorldCrystal : MonoBehaviour
             else if (Notes[i] == '3') { SoundOrder[i] = flute3; }
             else if (Notes[i] == '4') { SoundOrder[i] = flute4; }
         }
+
+        MusicScript = GameObject.FindGameObjectWithTag("BackGroundMusic").GetComponent<BackgroundMusic>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -114,7 +116,7 @@ public class WorldCrystal : MonoBehaviour
             //Change Scene here call something in a game manager script
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-            GM.BackgroundMusic();
+            MusicScript.PlayMusic();
         }
         else { StartCoroutine("StartCall"); }
 
