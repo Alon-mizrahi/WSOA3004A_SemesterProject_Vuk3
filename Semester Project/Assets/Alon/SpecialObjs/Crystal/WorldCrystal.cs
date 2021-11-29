@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class WorldCrystal : MonoBehaviour
 {
-    public AudioClip flute1;
-    public AudioClip flute2;
-    public AudioClip flute3;
-    public AudioClip flute4;
+    public AudioClip flute1, flute2, flute3, flute4;
+    public AudioClip FailSound;
     public AudioSource AS;
 
     public string Notes;
@@ -22,8 +20,6 @@ public class WorldCrystal : MonoBehaviour
 
     public GameObject Player;
 
-    public GameObject Obstacle;
-
     public int LayerNumber = 1;
 
     public int NoteBarCount = 1;
@@ -31,6 +27,8 @@ public class WorldCrystal : MonoBehaviour
     public int count = 0;
 
     public bool Correct = false;
+
+    public GameManager GM;
 
     // Start is called before the first frame update
     void Start()
@@ -113,8 +111,10 @@ public class WorldCrystal : MonoBehaviour
 
             StopCoroutine("StartCall");
 
-            Obstacle.GetComponent<CrystalObstical>().CrystalComplete = true;
+            //Change Scene here call something in a game manager script
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+            GM.BackgroundMusic();
         }
         else { StartCoroutine("StartCall"); }
 
@@ -186,6 +186,8 @@ public class WorldCrystal : MonoBehaviour
     IEnumerator FailedSong()
     {
         //play some fail audio here
+        AS.clip = FailSound;
+        AS.Play();
 
         Correct = false;
         Particals1.SetActive(false);

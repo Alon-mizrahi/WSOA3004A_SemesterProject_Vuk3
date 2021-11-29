@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TutorialUItxt: {fileID: 0}
+  TutorialText: []
   TextGpad: []
   TextMK: []
-  Defualttxt: Press 'A' to Interact
   Collided: 0
   inTutorial: 0
 --- !u!212 &4995188457728503780
