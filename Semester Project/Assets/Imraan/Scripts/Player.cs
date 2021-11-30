@@ -32,7 +32,9 @@ public class Player : MonoBehaviour
     public AudioSource PlayerAudio;
     public AudioClip Footsteps, JumpSound;
 
-
+    public bool isWalking = false;
+    public bool SetWalk = false;
+    public bool WalkButton = false;
 
 
     private void Start()
@@ -47,17 +49,24 @@ public class Player : MonoBehaviour
         Land();
 
         //JumpVect = new Vector2(0, JumpForce); for testing
+        if (Ground && WalkButton) { isWalking = true; }
+        else { isWalking = false; SetWalk = false; }
+
+        if (isWalking && SetWalk == false) { SetWalk = true; StartFootSteps(); }
+        
+        //if(Ground == false) { StopFootSteps(); }
+
+
     }
 
     public void Move(InputAction.CallbackContext XContext)
     {
         XInput = XContext.ReadValue<Vector2>().x;
 
-        if (XContext.started) 
+        if (XContext.started && Ground) 
         {
-            PlayerAudio.clip = Footsteps;
-            PlayerAudio.loop = true;
-            PlayerAudio.Play();
+            WalkButton = true;
+            //StartFootSteps();
         }
 
         if (XInput < 0) 
@@ -74,9 +83,12 @@ public class Player : MonoBehaviour
         {
             PlayerAnimator.SetBool("Move", false);
             PlayerAudio.Stop();
+            WalkButton = false;
         }
 
     }
+
+
 
     public void Jump(InputAction.CallbackContext JumpContext)
     {
@@ -87,10 +99,14 @@ public class Player : MonoBehaviour
 
             PLYRB.AddForce(JumpVect, ForceMode2D.Impulse);
             //Debug.Log("Jumped");
-
+            
+            
+            //if (isWalking) { StopFootSteps(); }
             PlayerAudio.clip = JumpSound;
             PlayerAudio.loop = false;
             PlayerAudio.Play();
+
+            //SetWalk = false;
         }
         else if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
         {
@@ -102,8 +118,23 @@ public class Player : MonoBehaviour
             }
             
         }
+
+
         
     }
+
+    void StartFootSteps() 
+    {
+        PlayerAudio.clip = Footsteps;
+        PlayerAudio.loop = true;
+        PlayerAudio.Play();
+    }
+    void StopFootSteps()
+    {
+        PlayerAudio.Stop();
+    }
+
+
     public void Land()
     {
         if (Ground)
