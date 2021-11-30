@@ -80,15 +80,6 @@ public class Player : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext JumpContext)
     {
-
-        if (JumpContext.started) 
-        {
-            PlayerAudio.clip = JumpSound;
-            PlayerAudio.loop = false;
-            PlayerAudio.Play();
-        }
-
-
         if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
             PlayerAnimator.SetBool("Midair", true);
@@ -96,8 +87,11 @@ public class Player : MonoBehaviour
 
             PLYRB.AddForce(JumpVect, ForceMode2D.Impulse);
             //Debug.Log("Jumped");
+
+            PlayerAudio.clip = JumpSound;
+            PlayerAudio.loop = false;
+            PlayerAudio.Play();
         }
-        
         else if (JumpContext.started && gameObject.GetComponent<PlayerTutorial>().CurrentTut != null) 
         {
             if (gameObject.GetComponent<PlayerTutorial>().FirstRound) 
