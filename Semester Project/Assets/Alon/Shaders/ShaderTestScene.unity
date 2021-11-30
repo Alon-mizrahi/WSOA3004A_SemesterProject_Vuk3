@@ -8154,9 +8154,17 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475481, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
+      propertyPath: Footsteps
+      value: 
+      objectReference: {fileID: 8300000, guid: 19c45a88bcd63ed4a82af1a7af3efe86, type: 3}
+    - target: {fileID: 7353043857725475481, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: JumpForce
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 7353043857725475481, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
+      propertyPath: JumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fd643417787b919439ab08a0a74d7e9f, type: 3}
     - target: {fileID: 7353043857725475483, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_DefaultControlScheme
       value: 
