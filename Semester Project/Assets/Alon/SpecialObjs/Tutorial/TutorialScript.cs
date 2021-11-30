@@ -18,7 +18,7 @@ public class TutorialScript : MonoBehaviour
     public bool Collided;
 
     public bool inTutorial = false;
-public int index = 0;
+    int index = 0;
 
     private IEnumerator coroutine;
 
@@ -111,7 +111,7 @@ public int index = 0;
             temp += TutText[i];
 
             TutorialUItxt.text = temp;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
         }
 
         AS.Stop();
