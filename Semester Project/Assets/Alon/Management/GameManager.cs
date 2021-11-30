@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public Image FadeOut;
 
 
 
@@ -20,6 +21,29 @@ public class GameManager : MonoBehaviour
     {
         //if (Input.GetKeyDown(KeyCode.Escape)) { QuitGame(); }
     }
+
+
+
+
+    public IEnumerator LoadNextScene()
+    {
+        float Fade = 0f;
+        for (int i = 0; i <= 20; i++) 
+        {
+            yield return new WaitForSeconds(0.15f);
+            FadeOut.color = new Color(FadeOut.color.r, FadeOut.color.g, FadeOut.color.b, Fade);
+
+            Fade += 0.05f;
+        }
+
+
+        int Index = SceneManager.GetActiveScene().buildIndex;
+        Index++;
+        SceneManager.LoadScene(Index, LoadSceneMode.Single);
+        
+    }
+
+
 
 
 

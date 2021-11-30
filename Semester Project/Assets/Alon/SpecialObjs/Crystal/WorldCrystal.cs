@@ -30,6 +30,8 @@ public class WorldCrystal : MonoBehaviour
 
     BackgroundMusic MusicScript;
 
+    GameManager GM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,7 @@ public class WorldCrystal : MonoBehaviour
         }
 
         MusicScript = GameObject.FindGameObjectWithTag("BackGroundMusic").GetComponent<BackgroundMusic>();
+        GM = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -117,6 +120,9 @@ public class WorldCrystal : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             MusicScript.PlayMusic();
+
+            StartCoroutine(GM.LoadNextScene());
+            
         }
         else { StartCoroutine("StartCall"); }
 

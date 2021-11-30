@@ -10,6 +10,7 @@ TagManager:
   - LearningArea
   - Crystal
   - BackGroundMusic
+  - Manager
   layers:
   - Default
   - TransparentFX
