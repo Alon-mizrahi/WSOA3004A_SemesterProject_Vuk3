@@ -13,13 +13,14 @@ public class BackgroundMusic : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
+        AS = gameObject.GetComponent<AudioSource>();
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        AS = gameObject.GetComponent<AudioSource>();
+        
     }
 
     public void PlayMusic()

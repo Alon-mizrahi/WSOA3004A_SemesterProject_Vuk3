@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape)) { QuitGame(); }
+        //if (Input.GetKeyDown(KeyCode.O)) { StartCoroutine("LoadNextScene"); }
     }
 
 
@@ -28,14 +28,15 @@ public class GameManager : MonoBehaviour
     public IEnumerator LoadNextScene()
     {
         float Fade = 0f;
-        for (int i = 0; i <= 20; i++) 
+        for (int i = 0; i <= 200; i++) 
         {
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.005f);
             FadeOut.color = new Color(FadeOut.color.r, FadeOut.color.g, FadeOut.color.b, Fade);
 
-            Fade += 0.05f;
+            Fade += 0.005f;
         }
 
+        yield return new WaitForSeconds(1f);
 
         int Index = SceneManager.GetActiveScene().buildIndex;
         Index++;
