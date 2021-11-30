@@ -4,14 +4,32 @@ using UnityEngine;
 
 public class GetInteractables : MonoBehaviour
 {
-    public GameObject[] Interactables = new GameObject[10];
+    public GameObject[] Interactables = new GameObject[30];
+    public SongBook SB;
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Interactable") 
         {
-            other.gameObject.GetComponent<InteractableSongDetection>().Highlight();
+
+            for (int j = 0; j < 6; j++) 
+            {
+                for (int k = 0; k < 6; k++) 
+                {
+                    if (other.gameObject.GetComponent<InteractableSongDetection>().TargetSongName[j] != null && SB.Songlist[k] != null) 
+                    {
+                        if (other.gameObject.GetComponent<InteractableSongDetection>().TargetSongName[j] == SB.Songlist[k].SongTitle)
+                        {
+                            other.gameObject.GetComponent<InteractableSongDetection>().Highlight();
+                            break;
+                        }
+                    }
+                    
+                }
+            }
+
+            
 
             for (int i = 0; i < Interactables.Length; i++) 
             {
@@ -29,11 +47,12 @@ public class GetInteractables : MonoBehaviour
     {
         if (other.tag == "Interactable")
         {
-            other.gameObject.GetComponent<InteractableSongDetection>().UnHighlight();
+            
             for (int i = 0; i < Interactables.Length; i++)
             {
                 if (Interactables[i] == other.gameObject)
                 {
+                    other.gameObject.GetComponent<InteractableSongDetection>().UnHighlight();
                     Interactables[i] = null;
                     break;
                 }

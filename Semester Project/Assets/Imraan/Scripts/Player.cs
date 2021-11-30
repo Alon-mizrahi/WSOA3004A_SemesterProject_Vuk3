@@ -27,6 +27,14 @@ public class Player : MonoBehaviour
 
     Vector2 JumpVect;
 
+
+    //Walk and Jump Sounds
+    public AudioSource PlayerAudio;
+    public AudioClip Footsteps, JumpSound;
+
+
+
+
     private void Start()
     {
         JumpVect = new Vector2(0, JumpForce);
@@ -45,6 +53,13 @@ public class Player : MonoBehaviour
     {
         XInput = XContext.ReadValue<Vector2>().x;
 
+        if (XContext.started) 
+        {
+            PlayerAudio.clip = Footsteps;
+            PlayerAudio.loop = true;
+            PlayerAudio.Play();
+        }
+
         if (XInput < 0) 
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
@@ -58,12 +73,22 @@ public class Player : MonoBehaviour
         if(XContext.canceled)
         {
             PlayerAnimator.SetBool("Move", false);
+            PlayerAudio.Stop();
         }
 
     }
 
     public void Jump(InputAction.CallbackContext JumpContext)
     {
+
+        if (JumpContext.started) 
+        {
+            PlayerAudio.clip = JumpSound;
+            PlayerAudio.loop = false;
+            PlayerAudio.Play();
+        }
+
+
         if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
             PlayerAnimator.SetBool("Midair", true);

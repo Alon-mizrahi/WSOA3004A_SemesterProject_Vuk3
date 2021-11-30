@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractableSongDetection : MonoBehaviour
 {
 
-    public string[] TargetSongName = new string[10];
+    public string[] TargetSongName = new string[6];
 
 
     public Material Default_Mat, Outline_Mat;

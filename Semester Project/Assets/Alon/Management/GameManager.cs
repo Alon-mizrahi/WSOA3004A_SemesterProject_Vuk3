@@ -8,6 +8,22 @@ public class GameManager : MonoBehaviour
 {
     public Image FadeOut;
 
+    private void Awake()
+    {
+        StartCoroutine("IntroFade");
+    }
+
+    IEnumerator IntroFade() 
+    {
+        float Fade = 1f;
+        for (int i = 200; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.005f);
+            FadeOut.color = new Color(FadeOut.color.r, FadeOut.color.g, FadeOut.color.b, Fade);
+
+            Fade -= 0.005f;
+        }
+    }
 
 
     // Start is called before the first frame update
