@@ -25,7 +25,14 @@ public class Player : MonoBehaviour
     public bool Ground, MusicBlock;
     public Animator PlayerAnimator;
 
+
     Vector2 JumpVect;
+
+    //New jump things
+    public float FallMux = 2.5f;
+    public float LowJumpMux = 2f;
+    bool isJump = false;
+    
 
 
     //Walk and Jump Sounds
@@ -39,6 +46,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        PLYRB = gameObject.GetComponent<Rigidbody2D>();
         JumpVect = new Vector2(0, JumpForce);
     }
 
@@ -53,10 +61,19 @@ public class Player : MonoBehaviour
         else { isWalking = false; SetWalk = false; }
 
         if (isWalking && SetWalk == false) { SetWalk = true; StartFootSteps(); }
-        
+
         //if(Ground == false) { StopFootSteps(); }
 
 
+        //new Jump Things
+        if (PLYRB.velocity.y < 0)
+        {
+            PLYRB.velocity += Vector2.up * Physics2D.gravity.y * (FallMux - 1) * Time.deltaTime;
+        }
+        else if (PLYRB.velocity.y > 0 && isJump ==false) 
+        {
+            PLYRB.velocity += Vector2.up * Physics2D.gravity.y * (LowJumpMux - 1) * Time.deltaTime;
+        }
     }
 
     public void Move(InputAction.CallbackContext XContext)
@@ -95,9 +112,11 @@ public class Player : MonoBehaviour
         if (JumpContext.performed && Ground && gameObject.GetComponent<PlayerTutorial>().CurrentTut == null)
         {
             PlayerAnimator.SetBool("Midair", true);
-            //PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
+            isJump = true;
+            
+            PLYRB.velocity = new Vector2(PLYRB.velocity.x, JumpForce);
 
-            PLYRB.AddForce(JumpVect, ForceMode2D.Impulse);
+            //PLYRB.AddForce(JumpVect, ForceMode2D.Impulse);
             //Debug.Log("Jumped");
             
             
@@ -118,6 +137,8 @@ public class Player : MonoBehaviour
             }
             
         }
+
+        if (JumpContext.canceled) { isJump = false; }
 
 
         
