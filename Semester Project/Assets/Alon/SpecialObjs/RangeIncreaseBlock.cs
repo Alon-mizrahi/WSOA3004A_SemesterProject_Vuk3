@@ -14,7 +14,16 @@ public class RangeIncreaseBlock : MonoBehaviour
         {
             NormalRange = other.gameObject.GetComponent<CircleCollider2D>().radius;
             other.gameObject.GetComponent<CircleCollider2D>().radius = IncreasedRadius;
-            RangeUI.transform.localScale = new Vector3(4.8f, 4.8f, 1f);
+            RangeUI.transform.localScale = new Vector3(6.2f, 6.2f, 1f);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<CircleCollider2D>().radius = IncreasedRadius;
+            RangeUI.transform.localScale = new Vector3(6.2f, 6.2f, 1f);
         }
     }
 

@@ -19,7 +19,7 @@ public class ColourTeaching : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player") 
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
         {
             StartCoroutine("FlashSequence");
         }
@@ -27,9 +27,10 @@ public class ColourTeaching : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D))
         {
             StopCoroutine("FlashSequence");
+            Light.color = Color.white;
         }
     }
 
