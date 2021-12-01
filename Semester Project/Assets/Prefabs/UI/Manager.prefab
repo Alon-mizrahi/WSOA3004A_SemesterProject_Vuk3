@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1029331540070681871}
   m_Layer: 0
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,3 +64,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd17f85ab995484c91a213d4e23319e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FadeOut: {fileID: 0}
