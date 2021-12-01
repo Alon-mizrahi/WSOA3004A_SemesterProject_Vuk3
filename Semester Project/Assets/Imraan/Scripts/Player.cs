@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
     public bool SetWalk = false;
     public bool WalkButton = false;
 
+    //No Music Block
+    public SpriteRenderer RangeUI;
+
 
     private void Start()
     {
@@ -74,6 +77,18 @@ public class Player : MonoBehaviour
         {
             PLYRB.velocity += Vector2.up * Physics2D.gravity.y * (LowJumpMux - 1) * Time.deltaTime;
         }
+
+
+        //MusicBlock Things
+        if (MusicBlock) 
+        {
+            if (RangeUI.enabled) 
+            {
+                RangeUI.enabled = false;
+            }
+        }
+
+
     }
 
     public void Move(InputAction.CallbackContext XContext)

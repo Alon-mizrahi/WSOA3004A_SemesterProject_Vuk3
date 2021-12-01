@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,6 +39,15 @@ public class GameManager : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.O)) { StartCoroutine("LoadNextScene"); }
     }
 
+
+    public void RestartLevel(InputAction.CallbackContext RestartContext) 
+    {
+        if (RestartContext.started) 
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
+    }
 
 
 
