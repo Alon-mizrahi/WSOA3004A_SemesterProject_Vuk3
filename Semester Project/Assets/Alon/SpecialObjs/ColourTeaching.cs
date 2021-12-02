@@ -9,18 +9,21 @@ public class ColourTeaching : MonoBehaviour
     
     string Song;
 
-    public float Delay1, Delay2;
+    GameObject LearningArea;
 
+    public float Delay1, Delay2;
 
     private void Start()
     {
         Song = gameObject.transform.GetChild(0).gameObject.GetComponent<Song>().Notes;
+        LearningArea = gameObject.transform.GetChild(0).gameObject;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
         {
+
             StartCoroutine("FlashSequence");
         }
     }
@@ -32,6 +35,17 @@ public class ColourTeaching : MonoBehaviour
             StopCoroutine("FlashSequence");
             Light.color = Color.white;
         }
+    }
+
+
+    private void Update()
+    {
+            if (!LearningArea.activeSelf) 
+            {
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                StopCoroutine("FlashSequence");
+                Light.color = Color.white;
+            }
     }
 
 

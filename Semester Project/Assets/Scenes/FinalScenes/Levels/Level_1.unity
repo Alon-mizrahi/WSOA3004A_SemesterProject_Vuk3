@@ -17579,7 +17579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.7
+      value: 137.7
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19367,6 +19367,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -1029331540070681871, guid: 1381efbe2128c9747ba217ab90151c40, type: 3}
+      propertyPath: SB
+      value: 
+      objectReference: {fileID: 446175055}
+    - target: {fileID: -1029331540070681871, guid: 1381efbe2128c9747ba217ab90151c40, type: 3}
       propertyPath: FadeOut
       value: 
       objectReference: {fileID: 1953060365}
@@ -20799,6 +20803,10 @@ PrefabInstance:
       propertyPath: NewSongNotif
       value: 
       objectReference: {fileID: 118670104}
+    - target: {fileID: 6274855028703890448, guid: 7f602518700099c48bcd0005fad426e4, type: 3}
+      propertyPath: TargetObjs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2106591657}
     - target: {fileID: 6747019260934871765, guid: 7f602518700099c48bcd0005fad426e4, type: 3}
       propertyPath: m_Name
       value: ColourTeacher
@@ -21510,6 +21518,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05740fe3e3249fb43b93692a0076b607, type: 3}
+--- !u!1 &2106591657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3504587017024823574, guid: 85bd3d0c2a43e884dbc7460f4bcb4322, type: 3}
+  m_PrefabInstance: {fileID: 643574497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2132947669
 GameObject:
   m_ObjectHideFlags: 0
