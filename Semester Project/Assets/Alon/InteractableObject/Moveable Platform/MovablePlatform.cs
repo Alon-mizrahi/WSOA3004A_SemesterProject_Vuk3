@@ -143,6 +143,14 @@ public class MovablePlatform : MonoBehaviour
         }
     }
 
+    //private void OnCollisionStay2D(Collision2D other)
+    //{
+        //if (other.gameObject.tag == "Player" && other.transform.parent == gameObject.transform)
+        //{
+        //    other.gameObject.transform.lossyScale = new Vector3(1f, 1f, 1f);
+        //}
+    //}
+
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
