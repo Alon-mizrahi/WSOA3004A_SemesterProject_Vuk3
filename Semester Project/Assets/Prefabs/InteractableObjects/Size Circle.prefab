@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5134173789586326396}
   - component: {fileID: 5134173789586326397}
+  - component: {fileID: 3903966914949717869}
   - component: {fileID: 5134173789586326398}
   - component: {fileID: 5134173789586326399}
   - component: {fileID: 5134173789586326392}
@@ -86,6 +87,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3903966914949717869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5134173789586326394}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7683d58fc21fe44fa45c1e8ca30705d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartSmall: 0
+  StartLarge: 0
 --- !u!114 &5134173789586326398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Small: {x: 0.5, y: 0.5, z: 1}
+  Normal: {x: 1, y: 1, z: 1}
   Large: {x: 1.7, y: 1.7, z: 1}
+  CurrentSize: 1
 --- !u!114 &5134173789586326399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +154,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 15
+  m_Mass: 60
   m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 1
