@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Layer:
-  - {fileID: 8300000, guid: 970440289364c704db3c3843f221a5d5, type: 3}
-  - {fileID: 8300000, guid: 6f02eec830bc3064aaead669c5db899a, type: 3}
-  - {fileID: 8300000, guid: 877b9fbae86761641b307147eeb12236, type: 3}
-  - {fileID: 8300000, guid: aaf745958febb3046a7983a505490ab1, type: 3}
-  LayerIndex: 0
+  - {fileID: 8300000, guid: 2acc654f1196f214694770cfc1369d0c, type: 3}
+  - {fileID: 8300000, guid: 81bae10a73bfb9a4a93fc37b9d26cea3, type: 3}
+  - {fileID: 8300000, guid: 5b822b09f65f5b149bd2741ea3571f6a, type: 3}
+  - {fileID: 8300000, guid: 3bebb99e68abf4c4084d34ce69fde826, type: 3}
+  LayerIndex: 1
   CurrentTime: 0
 --- !u!82 &6042772753107281139
 AudioSource:
