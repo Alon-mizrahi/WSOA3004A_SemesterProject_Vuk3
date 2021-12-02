@@ -45,10 +45,11 @@ public class Player : MonoBehaviour
 
     //No Music Block
     public SpriteRenderer RangeUI;
-
+    SongDetection CurSong;
 
     private void Start()
     {
+        CurSong = gameObject.GetComponent<SongDetection>();
         PLYRB = gameObject.GetComponent<Rigidbody2D>();
         JumpVect = new Vector2(0, JumpForce);
     }
@@ -85,6 +86,10 @@ public class Player : MonoBehaviour
             if (RangeUI.enabled) 
             {
                 RangeUI.enabled = false;
+            }
+            if (CurSong.CurrentSong != null) 
+            {
+                CurSong.ClearSong();
             }
         }
 
