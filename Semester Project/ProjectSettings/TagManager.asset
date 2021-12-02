@@ -11,6 +11,7 @@ TagManager:
   - Crystal
   - BackGroundMusic
   - Manager
+  - SongList
   layers:
   - Default
   - TransparentFX
