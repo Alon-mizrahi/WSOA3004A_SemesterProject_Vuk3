@@ -15,9 +15,11 @@ public class ScaleChange : MonoBehaviour
 
     public State CurrentSize;
 
+    //EditorSize ES;
 
     void Start()
     {
+        //ES = gameObject.GetComponent<EditorSize>();
         //CurrentSize = State.Normal;
         //Normal = transform.localScale;
     }
@@ -35,6 +37,9 @@ public class ScaleChange : MonoBehaviour
         }
         else if (CurrentSize == State.Normal)
         {
+
+                //ES.StartLarge = true;
+
             //Debug.Log("SCALE NORMAL");
             transform.localScale = Large;
             if (gameObject.GetComponent<Rigidbody2D>() != null) { gameObject.GetComponent<Rigidbody2D>().mass *= 2; }
@@ -53,7 +58,10 @@ public class ScaleChange : MonoBehaviour
             }
             else if (CurrentSize == State.Normal)
             {
-                transform.localScale = Small;
+
+               // ES.StartSmall = true;
+
+            transform.localScale = Small;
                 if (gameObject.GetComponent<Rigidbody2D>() != null) { gameObject.GetComponent<Rigidbody2D>().mass /= 2; }
                 CurrentSize = State.Small;
             }

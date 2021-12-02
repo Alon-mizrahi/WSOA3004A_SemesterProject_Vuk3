@@ -20,10 +20,6 @@ public class EditorSize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!EditorApplication.isPlaying)
-        {
-            Debug.Log("3");
-        }
 
 
         if (!EditorApplication.isPlaying) 
