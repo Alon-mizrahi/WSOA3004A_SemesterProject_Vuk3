@@ -13,6 +13,9 @@ public class Song : MonoBehaviour
     public GameObject NewSongNotif;
 
 
+    SongList GlobalSongs;
+
+
     GameObject Player;
 
     public GameObject[] TargetObjs = new GameObject[5];
@@ -21,6 +24,9 @@ public class Song : MonoBehaviour
     {
         gameObject.name = "Learning Area "+SongTitle;
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        GlobalSongs = GameObject.FindGameObjectWithTag("SongList").GetComponent<SongList>();
+
     }
 
     public void AddtoSongBook()
@@ -30,6 +36,8 @@ public class Song : MonoBehaviour
         //open songbook and switch input map
         Debug.Log("HERE");
         Songbook.GetComponent<SongBook>().AddSong(gameObject.GetComponent<Song>());
+
+        GlobalSongs.AddtoList(this);
         //Songbook.GetComponent<SongBook>().ToggleBook();
         //Player.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
 

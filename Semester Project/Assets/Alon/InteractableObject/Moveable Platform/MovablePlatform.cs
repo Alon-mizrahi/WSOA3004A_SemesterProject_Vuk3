@@ -54,13 +54,13 @@ public class MovablePlatform : MonoBehaviour
         else { DirecY = "Up"; }
 
 
-        Debug.Log("UpperBound "+ UpperBound);
-        Debug.Log("LowerBound " + LowerBound);
-        Debug.Log("LeftBound " + LeftBound);
-        Debug.Log("RightBound " + RightBound);
+        //Debug.Log("UpperBound "+ UpperBound);
+        //Debug.Log("LowerBound " + LowerBound);
+        //Debug.Log("LeftBound " + LeftBound);
+        //Debug.Log("RightBound " + RightBound);
 
-        Debug.Log("DirecX " + DirecX);
-        Debug.Log("DirecY " + DirecY);
+        //Debug.Log("DirecX " + DirecX);
+        //Debug.Log("DirecY " + DirecY);
 
 
     }

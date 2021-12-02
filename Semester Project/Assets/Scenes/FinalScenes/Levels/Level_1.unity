@@ -17840,7 +17840,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c638051d78e34c4fa0b10cd0fdc19c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConstSongList: []
+  ConstSongList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &538006505
 Transform:
   m_ObjectHideFlags: 0

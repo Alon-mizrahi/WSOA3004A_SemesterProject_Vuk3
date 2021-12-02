@@ -33,10 +33,17 @@ public class SongBook : MonoBehaviour
     GameObject Acontainer;
     GameObject Ncontainer;
 
+
+
+    public SongList GlobalSongs;
+
+
     private void Awake()
     {
+        //ToggleBook();
         //DontDestroyOnLoad(transform.gameObject);
 
+        /*
         for (int i = 0; i < Songlist.Length; i++) 
         {
             if (Songlist[i] != null) 
@@ -46,6 +53,31 @@ public class SongBook : MonoBehaviour
                 SetUI();
             }
         }
+        */
+        GlobalSongs = GameObject.FindGameObjectWithTag("SongList").GetComponent<SongList>();
+
+        Debug.Log(GlobalSongs);
+
+        for (int j = 0; j < GlobalSongs.ConstSongList.Length; j++)
+        {
+            if (GlobalSongs.ConstSongList[j] != null)
+            {
+                Debug.Log(GlobalSongs.ConstSongList[j].SongTitle);
+                Songlist[j] = GlobalSongs.ConstSongList[j];
+                index++;
+                SetUI();
+            }
+        }
+
+
+    }
+
+
+    void Start() 
+    {
+        
+        
+
     }
 
 

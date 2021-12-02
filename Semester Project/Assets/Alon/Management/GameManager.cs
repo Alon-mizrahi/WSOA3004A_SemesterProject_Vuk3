@@ -8,10 +8,14 @@ using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     public Image FadeOut;
+    public SongBook SB;
 
     private void Awake()
     {
+        SB.ToggleBook();
+        SB.ToggleBook();
         StartCoroutine("IntroFade");
+
     }
 
     IEnumerator IntroFade() 

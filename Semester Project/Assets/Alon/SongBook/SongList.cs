@@ -13,6 +13,26 @@ public class SongList : MonoBehaviour
     }
 
 
+
+    public void AddtoList(Song NewSong) 
+    {
+        for (int i = 0; i < ConstSongList.Length; i++) 
+        {
+            if (ConstSongList[i] == null) 
+            {
+                ConstSongList[i] = NewSong;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
