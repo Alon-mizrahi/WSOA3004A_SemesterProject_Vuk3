@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
+[ExecuteInEditMode]
 public class ScaleChange : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,10 +15,27 @@ public class ScaleChange : MonoBehaviour
 
     State CurrentSize;
 
+
+    public bool StartLarge;
+    public bool StartSmall;
+
+    
+    //change sized in editor
+    private void OnDrawGizmos()
+    {
+        //ChangeSizeInEditor();
+    }
+
+
     void Start()
     {
         CurrentSize = State.Normal;
         Normal = transform.localScale;
+    }
+
+    private void Update()
+    {
+        ChangeSizeInEditor();
     }
 
     public void IncreaseSize() 
@@ -51,5 +70,35 @@ public class ScaleChange : MonoBehaviour
         }
     }
 
+
+
+
+    void ChangeSizeInEditor() 
+    {
+        if (!StartSmall && !StartLarge) 
+        {
+            StartSmall = false;
+            StartLarge = false;
+
+            if (CurrentSize == State.Large)
+            {
+                DecreaseSize();
+            }
+            else if (CurrentSize == State.Small)
+            {
+                IncreaseSize();
+            }
+        }
+        else if (StartLarge && CurrentSize != State.Large)
+        {
+            StartSmall = false;
+            IncreaseSize();
+        }
+        else if (StartSmall && CurrentSize != State.Small)
+        {
+            StartLarge = false;
+            DecreaseSize();
+        }
+    }
 
 }
