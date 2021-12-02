@@ -128,7 +128,7 @@ public class MovablePlatform : MonoBehaviour
         {
             other.gameObject.transform.SetParent(transform);
         }
-        if (other.gameObject.name.Contains("Door") == true || other.gameObject.GetComponent<TilemapCollider2D>() == true || other.gameObject.name.Contains("Interactable_MovablePlatform") == true)
+        if (other.gameObject.name.Contains("Door") == true || other.gameObject.GetComponent<CompositeCollider2D>() == true || other.gameObject.name.Contains("Interactable_MovablePlatform") == true)
         {
             if (MoveHori == true) 
             {
