@@ -35,7 +35,7 @@ public class SongBook : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        //DontDestroyOnLoad(transform.gameObject);
 
         for (int i = 0; i < Songlist.Length; i++) 
         {
