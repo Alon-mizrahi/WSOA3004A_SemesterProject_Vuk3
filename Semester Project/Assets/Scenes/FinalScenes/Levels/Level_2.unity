@@ -17885,6 +17885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumIndicator
       objectReference: {fileID: 0}
+    - target: {fileID: 2852949426244266501, guid: 70d4d84ce4f2de849b0af7b343b43f12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d4d84ce4f2de849b0af7b343b43f12, type: 3}
 --- !u!224 &866766122 stripped

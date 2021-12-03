@@ -328,8 +328,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -79.3, y: 0.00000095367}
-  m_SizeDelta: {x: 145.6728, y: 50}
+  m_AnchoredPosition: {x: -99.168, y: 3}
+  m_SizeDelta: {x: 198.34, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171125647
 MonoBehaviour:
@@ -462,7 +462,7 @@ MonoBehaviour:
     m_ActionId: 3f1dd5c5-6b9a-4ae3-a6cd-636179379f5a
     m_ActionName: Cutscene/Skip[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: New control scheme
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Cutscene
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -482,6 +482,9 @@ MonoBehaviour:
   Holding: 0
   FadeOut: {fileID: 1113461017}
   TimerBar: {fileID: 1683311035}
+  GpadImage: {fileID: 1541442116}
+  Skiptxt: {fileID: 171125648}
+  InputMap: {fileID: 183558476}
 --- !u!1 &281176414
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +586,7 @@ RectTransform:
   m_Children:
   - {fileID: 171125646}
   - {fileID: 1683311034}
+  - {fileID: 1541442115}
   m_Father: {fileID: 1493059303}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -729,7 +733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1493059299
@@ -863,12 +867,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1683311034}
-  m_RootOrder: 0
+  m_Father: {fileID: 414009711}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -81.30237, y: 3}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541442116
@@ -937,14 +941,13 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1541442115}
+  m_Children: []
   m_Father: {fileID: 414009711}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 119.2, y: -0.00000047684}
+  m_AnchoredPosition: {x: 72.99992, y: 3}
   m_SizeDelta: {x: 63.2166, y: 63.217}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1683311035

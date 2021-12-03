@@ -17,22 +17,22 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "c9f4bbd9-2718-4138-a1b6-07b63e4834c0",
+                    "id": "240e901b-de28-4947-b0ee-308b0a13052c",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "KeyboardMouse",
                     "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "ecccf70e-8b0f-4b82-9ba2-32da47602197",
+                    "id": "447861b4-ffac-408e-a3d5-af14d870a87e",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "Gamepad",
                     "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -42,17 +42,28 @@
     ],
     "controlSchemes": [
         {
-            "name": "New control scheme",
-            "bindingGroup": "New control scheme",
+            "name": "KeyboardMouse",
+            "bindingGroup": "KeyboardMouse",
             "devices": [
                 {
-                    "devicePath": "<Gamepad>",
-                    "isOptional": true,
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
                     "isOR": false
                 },
                 {
-                    "devicePath": "<Keyboard>",
+                    "devicePath": "<Mouse>",
                     "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
                     "isOR": false
                 }
             ]
