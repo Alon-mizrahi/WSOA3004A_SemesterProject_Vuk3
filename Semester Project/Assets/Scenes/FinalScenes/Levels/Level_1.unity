@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
+      propertyPath: Notes
+      value: 123123234234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856582839, guid: 9d65524c3a9c4954d917ab9ea5291eb6, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 530447198}
@@ -14492,11 +14496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 97.8
+      value: -52.3
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.1
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16526,9 +16530,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.18
       objectReference: {fileID: 0}
+    - target: {fileID: 6502998988160238569, guid: 19c3a38e52a643c4c839b091959c9ef8, type: 3}
+      propertyPath: speed
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6502998989813680634, guid: 19c3a38e52a643c4c839b091959c9ef8, type: 3}
       propertyPath: m_Size.x
-      value: 22.432095
+      value: 20.14098
       objectReference: {fileID: 0}
     - target: {fileID: 6502998989813680634, guid: 19c3a38e52a643c4c839b091959c9ef8, type: 3}
       propertyPath: m_Size.y
@@ -16536,7 +16544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6502998989813680634, guid: 19c3a38e52a643c4c839b091959c9ef8, type: 3}
       propertyPath: m_Offset.x
-      value: 5.8309803
+      value: 6.9765377
       objectReference: {fileID: 0}
     - target: {fileID: 6502998989813680634, guid: 19c3a38e52a643c4c839b091959c9ef8, type: 3}
       propertyPath: m_Offset.y
