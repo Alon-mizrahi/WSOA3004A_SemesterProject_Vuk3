@@ -40,11 +40,19 @@ public class CallAndRespond : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { StartCoroutine("StartCall"); Player.GetComponent<SongDetection>().ClearSong(); }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
+        {
+            Player.GetComponent<SongDetection>().CurrentLerningArea = gameObject;
+            StartCoroutine("StartCall"); Player.GetComponent<SongDetection>().ClearSong(); 
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { StopCoroutine("StartCall"); CorrectResponse = false; }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
+        {
+            Player.GetComponent<SongDetection>().CurrentLerningArea = null;
+            StopCoroutine("StartCall"); CorrectResponse = false; 
+        }
     }
 
     IEnumerator StartCall()

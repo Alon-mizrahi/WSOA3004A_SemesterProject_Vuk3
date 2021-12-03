@@ -267,7 +267,7 @@ public class SongDetection : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
+        //if (other.tag == "LearningArea") { CurrentLerningArea = other.gameObject; }
         //if (other.tag == "Crystal") { CurrentCrystal = other.gameObject; }
     }
 
