@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class MenuHandler : MonoBehaviour
 {
 
-    public GameObject Screen1, Screen2, Screen3;
+    public GameObject Screen1, Screen2, Screen3, Screen4;
 
     Button[] Buttons = new Button[5];
 
@@ -92,6 +92,18 @@ public class MenuHandler : MonoBehaviour
                 }
             }
         }
+        else if (Screen4.activeSelf)
+        {
+            for (int j = 0; j < Screen3.transform.childCount; j++)
+            {
+                if (Screen3.transform.GetChild(j).GetComponent<Button>() != null)
+                {
+                    Buttons[index] = Screen3.transform.GetChild(j).GetComponent<Button>();
+                    index++;
+                    Length++;
+                }
+            }
+        }
 
         index = 0;
         SelectedBtn = Buttons[index];
@@ -146,6 +158,15 @@ public class MenuHandler : MonoBehaviour
         Debug.Log("Quite");
         Application.Quit(); 
     }
+
+
+    public void SelectLevel(int Index) 
+    {
+        SceneManager.LoadScene(Index, LoadSceneMode.Single);
+    
+    }
+
+
 
 
     void InitializeVolume() 
