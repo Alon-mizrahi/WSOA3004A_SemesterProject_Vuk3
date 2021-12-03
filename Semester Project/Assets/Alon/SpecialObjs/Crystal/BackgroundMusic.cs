@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class BackgroundMusic : MonoBehaviour
 {
-    AudioSource AS;
+    public AudioSource AS;
     public AudioClip[] Layer;
     public int LayerIndex = 0;
 
