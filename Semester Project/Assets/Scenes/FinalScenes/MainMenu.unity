@@ -255,7 +255,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_FontSize: 55
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 73
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_FontSize: 55
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 73
@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_FontSize: 55
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 73
@@ -1903,7 +1903,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_FontSize: 55
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 73
@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_FontSize: 55
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 73
@@ -3938,7 +3938,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_FontSize: 55
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 73
@@ -5482,7 +5482,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: eb4f124b34b322146a7e54c56af7abb6, type: 3}
     m_FontSize: 55
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 73

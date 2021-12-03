@@ -51,17 +51,26 @@ public class WorldCrystal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) { StartCoroutine("StartCall"); Player.GetComponent<SongDetection>().ClearSong(); }
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
+        {
+            Player.GetComponent<SongDetection>().CurrentCrystal = gameObject;
+            StartCoroutine("StartCall"); Player.GetComponent<SongDetection>().ClearSong();
+            
+        
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player") 
+        if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
         { 
             StopCoroutine("StartCall");
             Particals1.SetActive(false);
             Particals2.SetActive(false);
             Particals3.SetActive(false);
             Crystal.color = Color.white;
+            Player.GetComponent<SongDetection>().CurrentCrystal = null;
+
+
         }
     }
 
@@ -119,7 +128,7 @@ public class WorldCrystal : MonoBehaviour
             //Change Scene here call something in a game manager script
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-            MusicScript.PlayMusic();
+            //MusicScript.PlayMusic();
 
             StartCoroutine(GM.LoadNextScene());
             
