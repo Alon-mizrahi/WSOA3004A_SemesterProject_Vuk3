@@ -11,6 +11,7 @@ public class LearningArea : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D))
         {
             inArea = true;
+            other.GetComponent<SongDetection>().CurrentLerningArea = gameObject;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -18,6 +19,7 @@ public class LearningArea : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.GetType() == typeof(BoxCollider2D)) 
         {
             inArea = false;
+            other.GetComponent<SongDetection>().CurrentLerningArea = null;
         }
     }
 }
