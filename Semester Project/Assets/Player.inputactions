@@ -504,11 +504,11 @@
                 },
                 {
                     "name": "",
-                    "id": "a633f724-1cf0-4e8f-881f-2f4a4304f4eb",
+                    "id": "c919c367-7f67-4043-b2cd-3a2480b6103a",
                     "path": "<HID::ZEROPLUS P4 Wired Gamepad>/button4",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "ToggleSongBook",
                     "isComposite": false,
                     "isPartOfComposite": false
