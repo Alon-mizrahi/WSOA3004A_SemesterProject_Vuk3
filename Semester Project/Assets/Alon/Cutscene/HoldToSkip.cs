@@ -16,6 +16,12 @@ public class HoldToSkip : MonoBehaviour
 
     public Image TimerBar;
 
+    public Image GpadImage;
+
+    public Text Skiptxt;
+
+    public PlayerInput InputMap;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +31,12 @@ public class HoldToSkip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        CheckScheme();
+
+
+
+
         if (Holding)
         {
             if (timeLeft > 0)
@@ -48,6 +60,27 @@ public class HoldToSkip : MonoBehaviour
 
 
     }
+
+
+    void CheckScheme() 
+    {
+        //Debug.Log(InputMap.currentControlScheme);
+
+        if (InputMap.currentControlScheme == "KeyboardMouse")
+        {
+            GpadImage.enabled = false;
+            Skiptxt.text = "Hold Space to Skip";
+
+        }
+        else if (InputMap.currentControlScheme == "Gamepad") 
+        {
+            GpadImage.enabled = true;
+            Skiptxt.text = "Hold to Skip";
+        }
+    
+    }
+
+
 
     public void HoldSikp(InputAction.CallbackContext HoldContext) 
     {
