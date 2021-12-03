@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class BackgroundMusic : MonoBehaviour
 {
     AudioSource AS;
@@ -12,7 +12,7 @@ public class BackgroundMusic : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        //DontDestroyOnLoad(transform.gameObject);
         AS = gameObject.GetComponent<AudioSource>();
     }
 
@@ -20,7 +20,10 @@ public class BackgroundMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (SceneManager.GetActiveScene().buildIndex == 2) { AS.clip = Layer[0]; AS.Play(); }
+        else if (SceneManager.GetActiveScene().buildIndex == 3) { AS.clip = Layer[2]; AS.Play(); }
+        else if (SceneManager.GetActiveScene().buildIndex == 4) { AS.clip = Layer[3]; AS.Play(); }
+        else if (SceneManager.GetActiveScene().buildIndex == 5) { AS.clip = Layer[4]; AS.Play(); }
     }
 
     public void PlayMusic()
