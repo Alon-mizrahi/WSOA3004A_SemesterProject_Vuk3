@@ -125,10 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4c7b9e730a9df409b287cb907ec731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flute1: {fileID: 8300000, guid: c0b9a0fa9f1688049b4ceceb7451b337, type: 3}
-  flute2: {fileID: 8300000, guid: 28f63ff05d55dec43bac608032798ece, type: 3}
-  flute3: {fileID: 8300000, guid: 6dac9f8120092c143b4980721f789e49, type: 3}
-  flute4: {fileID: 8300000, guid: f300ce446db505b4aa685ad249041695, type: 3}
+  flute1: {fileID: 8300000, guid: 40acdd3ac49766b4888756875dfac3cc, type: 3}
+  flute2: {fileID: 8300000, guid: 35d6442429d7472458678fefd178cdea, type: 3}
+  flute3: {fileID: 8300000, guid: e8bf72471ed0db045a04aee26c62ef35, type: 3}
+  flute4: {fileID: 8300000, guid: 896519a518b54b44c82069730f59c2c1, type: 3}
   FailAudio: {fileID: 8300000, guid: 3ae4fd360fa01c446b6bc3a5a5f1f1f4, type: 3}
   AS: {fileID: 3824247858767806455}
   Player: {fileID: 0}
