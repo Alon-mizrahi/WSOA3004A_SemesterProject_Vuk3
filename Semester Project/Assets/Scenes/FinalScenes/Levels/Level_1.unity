@@ -444,10 +444,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundMusic
       objectReference: {fileID: 0}
-    - target: {fileID: 6042772753107281037, guid: dcb14667938eb2a429adf39d6cc36874, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6042772753107281138, guid: dcb14667938eb2a429adf39d6cc36874, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -14367,10 +14363,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 352787302, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
-      propertyPath: m_Volume
-      value: 0.6
-      objectReference: {fileID: 0}
     - target: {fileID: 711742898, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -14405,11 +14397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53
+      value: -51.1
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 7353043857725475463, guid: 34e046a3872909a4bb4f0600fc19fdac, type: 3}
       propertyPath: m_LocalPosition.z

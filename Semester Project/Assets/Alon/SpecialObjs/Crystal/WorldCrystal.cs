@@ -55,8 +55,8 @@ public class WorldCrystal : MonoBehaviour
         {
             Player.GetComponent<SongDetection>().CurrentCrystal = gameObject;
             StartCoroutine("StartCall"); Player.GetComponent<SongDetection>().ClearSong();
-            
-        
+
+            MusicScript.AS.volume = 0.6f;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -70,7 +70,7 @@ public class WorldCrystal : MonoBehaviour
             Crystal.color = Color.white;
             Player.GetComponent<SongDetection>().CurrentCrystal = null;
 
-
+            MusicScript.AS.volume = 0.8f;
         }
     }
 

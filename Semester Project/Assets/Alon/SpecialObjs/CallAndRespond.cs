@@ -121,11 +121,14 @@ public class CallAndRespond : MonoBehaviour
         LayerNumber = 1;
         Player.GetComponent<SongDetection>().ClearSong();
 
+        AS.volume = 0.4f;
         AS.clip = FailAudio;
         AS.Play();
 
         yield return new WaitForSeconds(1f);
         AS.Stop();
+
+        AS.volume = 1f;
         StartCoroutine("StartCall");
         Player.GetComponent<Player>().MusicBlock = false;
     }
