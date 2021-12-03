@@ -47,11 +47,14 @@ public class Player : MonoBehaviour
     public SpriteRenderer RangeUI;
     SongDetection CurSong;
 
+    CircleCollider2D Range;
+
     private void Start()
     {
         CurSong = gameObject.GetComponent<SongDetection>();
         PLYRB = gameObject.GetComponent<Rigidbody2D>();
         JumpVect = new Vector2(0, JumpForce);
+        Range = gameObject.GetComponent<CircleCollider2D>();
     }
 
     private void Update()
@@ -81,16 +84,15 @@ public class Player : MonoBehaviour
 
 
         //MusicBlock Things
-        if (MusicBlock) 
+        if (MusicBlock)
         {
-            if (RangeUI.enabled) 
-            {
-                RangeUI.enabled = false;
-            }
-            if (CurSong.CurrentSong != null) 
-            {
-                CurSong.ClearSong();
-            }
+            if (RangeUI.enabled) { RangeUI.enabled = false; }
+            if (CurSong.CurrentSong != null) { CurSong.ClearSong(); }
+            if (Range.enabled == true) { Range.enabled = false; }
+        }
+        else if(!MusicBlock)
+        {
+            if(Range.enabled == false) { Range.enabled = true; }
         }
 
 
@@ -281,12 +283,20 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D MusicBlocker)
     {
-
         if (MusicBlocker.gameObject.CompareTag("Music Block"))
         {
             MusicBlock = true;
         }
     }
+
+    private void OnCollisionStay2D(Collision2D MusicBlocker)
+    {
+        if (MusicBlocker.gameObject.CompareTag("Music Block"))
+        {
+            MusicBlock = true;
+        }
+    }
+
 
     private void OnCollisionExit2D(Collision2D MusicEnabler)
     {

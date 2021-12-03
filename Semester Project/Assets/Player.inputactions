@@ -527,7 +527,7 @@
                 {
                     "name": "",
                     "id": "cd1654a7-9303-42be-8872-a37f3468f051",
-                    "path": "<Gamepad>/select",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
