@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
             Fade += 0.005f;
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f); 
 
         int Index = SceneManager.GetActiveScene().buildIndex;
         Index++;

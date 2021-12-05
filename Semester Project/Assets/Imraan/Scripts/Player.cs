@@ -60,6 +60,9 @@ public class Player : MonoBehaviour
     private void Update()
     {
         PLYRB.velocity = new Vector2(XInput * MoveSpeed, PLYRB.velocity.y);
+
+        //PLYRB.AddForce(new Vector2(XInput * MoveSpeed, 0), ForceMode2D.Impulse);
+
         Ground = Physics2D.OverlapCircle(GroundCheck.position, JumpCheckDist, GroundLayer);
         Land();
 
@@ -118,7 +121,7 @@ public class Player : MonoBehaviour
             gameObject.transform.localScale = new Vector3(1, 1, 1);
             PlayerAnimator.SetBool("Move", true);
         }
-        if(XContext.canceled)
+        if (XContext.canceled)
         {
             PlayerAnimator.SetBool("Move", false);
             PlayerAudio.Stop();
